@@ -1,0 +1,110 @@
+<div id="entity-grid-container">
+  {#each Object.entries(Data) as [entityID, data] (entityID)}  <!-- neat! -->
+    <GridEntityBox
+      entityID={entityID}
+      entityData={data}
+      isDisabled={areDisabled.includes(entityID)} 
+      on:click={() => handleQueueEntity(entityID)} 
+    />
+  {/each}
+</div>
+<!-- ~ EntityGrid's layout change if it is siege -->
+
+<script lang="ts">
+  import { onDestroy } from 'svelte';
+  import { type Writable } from 'svelte/store';
+  import type { queueStateType, spellDataType, troopDataType } from '../../../typeDeclarations';
+  import { fullCapacities } from '../../svelte-stores';
+  import GridEntityBox from './EntityBox/GridEntityBox.svelte';
+  import { updateClickAudio, isTroopData, isSpellData } from '../../functions';
+  
+  export let Data: troopDataType | spellDataType;
+  export let queueState: Writable<queueStateType>;
+
+  let areDisabled: string[] = []
+  const entityHousingSpaces: {[key: string]: number} = {}      // you can use Record<keyType, valueType> as well, it is absolutely same as this
+  
+  for(const entity in Data) {
+    entityHousingSpaces[entity] = Data[entity].housingSpace;
+  }
+
+  function manageEntitiesHousing(state: queueStateType) {
+    let remainingCapacity: number;
+    if(isTroopData(Data)) {
+      remainingCapacity = $fullCapacities.troop - state.currentCapacity;
+    } else {
+      remainingCapacity = $fullCapacities.spell - state.currentCapacity;
+    }
+    
+    for(const entity in entityHousingSpaces) {
+      // if -> disabling, else if -> re-enabling
+      if(remainingCapacity < entityHousingSpaces[entity]) {
+        areDisabled[areDisabled.length + 1] = entity;  // since Svelte reactivity is based upon assignment and not array methods like push
+      } else if(remainingCapacity >= entityHousingSpaces[entity] && areDisabled.includes(entity)) {
+        const newDisabled = areDisabled.filter(item => item !== entity)
+        areDisabled = newDisabled;  // again assignment is what will trigger reactivity
+      }
+    }
+  }
+  
+  // any change to the queueState (caused from elsewhere) should activate this, therefore there shouldn't be a need to move it
+  const queueStateUnsubscriber = queueState.subscribe(state => {
+    manageEntitiesHousing(state);
+  })
+
+  function commonQueueUpdate(state: queueStateType, clickedEntityID: string) {
+    state.currentCapacity += Data[clickedEntityID].housingSpace;
+    if(isTroopData(Data)) 
+      state.timeLeft += Data[clickedEntityID].makeDuration;
+    else
+      state.timeLeft += Data[clickedEntityID].makeDuration;
+  }
+
+  function handleQueueEntity(clcikedEntityID: string) {
+    updateClickAudio();
+    if($queueState.queued[clcikedEntityID] !== undefined) {          // if entity already exists, just increment
+      queueState.update(state => {
+        state.queued[clcikedEntityID]++;
+        commonQueueUpdate(state, clcikedEntityID);
+        return state;
+      })
+    } else {
+      queueState.update(state => {                                  // if entity doesn't exist, make a new entry
+      state.queued[clcikedEntityID] = 1;
+      commonQueueUpdate(state, clcikedEntityID);
+      return state;
+      })
+    }
+  }
+
+  onDestroy(() => {
+    queueStateUnsubscriber();
+  });
+</script>
+
+<style>
+  #entity-grid-container {
+    height: 40%;
+    display: grid;
+    padding: 0.5rem;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(20, 100px);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 5px;
+
+    border-radius: 1rem;  
+    box-shadow: inset 0 2px 0 0 rgba(var(--pure-black-rgb), 0.2), 0 2px 0 0 rgba(var(--pure-white-rgb), 1);
+    background-color: rgba(var(--off-grey-rgb));
+
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  #entity-grid-container::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<!-- >> You had made an error where you had two separate updates to the queueState store which triggered all the subscribers twice, instead now we refactored and call the common code inside both conditions -->
+<!-- IDEA: laboratory should be integrated inside troop info, show a progression sort of...upgrade sprites and stuff could be shown in a cool way inside the troop's info dialogbox -->

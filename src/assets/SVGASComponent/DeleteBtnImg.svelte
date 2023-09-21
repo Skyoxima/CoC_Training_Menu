@@ -1,0 +1,1 @@
+<img src="/src/assets/icons/trash.png" alt="trash" />

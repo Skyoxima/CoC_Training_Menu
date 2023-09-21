@@ -1,0 +1,59 @@
+:root {
+  font-family: 'Supercell-Magic', 'Poppins', 'Segoe UI', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+
+  color: white;
+  letter-spacing: 0.05rem;
+  background-color: #242424;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.5px;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --pure-white-rgb: 255, 255, 255;
+  --pure-black-rgb: 0, 0, 0;
+  --pure-dark-grey-rgb: 94, 84, 82;
+  --pure-grey-rgb: 116, 106, 104;
+  --off-white-rgb: 234, 234, 234;
+  --off-grey-rgb: 207, 207, 199;
+  --troop-level-rgb: 200, 150, 0;
+
+  --pure-white-hex: #fff;
+  --pure-black-hex: #000;
+  --off-white-hex: #eaeaea;
+  --off-grey-hex: #cfcfc7;
+
+  /* Make these two toned for further visual enhancement practice */
+  --elixir-hex: #C340D6;
+  --gold-hex: #F1D412;
+  --dark-elixir-hex: #34253B;
+  --super-troop-hex: #9c2525;
+  --dark-super-troop-hex: #4d0000;
+
+  --elixir-light-alternate: #e093ec;
+  --elixir-dark-alternate: #6b2277;
+  --dark-elixir-light-alternate: #a282b0;
+  --dark-elixir-dark-alternate: #161019;
+  --super-troop-light-alternate: #d85a5a;
+  --super-troop-dark-alternate: #320c0c;
+  --dark-super-troop-light-alternate: #840000;
+  --dark-super-troop-dark-alternate: #200000;
+  --gold-light-alternate: #ffdd00;
+  --gold-dark-alternate: #ffb300;
+
+  --stat-dark-green-rgb: 63, 177, 4;
+  --stat-light-green-rgb: 145, 215, 57;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}

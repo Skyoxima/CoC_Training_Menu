@@ -1,0 +1,2799 @@
+{
+  "barbarian": {
+    "iconSource": "/src/assets/images/troops/icons/Barbarian.png",
+    "modelSource": "/src/assets/images/troops/models/Barbarian.png",
+    "type": "elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 1,
+    "makeDuration": 5,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "8",
+      "11",
+      "14",
+      "18",
+      "23",
+      "26",
+      "30",
+      "34",
+      "38",
+      "42",
+      "45"
+    ],
+    "Damage per Attack": [
+      "8",
+      "11",
+      "14",
+      "18",
+      "23",
+      "26",
+      "30",
+      "34",
+      "38",
+      "42",
+      "45"
+    ],
+    "Hitpoints": [
+      "45",
+      "54",
+      "65",
+      "85",
+      "105",
+      "125",
+      "160",
+      "205",
+      "230",
+      "250",
+      "270"
+    ],
+    "Research Cost": [
+      "N/A",
+      "20,000",
+      "60,000",
+      "200,000",
+      "650,000",
+      "1,400,000",
+      "2,100,000",
+      "2,800,000",
+      "5,000,000",
+      "14,000,000",
+      "16,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "2h",
+      "5h",
+      "12h",
+      "1d",
+      "1d 12h",
+      "2d 12h",
+      "3d",
+      "6d",
+      "13d",
+      "14d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "1",
+      "3",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "12",
+      "13"
+    ]
+  },
+  "s-barbarian": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Barbarian.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Barbarian.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 5,
+    "makeDuration": 25,
+    "Level": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "180",
+      "200",
+      "220",
+      "240"
+    ],
+    "Damage per Attack": [
+      "144",
+      "160",
+      "176",
+      "192"
+    ],
+    "Hitpoints": [
+      "1,000",
+      "1,100",
+      "1,200",
+      "1,300"
+    ]
+  },
+  "archer": {
+    "iconSource": "/src/assets/images/troops/icons/Archer.png",
+    "modelSource": "/src/assets/images/troops/models/Archer.png",
+    "type": "elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 1,
+    "makeDuration": 6,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "7",
+      "9",
+      "12",
+      "16",
+      "20",
+      "22",
+      "25",
+      "28",
+      "31",
+      "34",
+      "37"
+    ],
+    "Damage per Attack": [
+      "7",
+      "9",
+      "12",
+      "16",
+      "20",
+      "22",
+      "25",
+      "28",
+      "31",
+      "34",
+      "37"
+    ],
+    "Hitpoints": [
+      "20",
+      "23",
+      "28",
+      "33",
+      "40",
+      "44",
+      "48",
+      "52",
+      "56",
+      "60",
+      "64"
+    ],
+    "Research Cost": [
+      "N/A",
+      "30,000",
+      "80,000",
+      "300,000",
+      "800,000",
+      "2,000,000",
+      "2,500,000",
+      "3,200,000",
+      "5,600,000",
+      "14,500,000",
+      "16,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "3h",
+      "6h",
+      "12h",
+      "1d",
+      "1d 12h",
+      "2d 12h",
+      "3d 12h",
+      "6d",
+      "13d",
+      "14d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "1",
+      "3",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "12",
+      "13"
+    ]
+  },
+  "s-archer": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Archer.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Archer.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 12,
+    "makeDuration": 72,
+    "Level": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "120",
+      "132",
+      "144",
+      "156"
+    ],
+    "Damage per Attack": [
+      "180",
+      "198",
+      "216",
+      "234"
+    ],
+    "Hitpoints": [
+      "450",
+      "510",
+      "550",
+      "600"
+    ]
+  },
+  "giant": {
+    "iconSource": "/src/assets/images/troops/icons/Giant.png",
+    "modelSource": "/src/assets/images/troops/models/Giant.png",
+    "type": "elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 5,
+    "makeDuration": 30,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "11",
+      "14",
+      "19",
+      "24",
+      "31",
+      "43",
+      "55",
+      "62",
+      "70",
+      "78",
+      "86"
+    ],
+    "Damage per Attack": [
+      "22",
+      "28",
+      "38",
+      "48",
+      "62",
+      "86",
+      "110",
+      "124",
+      "140",
+      "156",
+      "172"
+    ],
+    "Hitpoints": [
+      "300",
+      "360",
+      "450",
+      "600",
+      "800",
+      "1,100",
+      "1,300",
+      "1,500",
+      "1,850",
+      "2,000",
+      "2,200"
+    ],
+    "Research Cost": [
+      "N/A",
+      "40,000",
+      "150,000",
+      "500,000",
+      "1,200,000",
+      "2,000,000",
+      "3,000,000",
+      "3,500,000",
+      "5,600,000",
+      "8,000,000",
+      "16,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "4h",
+      "8h",
+      "12h",
+      "1d",
+      "2d",
+      "3d 12h",
+      "5d 12h",
+      "8d",
+      "9d",
+      "16d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "2",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "13"
+    ]
+  },
+  "s-giant": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Giant.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Giant.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 10,
+    "makeDuration": 60,
+    "Level": [
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "130",
+      "140",
+      "150"
+    ],
+    "Damage per Attack": [
+      "260",
+      "280",
+      "300"
+    ],
+    "Damage vs Walls ": [
+      "1,300",
+      "1,400",
+      "1,500"
+    ],
+    "Hitpoints": [
+      "4,000",
+      "4,200",
+      "4,400"
+    ]
+  },
+  "goblin": {
+    "iconSource": "/src/assets/images/troops/icons/Goblin.png",
+    "modelSource": "/src/assets/images/troops/models/Goblin.png",
+    "type": "elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 1,
+    "makeDuration": 7,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second": [
+      "11",
+      "14",
+      "19",
+      "24",
+      "32",
+      "42",
+      "52",
+      "62",
+      "72"
+    ],
+    "Damage per Attack": [
+      "11",
+      "14",
+      "19",
+      "24",
+      "32",
+      "42",
+      "52",
+      "62",
+      "72"
+    ],
+    "DPS on Resource Buildings": [
+      "22",
+      "28",
+      "38",
+      "48",
+      "64",
+      "84",
+      "104",
+      "124",
+      "144"
+    ],
+    "Hitpoints": [
+      "25",
+      "30",
+      "36",
+      "50",
+      "65",
+      "80",
+      "105",
+      "126",
+      "146"
+    ],
+    "Research Cost": [
+      "N/A",
+      "45,000",
+      "175,000",
+      "500,000",
+      "1,200,000",
+      "2,000,000",
+      "3,000,000",
+      "5,600,000",
+      "16,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "5h",
+      "9h",
+      "12h",
+      "1d",
+      "1d 12h",
+      "3d 12h",
+      "7d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "1",
+      "3",
+      "5",
+      "6",
+      "7",
+      "8",
+      "10",
+      "13"
+    ]
+  },
+  "s-goblin": {
+    "iconSource": "/src/assets/images/troops/icons/Sneaky_Goblin.png",
+    "modelSource": "/src/assets/images/troops/models/Sneaky_Goblin.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 3,
+    "makeDuration": 21,
+    "Level": [
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second": [
+      "155",
+      "170",
+      "180"
+    ],
+    "Damage per Attack": [
+      "155",
+      "170",
+      "180"
+    ],
+    "DPS on Resource Buildings ": [
+      "310",
+      "340",
+      "360"
+    ],
+    "Hitpoints": [
+      "270",
+      "320",
+      "350"
+    ]
+  },
+  "wallbreaker": {
+    "iconSource": "/src/assets/images/troops/icons/Wall_Breaker.png",
+    "modelSource": "/src/assets/images/troops/models/Wall_Breaker.png",
+    "type": "elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 2,
+    "makeDuration": 15,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage": [
+      "6",
+      "10",
+      "15",
+      "20",
+      "43",
+      "55",
+      "66",
+      "75",
+      "86",
+      "94",
+      "102"
+    ],
+    "Damage when destroyed": [
+      "6",
+      "9",
+      "13",
+      "16",
+      "23",
+      "30",
+      "36",
+      "42",
+      "48",
+      "54",
+      "60"
+    ],
+    "Damage to Walls": [
+      "240",
+      "400",
+      "600",
+      "800",
+      "1,720",
+      "2,200",
+      "2,640",
+      "3,000",
+      "3,440",
+      "3,760",
+      "4,080"
+    ],
+    "Damage when destroyed to Walls": [
+      "240",
+      "360",
+      "520",
+      "640",
+      "920",
+      "1,200",
+      "1,440",
+      "1,680",
+      "1,920",
+      "2,160",
+      "2,400"
+    ],
+    "Hitpoints": [
+      "20",
+      "24",
+      "29",
+      "35",
+      "53",
+      "72",
+      "82",
+      "92",
+      "112",
+      "130",
+      "140"
+    ],
+    "Research Cost": [
+      "N/A",
+      "100,000",
+      "250,000",
+      "600,000",
+      "1,200,000",
+      "2,500,000",
+      "4,200,000",
+      "6,500,000",
+      "8,000,000",
+      "15,200,000",
+      "16,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "6h",
+      "12h",
+      "18h",
+      "1d",
+      "2d 3h",
+      "3d 12h",
+      "6d 12h",
+      "9d",
+      "15d",
+      "16d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "2",
+      "4",
+      "5",
+      "6",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-wallbreaker": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Wall_Breaker.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Wall_Breaker.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 8,
+    "makeDuration": 60,
+    "Level": [
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage": [
+      "78",
+      "100",
+      "120",
+      "130",
+      "140"
+    ],
+    "Damage when destroyed": [
+      "175",
+      "225",
+      "275",
+      "313",
+      "338"
+    ],
+    "Damage to Walls": [
+      "3,120",
+      "4,000",
+      "4,800",
+      "5,200",
+      "5,600"
+    ],
+    "Damage when destroyed to Walls": [
+      "7,000",
+      "9,000",
+      "11,000",
+      "12,520",
+      "13,520"
+    ],
+    "Hitpoints": [
+      "350",
+      "400",
+      "450",
+      "475",
+      "500"
+    ]
+  },
+  "balloon": {
+    "iconSource": "/src/assets/images/troops/icons/Balloon.png",
+    "modelSource": "/src/assets/images/troops/models/Balloon.png",
+    "type": "elixir-troop",
+    "maxLevel": 10,
+    "housingSpace": 5,
+    "makeDuration": 30,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "25",
+      "32",
+      "48",
+      "72",
+      "108",
+      "162",
+      "198",
+      "236",
+      "256",
+      "276"
+    ],
+    "Damage per Attack": [
+      "75",
+      "96",
+      "144",
+      "216",
+      "324",
+      "486",
+      "594",
+      "708",
+      "768",
+      "828"
+    ],
+    "Damage Upon Death": [
+      "25",
+      "32",
+      "48",
+      "72",
+      "108",
+      "162",
+      "214",
+      "268",
+      "322",
+      "352"
+    ],
+    "Hitpoints": [
+      "150",
+      "180",
+      "216",
+      "280",
+      "390",
+      "545",
+      "690",
+      "840",
+      "940",
+      "1,040"
+    ],
+    "Research Cost": [
+      "N/A",
+      "125,000",
+      "400,000",
+      "800,000",
+      "1,500,000",
+      "2,750,000",
+      "4,500,000",
+      "7,000,000",
+      "8,500,000",
+      "17,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "8h",
+      "12h",
+      "18h",
+      "1d",
+      "3d 12h",
+      "5d 6h",
+      "9d",
+      "10d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "2",
+      "4",
+      "5",
+      "6",
+      "7",
+      "9",
+      "10",
+      "11",
+      "12"
+    ]
+  },
+  "r-balloon": {
+    "iconSource": "/src/assets/images/troops/icons/Rocket_Balloon.png",
+    "modelSource": "/src/assets/images/troops/models/Rocket_Balloon.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 10,
+    "housingSpace": 8,
+    "makeDuration": 48,
+    "Level": [
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "236",
+      "256",
+      "276"
+    ],
+    "Damage per Attack": [
+      "708",
+      "768",
+      "828"
+    ],
+    "Damage Upon Death ": [
+      "400",
+      "500",
+      "600"
+    ],
+    "Hitpoints": [
+      "840",
+      "940",
+      "1,040"
+    ]
+  },
+  "wizard": {
+    "iconSource": "/src/assets/images/troops/icons/Wizard.png",
+    "modelSource": "/src/assets/images/troops/models/Wizard.png",
+    "type": "elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 4,
+    "makeDuration": 30,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "50",
+      "70",
+      "90",
+      "125",
+      "170",
+      "185",
+      "200",
+      "215",
+      "230",
+      "245",
+      "260"
+    ],
+    "Damage per Attack": [
+      "75",
+      "105",
+      "135",
+      "187.5",
+      "255",
+      "277.5",
+      "300",
+      "322.5",
+      "345",
+      "367.5",
+      "390"
+    ],
+    "Hitpoints": [
+      "75",
+      "90",
+      "108",
+      "135",
+      "165",
+      "180",
+      "195",
+      "210",
+      "230",
+      "250",
+      "270"
+    ],
+    "Research Cost": [
+      "N/A",
+      "120,000",
+      "320,000",
+      "620,000",
+      "1,200,000",
+      "2,200,000",
+      "3,500,000",
+      "5,000,000",
+      "5,800,000",
+      "8,500,000",
+      "17,200,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "8h",
+      "12h",
+      "18h",
+      "1d",
+      "2d",
+      "3d 12h",
+      "5d 6h",
+      "8d",
+      "9d",
+      "16d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "13"
+    ]
+  },
+  "s-wizard": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Wizard.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Wizard.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 8,
+    "makeDuration": 75,
+    "Level": [
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "220",
+      "240",
+      "260"
+    ],
+    "Damage per Attack(Primary Target)": [
+      "440",
+      "480",
+      "520"
+    ],
+    "Secondary Chain Damage(per Target)": [
+      "176",
+      "192",
+      "208"
+    ],
+    "Hitpoints": [
+      "450",
+      "500",
+      "550"
+    ]
+  },
+  "healer": {
+    "iconSource": "/src/assets/images/troops/icons/Healer.png",
+    "modelSource": "/src/assets/images/troops/models/Healer.png",
+    "type": "elixir-troop",
+    "maxLevel": 8,
+    "housingSpace": 14,
+    "makeDuration": 120,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "Healing per Second": [
+      "36",
+      "48",
+      "60",
+      "66",
+      "72",
+      "72",
+      "72",
+      "76"
+    ],
+    "Healing per Pulse": [
+      "25.2",
+      "33.6",
+      "42",
+      "46.2",
+      "50.4",
+      "50.4",
+      "50.4",
+      "53.2"
+    ],
+    "HPS on Heroes": [
+      "19",
+      "26",
+      "33",
+      "36",
+      "48",
+      "56",
+      "62",
+      "65"
+    ],
+    "Hitpoints": [
+      "500",
+      "700",
+      "900",
+      "1,200",
+      "1,500",
+      "1,600",
+      "1,700",
+      "1,800"
+    ],
+    "Research Cost": [
+      "N/A",
+      "450,000",
+      "900,000",
+      "2,700,000",
+      "4,200,000",
+      "8,000,000",
+      "16,000,000",
+      "18,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "12h",
+      "1d",
+      "2d",
+      "7d",
+      "8d 12h",
+      "16d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "5",
+      "6",
+      "7",
+      "9",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "dragon": {
+    "iconSource": "/src/assets/images/troops/icons/Dragon.png",
+    "modelSource": "/src/assets/images/troops/models/Dragon.png",
+    "type": "elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 20,
+    "makeDuration": 180,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "140",
+      "160",
+      "180",
+      "210",
+      "240",
+      "270",
+      "310",
+      "330",
+      "350",
+      "370"
+    ],
+    "Damage per Attack": [
+      "175",
+      "200",
+      "225",
+      "262.5",
+      "300",
+      "337.5",
+      "387.5",
+      "412.5",
+      "437.5",
+      "462.5"
+    ],
+    "Hitpoints": [
+      "1,900",
+      "2,100",
+      "2,300",
+      "2,700",
+      "3,100",
+      "3,400",
+      "3,900",
+      "4,200",
+      "4,500",
+      "4,900"
+    ],
+    "Research Cost": [
+      "N/A",
+      "1,000,000",
+      "2,000,000",
+      "3,000,000",
+      "3,800,000",
+      "4,900,000",
+      "6,300,000",
+      "8,800,000",
+      "17,500,000",
+      "19,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "18h",
+      "1d 12h",
+      "3d",
+      "5d 6h",
+      "5d 12h",
+      "9d",
+      "9d 12h",
+      "17d",
+      "18d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-dragon": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Dragon.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Dragon.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 40,
+    "makeDuration": 360,
+    "Level": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "381",
+      "405",
+      "429",
+      "452"
+    ],
+    "Damage per Attack": [
+      "144",
+      "153",
+      "162",
+      "171"
+    ],
+    "Hitpoints": [
+      "6,100",
+      "6,400",
+      "6,700",
+      "7,100"
+    ]
+  },
+  "PEKKA": {
+    "iconSource": "/src/assets/images/troops/icons/P.E.K.K.A.png",
+    "modelSource": "/src/assets/images/troops/models/P.E.K.K.A.png",
+    "type": "elixir-troop",
+    "maxLevel": 10,
+    "housingSpace": 25,
+    "makeDuration": 180,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "260",
+      "290",
+      "320",
+      "360",
+      "410",
+      "470",
+      "540",
+      "610",
+      "680",
+      "750"
+    ],
+    "Damage per Attack": [
+      "468",
+      "522",
+      "576",
+      "648",
+      "738",
+      "846",
+      "972",
+      "1,098",
+      "1,224",
+      "1,350"
+    ],
+    "Hitpoints": [
+      "3,000",
+      "3,500",
+      "4,000",
+      "4,500",
+      "5,000",
+      "5,500",
+      "5,900",
+      "6,300",
+      "6,700",
+      "7,200"
+    ],
+    "Research Cost": [
+      "N/A",
+      "1,200,000",
+      "1,800,000",
+      "2,800,000",
+      "3,200,000",
+      "4,200,000",
+      "5,200,000",
+      "7,000,000",
+      "8,500,000",
+      "18,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "12h",
+      "1d",
+      "2d",
+      "3d 12h",
+      "4d 18h",
+      "6d",
+      "9d",
+      "10d",
+      "16d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "6",
+      "6",
+      "7",
+      "8",
+      "8",
+      "9",
+      "10",
+      "11",
+      "13"
+    ]
+  },
+  "b-dragon": {
+    "iconSource": "/src/assets/images/troops/icons/Baby_Dragon.png",
+    "modelSource": "/src/assets/images/troops/models/Baby_Dragon.png",
+    "type": "elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 10,
+    "makeDuration": 90,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second": [
+      "75",
+      "85",
+      "95",
+      "105",
+      "115",
+      "125",
+      "135",
+      "145",
+      "155"
+    ],
+    "Ability Damage per Second": [
+      "225",
+      "255",
+      "285",
+      "315",
+      "345",
+      "375",
+      "405",
+      "435",
+      "465"
+    ],
+    "Damage per Attack": [
+      "75",
+      "85",
+      "95",
+      "105",
+      "115",
+      "125",
+      "135",
+      "145",
+      "155"
+    ],
+    "Hitpoints": [
+      "1,200",
+      "1,300",
+      "1,400",
+      "1,500",
+      "1,600",
+      "1,700",
+      "1,800",
+      "1,900",
+      "2,000"
+    ],
+    "Research Cost": [
+      "N/A",
+      "2,000,000",
+      "2,500,000",
+      "3,400,000",
+      "4,200,000",
+      "5,500,000",
+      "7,200,000",
+      "16,000,000",
+      "18,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "2d",
+      "3d 12h",
+      "5d",
+      "6d 6h",
+      "7d 12h",
+      "8d 12h",
+      "15d 18h",
+      "16d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "7",
+      "8",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "i-dragon": {
+    "iconSource": "/src/assets/images/troops/icons/Inferno_Dragon.png",
+    "modelSource": "/src/assets/images/troops/models/Inferno_Dragon.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 15,
+    "makeDuration": 135,
+    "Level": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second Stage 1": [
+      "75",
+      "79",
+      "83",
+      "85"
+    ],
+    "Damage per Second Stage 2": [
+      "150",
+      "158",
+      "166",
+      "170"
+    ],
+    "Damage per Second Stage 3": [
+      "1,500",
+      "1,580",
+      "1,660",
+      "1,700"
+    ],
+    "Hitpoints": [
+      "1,900",
+      "2,050",
+      "2,200",
+      "2,300"
+    ]
+  },
+  "miner": {
+    "iconSource": "/src/assets/images/troops/icons/Miner.png",
+    "modelSource": "/src/assets/images/troops/models/Miner.png",
+    "type": "elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 6,
+    "makeDuration": 30,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second": [
+      "80",
+      "88",
+      "96",
+      "104",
+      "112",
+      "120",
+      "128",
+      "136",
+      "144"
+    ],
+    "Damage per Attack": [
+      "136",
+      "149.6",
+      "163.2",
+      "176.8",
+      "190.4",
+      "204",
+      "217.6",
+      "231.2",
+      "244.8"
+    ],
+    "Hitpoints": [
+      "550",
+      "610",
+      "670",
+      "730",
+      "800",
+      "900",
+      "1,000",
+      "1,100",
+      "1,250"
+    ],
+    "Research Cost": [
+      "N/A",
+      "2,500,000",
+      "3,200,000",
+      "3,800,000",
+      "5,000,000",
+      "5,800,000",
+      "8,000,000",
+      "16,500,000",
+      "18,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "2d 4h",
+      "3d 12h",
+      "4d",
+      "7d",
+      "8d",
+      "10d",
+      "16d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "8",
+      "8",
+      "9",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-miner": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Miner.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Miner.png",
+    "type": "super-elixir-troop",
+    "maxLevel": 9,
+    "housingSpace": 24,
+    "makeDuration": 120,
+    "Level": [
+      "7",
+      "8",
+      "9"
+    ],
+    "Damage per Second Stage 1": [
+      "170",
+      "185",
+      "200"
+    ],
+    "Damage per Second Stage 2": [
+      "340",
+      "370",
+      "400"
+    ],
+    "Damage per Second Stage 3": [
+      "520",
+      "560",
+      "600"
+    ],
+    "Hitpoints": [
+      "2,900",
+      "3,200",
+      "3,500"
+    ]
+  },
+  "e-dragon": {
+    "iconSource": "/src/assets/images/troops/icons/Electro_Dragon.png",
+    "modelSource": "/src/assets/images/troops/models/Electro_Dragon.png",
+    "type": "elixir-troop",
+    "maxLevel": 6,
+    "housingSpace": 30,
+    "makeDuration": 360,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Damage per Second(Primary Target)": [
+      "240",
+      "270",
+      "300",
+      "330",
+      "360",
+      "390"
+    ],
+    "Damage per Hit(Primary Target)": [
+      "840",
+      "945",
+      "1,050",
+      "1,155",
+      "1,260",
+      "1,365"
+    ],
+    "Damage when destroyed": [
+      "65 x6",
+      "75 x6",
+      "85 x6",
+      "95 x6",
+      "105 x6",
+      "115 x6"
+    ],
+    "Hitpoints": [
+      "3,200",
+      "3,700",
+      "4,200",
+      "4,500",
+      "4,800",
+      "5,100"
+    ],
+    "Research Cost": [
+      "N/A",
+      "6,300,000",
+      "7,000,000",
+      "9,600,000",
+      "18,000,000",
+      "20,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "5d 12h",
+      "9d",
+      "10d",
+      "17d",
+      "18d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "yeti": {
+    "iconSource": "/src/assets/images/troops/icons/Yeti.png",
+    "modelSource": "/src/assets/images/troops/models/Yeti.png",
+    "type": "elixir-troop",
+    "maxLevel": 4,
+    "housingSpace": 18,
+    "makeDuration": 180,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Damage per Second": [
+      "230",
+      "250",
+      "270",
+      "290",
+      "310"
+    ],
+    "Damage per Attack": [
+      "230",
+      "250",
+      "270",
+      "290",
+      "310"
+    ],
+    "Hitpoints": [
+      "2,900",
+      "3,200",
+      "3,500",
+      "3,700",
+      "3,900"
+    ],
+    "Yetimites spawned": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "Research Cost": [
+      "N/A",
+      "7,000,000",
+      "9,000,000",
+      "17,100,000",
+      "19,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "7d",
+      "10d",
+      "17d",
+      "18d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "dragonrider": {
+    "iconSource": "/src/assets/images/troops/icons/Dragon_Rider.png",
+    "modelSource": "/src/assets/images/troops/models/Dragon_Rider.png",
+    "type": "elixir-troop",
+    "maxLevel": 3,
+    "housingSpace": 25,
+    "makeDuration": 250,
+    "Level": [
+      "1",
+      "2",
+      "3"
+    ],
+    "Damage per Second": [
+      "340",
+      "370",
+      "400"
+    ],
+    "Damage per Attack": [
+      "408",
+      "444",
+      "480"
+    ],
+    "Damage Upon Death": [
+      "700",
+      "800",
+      "900"
+    ],
+    "Hitpoints": [
+      "4,100",
+      "4,400",
+      "4,700"
+    ],
+    "Research Cost": [
+      "N/A",
+      "9,600,000",
+      "16,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "9d",
+      "16d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "11",
+      "12"
+    ]
+  },
+  "e-titan": {
+    "iconSource": "/src/assets/images/troops/icons/Electro_Titan.png",
+    "modelSource": "/src/assets/images/troops/models/Electro_Titan.png",
+    "type": "elixir-troop",
+    "maxLevel": 3,
+    "housingSpace": 32,
+    "makeDuration": 360,
+    "Level": [
+      "1",
+      "2",
+      "3"
+    ],
+    "Damage per Second": [
+      "180",
+      "200",
+      "220"
+    ],
+    "Damage per Attack": [
+      "270",
+      "300",
+      "330"
+    ],
+    "Aura Damage per Second": [
+      "75",
+      "100",
+      "125"
+    ],
+    "Aura Damage per Attack": [
+      "30",
+      "40",
+      "50"
+    ],
+    "Hitpoints": [
+      "7,200",
+      "7,700",
+      "8,200"
+    ],
+    "Research Cost": [
+      "N/A",
+      "19,500,000",
+      "20,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "17d 12h",
+      "18d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "12",
+      "13"
+    ]
+  },
+  "minion": {
+    "iconSource": "/src/assets/images/troops/icons/Minion.png",
+    "modelSource": "/src/assets/images/troops/models/Minion.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 2,
+    "makeDuration": 18,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "38",
+      "41",
+      "44",
+      "47",
+      "50",
+      "54",
+      "58",
+      "62",
+      "66",
+      "70",
+      "74"
+    ],
+    "Damage per Attack": [
+      "38",
+      "41",
+      "44",
+      "47",
+      "50",
+      "54",
+      "58",
+      "62",
+      "66",
+      "70",
+      "74"
+    ],
+    "Hitpoints": [
+      "58",
+      "63",
+      "68",
+      "73",
+      "78",
+      "84",
+      "90",
+      "96",
+      "102",
+      "108",
+      "114"
+    ],
+    "Research Cost": [
+      "N/A",
+      "3,000",
+      "7,000",
+      "15,000",
+      "25,000",
+      "35,000",
+      "63,000",
+      "95,000",
+      "150,000",
+      "285,000",
+      "310,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "8h",
+      "16h",
+      "1d",
+      "2d",
+      "3d 12h",
+      "5d",
+      "9d",
+      "10d",
+      "15d 12h",
+      "16d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "5",
+      "6",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-minion": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Minion.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Minion.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 12,
+    "makeDuration": 108,
+    "Level": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "Damage per Second": [
+      "300",
+      "325",
+      "350",
+      "360"
+    ],
+    "Damage per Attack": [
+      "300",
+      "325",
+      "350",
+      "360"
+    ],
+    "Hitpoints": [
+      "1,500",
+      "1,600",
+      "1,700",
+      "1,800"
+    ]
+  },
+  "hogrider": {
+    "iconSource": "/src/assets/images/troops/icons/Hog_Rider.png",
+    "modelSource": "/src/assets/images/troops/models/Hog_Rider.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 5,
+    "makeDuration": 45,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "Damage per Second": [
+      "60",
+      "70",
+      "80",
+      "92",
+      "105",
+      "118",
+      "135",
+      "148",
+      "161",
+      "174",
+      "187",
+      "200"
+    ],
+    "Damage per Attack": [
+      "60",
+      "70",
+      "80",
+      "92",
+      "105",
+      "118",
+      "135",
+      "148",
+      "161",
+      "174",
+      "187",
+      "200"
+    ],
+    "Hitpoints": [
+      "270",
+      "312",
+      "370",
+      "430",
+      "500",
+      "590",
+      "700",
+      "810",
+      "890",
+      "970",
+      "1,080",
+      "1,230"
+    ],
+    "Research Cost": [
+      "N/A",
+      "5,000",
+      "9,000",
+      "16,000",
+      "30,000",
+      "43,000",
+      "70,000",
+      "95,000",
+      "150,000",
+      "175,000",
+      "305,000",
+      "335,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "10h",
+      "20h",
+      "1d 6h",
+      "2d",
+      "3d 12h",
+      "5d 6h",
+      "7d",
+      "9d",
+      "10d",
+      "16d 6h",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "5",
+      "6",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-hogrider": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Hog_Rider.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Hog_Rider.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 11,
+    "housingSpace": 12,
+    "makeDuration": 108,
+    "Level": [
+      "10",
+      "11",
+      "12"
+    ],
+    "Damage per Second": [
+      "180",
+      "200",
+      "230"
+    ],
+    "Damage per Attack": [
+      "180",
+      "200",
+      "230"
+    ],
+    "Hitpoints": [
+      "1,500",
+      "1,600",
+      "1,700"
+    ]
+  },
+  "valkyrie": {
+    "iconSource": "/src/assets/images/troops/icons/Valkyrie.png",
+    "modelSource": "/src/assets/images/troops/models/Valkyrie.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 10,
+    "housingSpace": 8,
+    "makeDuration": 90,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "94",
+      "106",
+      "119",
+      "133",
+      "148",
+      "163",
+      "178",
+      "193",
+      "208",
+      "223"
+    ],
+    "Damage per Attack": [
+      "169.2",
+      "190.8",
+      "214.2",
+      "239.4",
+      "266.4",
+      "293.4",
+      "320.4",
+      "347.4",
+      "374.4",
+      "401.4"
+    ],
+    "Hitpoints": [
+      "750",
+      "850",
+      "950",
+      "1,050",
+      "1,300",
+      "1,500",
+      "1,650",
+      "1,800",
+      "2,000",
+      "2,400"
+    ],
+    "Research Cost": [
+      "N/A",
+      "8,000",
+      "12,000",
+      "25,000",
+      "38,000",
+      "63,000",
+      "110,000",
+      "155,000",
+      "295,000",
+      "320,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "1d",
+      "2d",
+      "3d",
+      "4d 6h",
+      "5d 6h",
+      "7d",
+      "10d",
+      "16d 6h",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "6",
+      "7",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-valkyrie": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Valkyrie.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Valkyrie.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 10,
+    "housingSpace": 20,
+    "makeDuration": 235,
+    "Level": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "Damage per Second": [
+      "250",
+      "300",
+      "325",
+      "350"
+    ],
+    "Damage per Attack": [
+      "275",
+      "330",
+      "357.5",
+      "385"
+    ],
+    "Hitpoints": [
+      "2,400",
+      "2,700",
+      "2,900",
+      "3,400"
+    ]
+  },
+  "golem": {
+    "iconSource": "/src/assets/images/troops/icons/Golem.png",
+    "modelSource": "/src/assets/images/troops/models/Golem.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 12,
+    "housingSpace": 30,
+    "makeDuration": 300,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "Damage per Second": [
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60",
+      "65",
+      "70",
+      "75",
+      "80",
+      "85",
+      "90"
+    ],
+    "Damage per Attack": [
+      "84",
+      "96",
+      "108",
+      "120",
+      "132",
+      "144",
+      "156",
+      "168",
+      "180",
+      "192",
+      "204",
+      "216"
+    ],
+    "Damage Upon Death": [
+      "350",
+      "400",
+      "450",
+      "500",
+      "550",
+      "600",
+      "650",
+      "700",
+      "750",
+      "800",
+      "850",
+      "900"
+    ],
+    "Golemites spawned Upon Death": [
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "2",
+      "3",
+      "3",
+      "3",
+      "3",
+      "3"
+    ],
+    "Hitpoints": [
+      "5,100",
+      "5,400",
+      "5,700",
+      "6,000",
+      "6,300",
+      "6,600",
+      "6,900",
+      "7,200",
+      "7,500",
+      "8,000",
+      "8,400",
+      "8,800"
+    ],
+    "Research Cost": [
+      "N/A",
+      "10,000",
+      "20,000",
+      "30,000",
+      "43,000",
+      "53,000",
+      "77,000",
+      "100,000",
+      "125,000",
+      "160,000",
+      "300,000",
+      "330,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "1d 6h",
+      "2d 12h",
+      "3d 18h",
+      "4d 6h",
+      "5d",
+      "5d 12h",
+      "6d 12h",
+      "9d",
+      "10d",
+      "16d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "6",
+      "7",
+      "7",
+      "8",
+      "9",
+      "9",
+      "10",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "witch": {
+    "iconSource": "/src/assets/images/troops/icons/Witch.png",
+    "modelSource": "/src/assets/images/troops/models/Witch.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 6,
+    "housingSpace": 12,
+    "makeDuration": 120,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Damage per Second": [
+      "100",
+      "110",
+      "140",
+      "160",
+      "180",
+      "200"
+    ],
+    "Damage per Attack": [
+      "70",
+      "77",
+      "98",
+      "112",
+      "126",
+      "140"
+    ],
+    "Maximum Skeletons Summoned": [
+      "6",
+      "8",
+      "10",
+      "12",
+      "14",
+      "15"
+    ],
+    "Hitpoints": [
+      "300",
+      "320",
+      "400",
+      "440",
+      "480",
+      "520"
+    ],
+    "Research Cost": [
+      "N/A",
+      "50,000",
+      "68,000",
+      "90,000",
+      "125,000",
+      "340,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "4d",
+      "4d 18h",
+      "6d 18h",
+      "9d",
+      "17d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "7",
+      "8",
+      "9",
+      "10",
+      "13"
+    ]
+  },
+  "s-witch": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Witch.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Witch.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 6,
+    "housingSpace": 40,
+    "makeDuration": 400,
+    "Level": [
+      "5",
+      "6"
+    ],
+    "Damage per Second": [
+      "360",
+      "390"
+    ],
+    "Damage per Attack": [
+      "252",
+      "273"
+    ],
+    "Hitpoints": [
+      "3,200",
+      "3,400"
+    ]
+  },
+  "lavahound": {
+    "iconSource": "/src/assets/images/troops/icons/Lava_Hound.png",
+    "modelSource": "/src/assets/images/troops/models/Lava_Hound.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 6,
+    "housingSpace": 30,
+    "makeDuration": 300,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "Damage per Second": [
+      "10",
+      "12",
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "Damage per Attack": [
+      "20",
+      "24",
+      "28",
+      "32",
+      "36",
+      "40"
+    ],
+    "Damage Upon Death": [
+      "100",
+      "150",
+      "200",
+      "250",
+      "300",
+      "350"
+    ],
+    "Lava Pups Spawned (After Death)": [
+      "8",
+      "10",
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "Hitpoints": [
+      "6,100",
+      "6,500",
+      "6,800",
+      "7,200",
+      "7,600",
+      "8,000"
+    ],
+    "Research Cost": [
+      "N/A",
+      "35,000",
+      "50,000",
+      "85,000",
+      "120,000",
+      "160,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "2d 12h",
+      "4d 6h",
+      "6d 6h",
+      "9d",
+      "9d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ]
+  },
+  "icehound": {
+    "iconSource": "/src/assets/images/troops/icons/Ice_Hound.png",
+    "modelSource": "/src/assets/images/troops/models/Ice_Hound.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 6,
+    "housingSpace": 40,
+    "makeDuration": 400,
+    "Level": [
+      "5",
+      "6"
+    ],
+    "Damage per Second": [
+      "10",
+      "15"
+    ],
+    "Damage per Attack": [
+      "20",
+      "30"
+    ],
+    "Freeze Time when Destroyed ": [
+      "3.5s",
+      "4.25s"
+    ],
+    "Ice Pups Spawned": [
+      "10",
+      "12"
+    ],
+    "Hitpoints": [
+      "9,500",
+      "10,000"
+    ]
+  },
+  "bowler": {
+    "iconSource": "/src/assets/images/troops/icons/Bowler.png",
+    "modelSource": "/src/assets/images/troops/models/Bowler.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 7,
+    "housingSpace": 6,
+    "makeDuration": 60,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "Damage per Second": [
+      "60",
+      "70",
+      "80",
+      "90",
+      "96",
+      "102",
+      "114"
+    ],
+    "Damage per Attack": [
+      "132",
+      "154",
+      "176",
+      "198",
+      "211.2",
+      "224.4",
+      "250.8"
+    ],
+    "Hitpoints": [
+      "325",
+      "350",
+      "385",
+      "420",
+      "455",
+      "500",
+      "550"
+    ],
+    "Research Cost": [
+      "N/A",
+      "65,000",
+      "88,000",
+      "125,000",
+      "170,000",
+      "305,000",
+      "335,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "3d 12h",
+      "5d",
+      "7d 12h",
+      "9d",
+      "16d 18h",
+      "17d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13"
+    ]
+  },
+  "s-bowler": {
+    "iconSource": "/src/assets/images/troops/icons/Super_Bowler.png",
+    "modelSource": "/src/assets/images/troops/models/Super_Bowler.png",
+    "type": "super-dark-elixir-troop",
+    "maxLevel": 7,
+    "housingSpace": 30,
+    "makeDuration": 300,
+    "Level": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "Damage per Second": [
+      "170",
+      "185",
+      "200",
+      "215"
+    ],
+    "Damage per Attack": [
+      "374",
+      "407",
+      "440",
+      "473"
+    ],
+    "Hitpoints": [
+      "1,600",
+      "1,800",
+      "2,000",
+      "2,200"
+    ]
+  },
+  "icegolem": {
+    "iconSource": "/src/assets/images/troops/icons/Ice_Golem.png",
+    "modelSource": "/src/assets/images/troops/models/Ice_Golem.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 7,
+    "housingSpace": 15,
+    "makeDuration": 150,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "Damage per Second": [
+      "24",
+      "28",
+      "32",
+      "36",
+      "40",
+      "44",
+      "48"
+    ],
+    "Damage per Attack": [
+      "57.6",
+      "67.2",
+      "76.8",
+      "86.4",
+      "96",
+      "105.6",
+      "115.2"
+    ],
+    "Freeze Time After Death On Offense": [
+      "4.0",
+      "4.75",
+      "5.5",
+      "6.25",
+      "7.0",
+      "7.5",
+      "8.0"
+    ],
+    "Freeze Time After Death On Defense": [
+      "2.0",
+      "2.25",
+      "2.5",
+      "2.75",
+      "3.0",
+      "3.25",
+      "3.5"
+    ],
+    "Hitpoints": [
+      "2,600",
+      "2,800",
+      "3,000",
+      "3,200",
+      "3,400",
+      "3,600",
+      "3,900"
+    ],
+    "Research Cost": [
+      "N/A",
+      "55,000",
+      "85,000",
+      "100,000",
+      "125,000",
+      "305,000",
+      "335,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "2d 20h",
+      "5d",
+      "6d 12h",
+      "8d",
+      "16d",
+      "17d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "9",
+      "9",
+      "10",
+      "10",
+      "12",
+      "13"
+    ]
+  },
+  "headhunter": {
+    "iconSource": "/src/assets/images/troops/icons/Headhunter.png",
+    "modelSource": "/src/assets/images/troops/models/Headhunter.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 3,
+    "housingSpace": 6,
+    "makeDuration": 60,
+    "Level": [
+      "1",
+      "2",
+      "3"
+    ],
+    "Damage per Second": [
+      "105",
+      "115",
+      "125"
+    ],
+    "Damage per Attack": [
+      "63",
+      "69",
+      "75"
+    ],
+    "DPS on Heroes": [
+      "420",
+      "460",
+      "500"
+    ],
+    "Speed Decrease": [
+      "40%",
+      "42%",
+      "44%"
+    ],
+    "Attack Rate Decrease": [
+      "55%",
+      "60%",
+      "65%"
+    ],
+    "Hitpoints": [
+      "360",
+      "400",
+      "440"
+    ],
+    "Research Cost": [
+      "N/A",
+      "115,000",
+      "145,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "9d",
+      "10d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "11"
+    ]
+  },
+  "apprenticewarden": {
+    "iconSource": "/src/assets/images/troops/icons/Apprentice_Warden.png",
+    "modelSource": "/src/assets/images/troops/models/Apprentice_Warden.png",
+    "type": "dark-elixir-troop",
+    "maxLevel": 4,
+    "housingSpace": 20,
+    "makeDuration": 240,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Damage per Second": [
+      "170",
+      "185",
+      "200",
+      "215"
+    ],
+    "Damage per Attack": [
+      "153",
+      "166.5",
+      "180",
+      "193.5"
+    ],
+    "Aura HP Increase": [
+      "24%",
+      "26%",
+      "28%",
+      "30%"
+    ],
+    "Hitpoints": [
+      "1,500",
+      "1,650",
+      "1,800",
+      "1,950"
+    ],
+    "Research Cost": [
+      "N/A",
+      "180,000",
+      "315,000",
+      "340,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "9d",
+      "16d 18h",
+      "17d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "11",
+      "12",
+      "13"
+    ]
+  }
+}

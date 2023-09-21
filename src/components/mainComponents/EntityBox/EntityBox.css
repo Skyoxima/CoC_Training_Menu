@@ -1,0 +1,93 @@
+.entity-box-wrapper {
+  position: relative;
+  width: 85px; height: 85px;
+}
+
+/* This style goes to both Grid Buttons and Queue Boxes */
+.entity-btn, .entity-box {
+  position: relative;
+  background: linear-gradient(
+    to top,
+    rgb(255, 182, 108) 0% var(--linear-gradient-color-extent),
+    transparent
+  );
+  border-radius: 0.5rem;
+  border: 3px solid transparent;
+
+  overflow: hidden;
+}
+
+.entity-btn img, .entity-box img {
+  width: 100%;
+  height: 100%;
+}
+
+.elixir-troop {
+  background: linear-gradient(
+        to top,
+        var(--elixir-light-alternate),
+        var(--elixir-hex)
+        /* rgba(0, 0, 0, 0.25) */
+      )
+      padding-box,
+    linear-gradient(
+        to top,
+        var(--elixir-dark-alternate),
+        var(--elixir-light-alternate)
+      )
+      border-box;
+}
+
+.dark-elixir-troop {
+  background: linear-gradient(
+    to top,
+    var(--dark-elixir-light-alternate),
+    var(--dark-elixir-hex)
+  )
+  padding-box,
+  linear-gradient(
+    to top,
+    var(--dark-elixir-dark-alternate),
+    var(--dark-elixir-light-alternate)
+  )
+  border-box;
+}
+
+.super-elixir-troop {
+  background: linear-gradient(
+    to top,
+    var(--super-troop-light-alternate),
+    var(--super-troop-hex)
+  )
+  padding-box,
+  linear-gradient(
+    to top,
+    var(--gold-dark-alternate),
+    var(--gold-light-alternate)
+  )
+  border-box;
+}
+
+.super-dark-elixir-troop {
+  background: linear-gradient(
+    to top,
+    var(--dark-super-troop-light-alternate),
+    var(--dark-super-troop-hex)
+  )
+  padding-box,
+  linear-gradient(
+    to top,
+    var(--dark-super-troop-dark-alternate),
+    var(--dark-super-troop-light-alternate),
+    var(--gold-light-alternate)
+  )
+  border-box;
+}
+
+/* everything except content of the top right corner of both troop boxes */
+.top-right-btn::before {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;  
+}
