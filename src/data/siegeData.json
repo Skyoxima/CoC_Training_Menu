@@ -1,0 +1,445 @@
+{
+  "wall-wrecker": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Wall_Wrecker.png",
+    "modelSource": "/src/assets/images/models/siege/Wall_Wrecker.png",
+    "housingSpace": 1,
+    "maxLevel": 5,
+    "makeDuration": 1200,
+    "preferredTarget": "Walls (Damage x10)",
+    "attackType": "Area Splash",
+    "movementSpeed": 12,
+    "attackSpeed": 1.3,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Damage per Second": [
+      "250",
+      "300",
+      "350",
+      "400",
+      "450"
+    ],
+    "Damage per Attack": [
+      "325",
+      "390",
+      "455",
+      "520",
+      "585"
+    ],
+    "Damage vs. Walls": [
+      "3,250",
+      "3900",
+      "4,550",
+      "5,200",
+      "5,850"
+    ],
+    "Hitpoints": [
+      "5,500",
+      "6,000",
+      "6,500",
+      "7,000",
+      "7,500"
+    ],
+    "Research Cost": [
+      "N/A",
+      "3,800,000",
+      "5,000,000",
+      "8,500,000",
+      "15,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "5d",
+      "6d",
+      "9d",
+      "16d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11",
+      "13"
+    ]
+  },
+  "battle-blimp": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Battle_Blimp.png",
+    "modelSource": "/src/assets/images/models/siege/Battle_Blimp.png",
+    "housingSpace": 1,
+    "maxLevel": 4,
+    "makeDuration": 1200,
+    "preferredTarget": "None",
+    "attackType": "Area Splash",
+    "movementSpeed": 18,
+    "attackSpeed": 1.5,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Damage per Second": [
+      "100",
+      "140",
+      "180",
+      "220"
+    ],
+    "Damage per Attack": [
+      "150",
+      "210",
+      "270",
+      "330"
+    ],
+    "Damage when Destroyed": [
+      "700",
+      "800",
+      "900",
+      "1,000"
+    ],
+    "Hitpoints": [
+      "3,000",
+      "3,500",
+      "4,000",
+      "4,500"
+    ],
+    "Research Cost": [
+      "N/A",
+      "3,800,000",
+      "5,000,000",
+      "8,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "5d",
+      "6d",
+      "9d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11"
+    ]
+  },
+  "stone-slammer": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Stone_Slammer.png",
+    "modelSource": "/src/assets/images/models/siege/Stone_Slammer.png",
+    "housingSpace": 1,
+    "maxLevel": 5,
+    "makeDuration": 1200,
+    "preferredTarget": "Defenses",
+    "attackType": "Area Splash 1 and 3 tile Radius (Ground Only)",
+    "movementSpeed": 16,
+    "attackSpeed": 2.5,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "Damage per Second": [
+      "400",
+      "500",
+      "600",
+      "700",
+      "750"
+    ],
+    "Damage per Attack (Hitbox 1)": [
+      "1,000",
+      "1,250",
+      "1,500",
+      "1,750",
+      "1,875"
+    ],
+    "Damage per Attack (Hitbox 2)": [
+      "100-200",
+      "150-300",
+      "200-400",
+      "250-500",
+      "300-600"
+    ],
+    "Damage when Destroyed": [
+      "500",
+      "500",
+      "500",
+      "500",
+      "500"
+    ],
+    "Hitpoints": [
+      "5,600",
+      "5,900",
+      "6,200",
+      "6,500",
+      "6,800"
+    ],
+    "Research Cost": [
+      "N/A",
+      "3,800,000",
+      "5,000,000",
+      "8,500,000",
+      "15,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "5d",
+      "6d",
+      "9d",
+      "16d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11",
+      "13"
+    ]
+  },
+  "siege-barracks": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Siege_Barracks.png",
+    "modelSource": "/src/assets/images/models/siege/Siege_Barracks.png",
+    "housingSpace": 1,
+    "maxLevel": 4,
+    "makeDuration": 1200,
+    "movementSpeed": 0,
+    "Lifetime": 30,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Hitpoints": [
+      "3,300",
+      "3,700",
+      "4,100",
+      "4,500"
+    ],
+    "P.E.K.K.As Spawned": [
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "Wizards Spawned": [
+      "6",
+      "8",
+      "10",
+      "11"
+    ],
+    "Research Cost": [
+      "N/A",
+      "5,000,000",
+      "7,000,000",
+      "8,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "6d",
+      "8d 12h",
+      "9d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11"
+    ]
+  },
+  "log-launcher": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Log_Launcher.png",
+    "modelSource": "/src/assets/images/models/siege/Log_Launcher.png",
+    "housingSpace": 1,
+    "maxLevel": 4,
+    "makeDuration": 1200,
+    "preferredTarget": "Walls (Damage x4)",
+    "attackType": "Area Splash (Ground Only)",
+    "movementSpeed": 5,
+    "attackSpeed": 3,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Damage per Second": [
+      "140",
+      "160",
+      "180",
+      "200"
+    ],
+    "Damage per Attack": [
+      "420",
+      "480",
+      "540",
+      "600"
+    ],
+    "Point-Blank Damage": [
+      "2,900",
+      "3,000",
+      "3,100",
+      "3,200"
+    ],
+    "Lifetimes": [
+      "25s",
+      "28s",
+      "30s",
+      "32s"
+    ],
+    "Hitpoints": [
+      "4,000",
+      "4,400",
+      "4,800",
+      "5,200"
+    ],
+    "Research Cost": [
+      "N/A",
+      "4,800,000",
+      "6,500,000",
+      "8,500,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "6d",
+      "9d",
+      "9d 12h"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11"
+    ]
+  },
+  "flame-flinger": {
+    "type": "siege-machine",
+    "iconSource": "/src/assets/images/siege/icons/Flame_Flinger.png",
+    "modelSource": "/src/assets/images/models/siege/Flame_Flinger.png",
+    "housingSpace": 1,
+    "maxLevel": 4,
+    "makeDuration": 1200,
+    "preferredTarget": "Defenses",
+    "attackType": "Area Splash (Ground Only)",
+    "attackRange": "11 tiles",
+    "movementSpeed": 6,
+    "attackSpeed": 5,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Damage per Second": [
+      "135",
+      "150",
+      "165",
+      "180"
+    ],
+    "Total Damage per Attack": [
+      "675",
+      "750",
+      "825",
+      "900"
+    ],
+    "Flame Maximum DPS": [
+      "80",
+      "95",
+      "105",
+      "120"
+    ],
+    "Lifetimes": [
+      "100s",
+      "105s",
+      "111s",
+      "117s"
+    ],
+    "Hitpoints": [
+      "1,700",
+      "1,800",
+      "1,900",
+      "2,000"
+    ],
+    "Research Cost": [
+      "N/A",
+      "7,600,000",
+      "10,500,000",
+      "13,300,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "9d 12h",
+      "13d 12h",
+      "15d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "10",
+      "10",
+      "11"
+    ]
+  },
+  "battle-drill": {
+    "type": "siege-machine",
+    "preferredTarget": "Defenses",
+    "iconSource": "/src/assets/images/siege/icons/Battle_Drill.png",
+    "modelSource": "/src/assets/images/models/siege/Battle_Drill.png",
+    "housingSpace": 1,
+    "maxLevel": 4,
+    "makeDuration": 1200,
+    "attackType": "Single Target (Ground Only)",
+    "attackRange": "1 tile",
+    "movementSpeed": 24,
+    "attackSpeed": 1.7,
+    "Level": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "Damage per Second": [
+      "430",
+      "470",
+      "510",
+      "550"
+    ],
+    "Damage per Attack": [
+      "731",
+      "799",
+      "867",
+      "935"
+    ],
+    "Hitpoints": [
+      "4,600",
+      "4,900",
+      "5,200",
+      "5,500"
+    ],
+    "Research Cost": [
+      "N/A",
+      "8,000,000",
+      "11,000,000",
+      "14,000,000"
+    ],
+    "Research Time": [
+      "N/A",
+      "10d",
+      "14d",
+      "16d"
+    ],
+    "Laboratory Level Required": [
+      "N/A",
+      "13",
+      "13",
+      "13"
+    ]
+  }
+}

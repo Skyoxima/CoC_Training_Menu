@@ -1,15 +1,16 @@
 <script lang="ts">
   import Toolbar from "./Toolbar.svelte";
-  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState } from "../../svelte-stores";
-  import type { troopDataType, spellDataType } from "../../../typeDeclarations";
+  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState, siegeQueueState } from "../../svelte-stores";
+  import type { troopDataType, spellDataType, siegeDataType } from "../../../typeDeclarations";
   import MenuContents from "./MenuContents.svelte";
   import EntityInfoTab from "./EntityInfoTab.svelte";
   import TroopData from '../../data/troopData.json';
   import SpellData from '../../data/spellData.json';
+  import SiegeData from '../../data/siegeData.json';
 
   const troopData: troopDataType = TroopData;
   const spellData: spellDataType = SpellData;
-
+  const siegeData: siegeDataType = SiegeData;
 </script>
 
 <div id="menu">
@@ -19,6 +20,8 @@
     <MenuContents queueState={troopQueueState} Data={troopData} entityFullCapacity={$fullCapacities.troop} />
     {:else if $activeTab === 'spells-tab'}
     <MenuContents queueState={spellQueueState} Data={spellData} entityFullCapacity={$fullCapacities.spell} />
+    {:else if $activeTab === 'siege-tab'}
+    <MenuContents queueState={siegeQueueState} Data={siegeData} entityFullCapacity={$fullCapacities.siege} />
   {/if}
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="entity-box-wrapper">
   <button id={entityID} class={`menu-entity-box entity-btn ${entityData.type}`} disabled={isDisabled} on:click>     <!-- on:click handler is coming from the parent, neat imo, don't need to pass down the handler function  -->
     <img src={entityData.iconSource} alt={entityID}>
-    <div class="bottom-overlay" data-current-entity-level={entityData.maxLevel} data-iconSrc={"url(\"" + bottomOverlayIconSrc + "\")"}>
+    <div class="bottom-overlay" data-current-entity-level={entityData.maxLevel} style="--iconSrc: url({bottomOverlayIconSrc})">
       {entityData.housingSpace}
     </div>
   </button>
@@ -21,6 +21,8 @@
 
   if(['elixir-troop', 'dark-elixir-troop', 'super-elixir-troop', 'super-dark-elixir-troop'].includes(entityData.type))
     bottomOverlayIconSrc += "/troop_capacity.png";
+  else if(entityData.type === 'siege-machine')
+    bottomOverlayIconSrc += "/siege_capacity.png";
   else
     bottomOverlayIconSrc += "/spell_capacity.png";
 
@@ -112,7 +114,6 @@
   }
 
   .menu-entity-box .bottom-overlay::after {
-    --iconSrc: attr(data-iconSrc)
     content: '';
     position: absolute;
     bottom: 1%; right: 1%;

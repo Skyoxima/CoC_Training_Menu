@@ -1,4 +1,4 @@
-<div id="entity-grid-container">
+<div id="entity-grid-container" class={isSiegeData(Data) ? "siege-grid": ""}>
   {#each Object.entries(Data) as [entityID, data] (entityID)}  <!-- neat! -->
     <GridEntityBox
       entityID={entityID}
@@ -8,38 +8,32 @@
     />
   {/each}
 </div>
-<!-- ~ EntityGrid's layout change if it is siege -->
 
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { type Writable } from 'svelte/store';
-  import type { queueStateType, spellDataType, troopDataType } from '../../../typeDeclarations';
-  import { fullCapacities } from '../../svelte-stores';
+  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from '../../../typeDeclarations';
   import GridEntityBox from './EntityBox/GridEntityBox.svelte';
-  import { updateClickAudio, isTroopData, isSpellData } from '../../functions';
+  import { updateClickAudio, isTroopData, isSpellData, isSiegeData } from '../../functions';
   
-  export let Data: troopDataType | spellDataType;
+  export let Data: troopDataType | spellDataType | siegeDataType;
   export let queueState: Writable<queueStateType>;
-
+  export let entityFullCapacity: number;
+  
   let areDisabled: string[] = []
   const entityHousingSpaces: {[key: string]: number} = {}      // you can use Record<keyType, valueType> as well, it is absolutely same as this
-  
+  const id="wall-wrecker"
   for(const entity in Data) {
     entityHousingSpaces[entity] = Data[entity].housingSpace;
   }
-
   function manageEntitiesHousing(state: queueStateType) {
     let remainingCapacity: number;
-    if(isTroopData(Data)) {
-      remainingCapacity = $fullCapacities.troop - state.currentCapacity;
-    } else {
-      remainingCapacity = $fullCapacities.spell - state.currentCapacity;
-    }
+    remainingCapacity = entityFullCapacity - state.currentCapacity;
     
     for(const entity in entityHousingSpaces) {
       // if -> disabling, else if -> re-enabling
       if(remainingCapacity < entityHousingSpaces[entity]) {
-        areDisabled[areDisabled.length + 1] = entity;  // since Svelte reactivity is based upon assignment and not array methods like push
+        areDisabled[areDisabled.length] = entity;  // since Svelte reactivity is based upon assignment and not array methods like push
       } else if(remainingCapacity >= entityHousingSpaces[entity] && areDisabled.includes(entity)) {
         const newDisabled = areDisabled.filter(item => item !== entity)
         areDisabled = newDisabled;  // again assignment is what will trigger reactivity
@@ -100,9 +94,16 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
   }
-
   #entity-grid-container::-webkit-scrollbar {
     display: none;
+  }
+
+
+  #entity-grid-container.siege-grid {
+    height: 40%;
+    display: flex;
+    padding: 0.5rem;
+    gap: 1rem;
   }
 </style>
 

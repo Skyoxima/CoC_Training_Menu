@@ -8,7 +8,7 @@
   <BoostButton />
   <FinishButton queueState={queueState} />
 </div>
-<EntityGrid Data={Data} queueState={queueState} />
+<EntityGrid Data={Data} queueState={queueState} entityFullCapacity={entityFullCapacity} />
 <Currencies />
 
 
@@ -22,14 +22,14 @@
   import EntityGrid from "./EntityGrid.svelte";
   import Currencies from "../auxiliaryComponents/TextComponents/Currencies.svelte";
   import { type Writable } from "svelte/store";
-  import type { queueStateType, spellDataType, troopDataType } from "../../../typeDeclarations";
-  import { isTroopData } from "../../functions";
+  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from "../../../typeDeclarations";
+  import { isSpellData, isTroopData } from "../../functions";
 
   export let queueState: Writable<queueStateType>;
-  export let Data: troopDataType | spellDataType;
+  export let Data: troopDataType | spellDataType | siegeDataType;
   export let entityFullCapacity:  number;
 
-  let topIconSource = `/src/assets/icons/${isTroopData(Data) ? "troop" : "spell"}_capacity.png`;
+  let topIconSource = `/src/assets/icons/${isTroopData(Data) ? "troop" : isSpellData(Data) ? "spell" : "siege"}_capacity.png`;
 </script>
 
 <style>

@@ -5,10 +5,10 @@ export interface queueStateType {
 }
 
 export type ratesType = {
-  "troop": number;
-  "spell": number;
-  "siege": number;
-}
+  troop: number;
+  spell: number;
+  siege: number;
+};
 
 // first section are the compulsory entries for every troop
 export type troopDataType = {
@@ -85,28 +85,28 @@ export type troopDataSubType = troopDataType[keyof troopDataType];
 
 export type spellDataType = {
   [key: string]: {
-    "radius"?: string  // optional as lighning and eq have diff radius
-    "spellDuration"?: number;   // some spells don't have it
-    "targets"?: string;
-    "makeDuration": number;
-    "maxLevel": number;
-    "iconSource": string;
-    "housingSpace": number;
-    "type": string;
-    "Level": string[];
+    radius?: string; // optional as lighning and eq have diff radius
+    spellDuration?: number; // some spells don't have it
+    targets?: string;
+    makeDuration: number;
+    maxLevel: number;
+    iconSource: string;
+    housingSpace: number;
+    type: string;
+    Level: string[];
     "Research Cost": string[];
     "Research Time": string[];
     "Laboratory Level Required": string[];
   } & (
     | {
         // lightning
-        "stunTime": string;
-        "Damage": string[];
+        stunTime: string;
+        Damage: string[];
       }
     | ({
         // heal and rage
-        "noofpulses": number;
-        "timeBtwnPulses": string;
+        noofpulses: number;
+        timeBtwnPulses: string;
       } & (
         | {
             // heal only
@@ -116,60 +116,115 @@ export type spellDataType = {
           }
         | {
             // rage only
-            "boostTime": number; // in seconds
+            boostTime: number; // in seconds
             "Damage Increase": string[];
             "Speed Increase": string[];
           }
       ))
     | {
-      // jump
-      "boostTime": number;
-      "Spell Duration": string[];
-    }
+        // jump
+        boostTime: number;
+        "Spell Duration": string[];
+      }
     | {
-      // freeze
-      "Freeze Time": string[];
-    }
+        // freeze
+        "Freeze Time": string[];
+      }
     | {
-      // clone
-      "spellDuration": number;
-      "clonedLifespan": number;
-      "Cloned Capacity": string[];
-    }
+        // clone
+        spellDuration: number;
+        clonedLifespan: number;
+        "Cloned Capacity": string[];
+      }
     | {
-      // invisibility
-      "Duration": string[];
-    }
+        // invisibility
+        Duration: string[];
+      }
     | {
-      // recall
-      "Recalled Capacity": string[];
-    }
+        // recall
+        "Recalled Capacity": string[];
+      }
     | {
-      // poison
-      "Max DPS": string[];
-      "Speed Decrease": string[];
-      "Attack Rate Decrease": string[];
-    }
+        // poison
+        "Max DPS": string[];
+        "Speed Decrease": string[];
+        "Attack Rate Decrease": string[];
+      }
     | {
-      // earthquake
-      "favTarget": string;
-      "Damage": string[];
-      "Radii": string[];
-    }
+        // earthquake
+        favTarget: string;
+        Damage: string[];
+        Radii: string[];
+      }
     | {
-      // haste
-      "Speed Increase": string[];
-      "Spell Duration": string[];
-    }
-    | { 
-      // skeleton 
-      "Skeletons spawned": string[];
-    }
+        // haste
+        "Speed Increase": string[];
+        "Spell Duration": string[];
+      }
     | {
-      // bat
-      "Bats spawned": string[];
-    }
+        // skeleton
+        "Skeletons spawned": string[];
+      }
+    | {
+        // bat
+        "Bats spawned": string[];
+      }
   );
 };
 
 export type spellDataSubType = spellDataType[keyof spellDataType];
+
+export type siegeDataType = {
+  [key: string]: {
+    type: string;
+    iconSource: string;
+    modelSource: string;
+    housingSpace: number;
+    maxLevel: number;
+    makeDuration: number;
+    movementSpeed: number;
+    Level: string[];
+    Hitpoints: string[];
+    "Research Cost": string[];
+    "Research Time": string[];
+    "Laboratory Level Required": string[];
+  } & (
+    | ({
+        // common to everyone except siege-barracks
+        preferredTarget: string;
+        attackType: string;
+        attackSpeed: number;
+        "Damage per Second": string[];
+      } & (
+        | { 
+            "Damage per Attack": string[];
+          }
+          | {
+            // slammer specific
+            "Damage when Destroyed": string[];
+            "Damage per Attack (Hitbox 1)": string[];
+            "Damage per Attack (Hitbox 2)": string[];
+          }
+          | {
+            // launcher specific
+            "Damage per Attack": string[];
+            "Point-Blank Damage": string[];
+            Lifetimes: string[];
+          }
+          | {
+            // flinger specific
+            "Total Damage per Attack": string[];
+            "Flame Maximum DPS": string[];
+            Lifetimes: string[];
+          }
+      ))
+    | {
+        // siege-barracks specific
+        Lifetime: number;
+        "P.E.K.K.As Spawned": string[];
+        "Wizards Spawned": string[];
+      }
+  );
+};
+
+export type siegeDataSubType = siegeDataType[keyof siegeDataType];
