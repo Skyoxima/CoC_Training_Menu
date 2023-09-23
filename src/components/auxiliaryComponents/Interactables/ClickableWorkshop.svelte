@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { showMenu, spellQueueState, activeTab } from "../../../svelte-stores";
+  import { showMenu, siegeQueueState, activeTab } from "../../../svelte-stores";
   let audioBind: HTMLAudioElement;
   let gifBackgroundSrc: string;
   let glowingClass: string;
 
-  const queueStateUnsubscriber = spellQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
+  const queueStateUnsubscriber = siegeQueueState.subscribe(state => {
+    gifBackgroundSrc = `/src/assets/images/interactables/workshop/workshop_th12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -16,7 +16,7 @@
 
   function handleBarracksClick() {
     audioBind.play();
-    activeTab.set("spells-tab");
+    activeTab.set("siege-tab");
     showMenu.set(true); 
   }
 
@@ -26,7 +26,7 @@
 </script>
 
 <button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-spell-factory" class="{glowingClass}" on:click={handleBarracksClick}>
-  <audio bind:this={audioBind} src="/src/assets/sound/Spell_Factory_Pickup.ogg" preload="auto"></audio>
+  <audio bind:this={audioBind} src="/src/assets/sound/Barracks_Pickup.ogg" preload="auto"></audio>
 </button>
 
 <style>
@@ -42,8 +42,8 @@
     background: none;
     border: none;
     position: absolute;
-    top: 51.2%; left: 21.2%;
-    width: 4.5rem; aspect-ratio: 1 / 1;
+    top: 40%; left: 9%;
+    width: 6.25rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;

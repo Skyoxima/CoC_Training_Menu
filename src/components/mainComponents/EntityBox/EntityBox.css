@@ -1,3 +1,4 @@
+/*! These styles goes to both Grid Buttons and Queue Boxes */
 .entity-box-wrapper {
   position: relative;
   width: 85px; height: 85px;
@@ -8,7 +9,6 @@
   width: max-content;
 }
 
-/* This style goes to both Grid Buttons and Queue Boxes */
 .entity-btn, .entity-box {
   position: relative;
   background: linear-gradient(

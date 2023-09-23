@@ -9,6 +9,6 @@
     z-index: -1;
     width: 100%; height: 100%;
     object-fit: cover;
-    filter: brightness(0.85);
+    filter: brightness(0.90);
   }
 </style>

@@ -6,7 +6,7 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = spellQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
+    gifBackgroundSrc = `/src/assets/images/interactables/dark_spell_factory/dark_spell_factory_th12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -42,7 +42,7 @@
     background: none;
     border: none;
     position: absolute;
-    top: 51.2%; left: 21.2%;
+    top: 51.2%; right: 21%;
     width: 4.5rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;

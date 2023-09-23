@@ -9,6 +9,8 @@
   import type { Unsubscriber } from "svelte/motion";
   import ClickableDarkBarracks from "./components/auxiliaryComponents/Interactables/ClickableDarkBarracks.svelte";
   import ClickableSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableSpellFactory.svelte";
+  import ClickableDarkSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableDarkSpellFactory.svelte";
+  import ClickableWorkshop from "./components/auxiliaryComponents/Interactables/ClickableWorkshop.svelte";
   let audioBind: HTMLAudioElement;
   let playButtonAudioUnsubscriber: Unsubscriber;
   
@@ -37,6 +39,8 @@
     <ClickableBarracks />
     <ClickableDarkBarracks />
     <ClickableSpellFactory />
+    <ClickableDarkSpellFactory />
+    <ClickableWorkshop />
     <BgVideo />
     <audio bind:this={audioBind} src="/src/assets/sound/button_click.ogg" preload="auto"></audio>
   </div>
