@@ -6,7 +6,7 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = troopQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/barracks/barracks_th12${state.currentCapacity > 0 ? "_glow" : "_no_glow"}.gif`
+    gifBackgroundSrc = `/src/assets/images/interactables/dark_barracks/dark_barracks_th12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -26,7 +26,7 @@
   })
 </script>
 
-<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-barracks" class="{glowingClass}" on:click={handleBarracksClick}>
+<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-dark-barracks" class="{glowingClass}" on:click={handleBarracksClick}>
   <audio bind:this={audioBind} src="/src/assets/sound/Barracks_Pickup.ogg" preload="auto"></audio>
 </button>
 
@@ -39,18 +39,18 @@
     }
   }
 
-  #clickable-barracks {
+  #clickable-dark-barracks {
     background: none;
     border: none;
     position: absolute;
-    top: 72%; left: 66%;
+    top: 36.5%; right: 20.5%;
     width: 4.5rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
   }
-  #clickable-barracks.custom-glow {
+  #clickable-dark-barracks.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
 </style>

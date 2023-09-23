@@ -13,33 +13,23 @@
   }
   let tabTitle_ = titles[tabID];
 
-  function handleClick(e: MouseEvent & {currentTarget: EventTarget & HTMLDivElement;} | KeyboardEvent & {currentTarget: EventTarget & HTMLDivElement}): void {
+  function handleTabClick() {
     updateClickAudio();
-    const siblingTabs = e.currentTarget!.parentElement!.children;
-    for(let i = 0; i < 5; i++) {
-      siblingTabs.item(i)!.classList.remove('active');
-    }
-
-    e.currentTarget.classList.toggle('active');
     activeTab.set(tabID);
   }
 
 </script>
-<!-- you can see above how tedious it becomes manually making a div act as a button. Surprising React didn't want about accessibility but Svelte did   -->
 
-<div id={tabID} class={tabID !== 'training-tab' ? tabClass : `${tabClass} active`} on:click={(e) => handleClick(e)} on:keydown={(e) => {
-      if(e.key === 'Enter')
-        handleClick(e)
-    }
-  } 
-  role="button" tabindex="0">     <!-- that's how to make a div accessible! WOW --> <!--~ but it is preferred that we use buttons -->
+<button id={tabID} class={tabClass + ` ${tabID === $activeTab ? "active": ""}`} on:click={handleTabClick}>
   <p class="tab-title">{tabTitle_}</p>
-</div>
+</button>
+
 
 <style>
   .tab {
+    border: none;
+    background: none;
     position: relative;
-    padding: 0.5rem;
     width: 20%; height: 90%;
     display: flex; justify-content: center; align-items: center;
     
@@ -49,7 +39,15 @@
     border-bottom-right-radius: 0.75rem;
     border-bottom-left-radius: 0.75rem;
 
-    /* font-size: 1.2rem; */
+    font-family: 'Supercell-Magic';
+    color: white;
+    font-size: 1.25rem;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgba(45, 45, 45, 0.75);
+  } #siege-tab {
+    font-size: 0.9rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(15, 15, 15);
   }
   
   .tab::before {
@@ -63,12 +61,13 @@
   .tab.active {
     background-color: var(--off-white-hex);
     color: black;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.5px;
   } .tab.active::before {
     background: rgba(var(--pure-white-rgb), 0.5);
   }
 
-  /* try inverted border radii at the bottom for the active one (chrome-like) */
-
+  
   @media screen and (max-width: 1220px) {
     .tab > p {
       font-size: 0.75rem;
@@ -87,3 +86,5 @@
     }
   }
 </style>
+
+<!--IDEA: (In OLD Version of this comp's code) you can see above how tedious it becomes manually making a div act as a button. Surprising React didn't want about accessibility but Svelte did   -->

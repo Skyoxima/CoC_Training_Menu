@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { showMenu, troopQueueState, activeTab } from "../../../svelte-stores";
+  import { showMenu, spellQueueState, activeTab } from "../../../svelte-stores";
   let audioBind: HTMLAudioElement;
   let gifBackgroundSrc: string;
   let glowingClass: string;
 
-  const queueStateUnsubscriber = troopQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/barracks/barracks_th12${state.currentCapacity > 0 ? "_glow" : "_no_glow"}.gif`
+  const queueStateUnsubscriber = spellQueueState.subscribe(state => {
+    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -16,9 +16,8 @@
 
   function handleBarracksClick() {
     audioBind.play();
-    activeTab.set("training-tab");
+    activeTab.set("spells-tab");
     showMenu.set(true); 
-    // set the tab to training, similarly do for clickable spell factory
   }
 
   onDestroy(() => {
@@ -26,7 +25,7 @@
   })
 </script>
 
-<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-barracks" class="{glowingClass}" on:click={handleBarracksClick}>
+<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-spell-factory" class="{glowingClass}" on:click={handleBarracksClick}>
   <audio bind:this={audioBind} src="/src/assets/sound/Barracks_Pickup.ogg" preload="auto"></audio>
 </button>
 
@@ -39,18 +38,18 @@
     }
   }
 
-  #clickable-barracks {
+  #clickable-spell-factory {
     background: none;
     border: none;
     position: absolute;
-    top: 72%; left: 66%;
+    top: 51.2%; left: 21.2%;
     width: 4.5rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
   }
-  #clickable-barracks.custom-glow {
+  #clickable-spell-factory.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
 </style>

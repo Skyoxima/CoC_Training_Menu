@@ -2,7 +2,7 @@
   <button id={entityID} class={`menu-entity-box entity-btn ${entityData.type}`} disabled={isDisabled} on:click>     <!-- on:click handler is coming from the parent, neat imo, don't need to pass down the handler function  -->
     <img src={entityData.iconSource} alt={entityID}>
     <div class="bottom-overlay" data-current-entity-level={entityData.maxLevel} style="--iconSrc: url({bottomOverlayIconSrc})">
-      {entityData.housingSpace}
+      <span>{entityData.housingSpace}</span>
     </div>
   </button>
   <button class="info-btn top-right-btn" on:click={handleInfoBtnClick}></button>
@@ -57,7 +57,7 @@
     --blue-shade-1-rgb: rgb(67, 128, 226);
     position: absolute;
     top: 6%; right: 5%;
-    width: 1rem; height: 1rem;
+    width: 1.2rem; height: 1.2rem;
     
     background: 
     linear-gradient(
@@ -84,7 +84,7 @@
   .entity-box-wrapper .info-btn::before {
     content: 'i';
     font-family: 'Supercell-Magic';
-    stroke-width: 0;
+    -webkit-text-stroke-width: 0.25px;
   }
 
   .menu-entity-box .bottom-overlay {
@@ -92,7 +92,7 @@
     bottom: 0; left: 0;
     width: 100%; height: 1.2rem;
     background: rgba(var(--pure-black-rgb), 0.3);
-
+    
     color: white;
     font-family: 'Supercell-Magic', 'Poppins';
   }
@@ -100,7 +100,7 @@
   .menu-entity-box .bottom-overlay::before {
     position: absolute;
     content: attr(data-current-entity-level);
-    top: -1.35rem; left: 2px;
+    top: -1.1rem; left: 2px;
     width: 1.1rem;
 
     border-radius: 0.2rem;
@@ -108,7 +108,7 @@
     background: rgba(var(--troop-level-rgb));
     
     font-family: 'Supercell-Magic', 'Poppins';
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     color: white;
     text-align: center;
   }
@@ -123,6 +123,14 @@
     background-repeat: no-repeat;
   }
   
+  .menu-entity-box .bottom-overlay span {
+    position: absolute;
+    top: 0; left: 0;
+    top: 10%; left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.05rem;
+    -webkit-text-stroke-width: 1px;
+  }
 </style>
 
 <!-->> NOTE: Never put an interactive element, such as input, anchor, buttons etc. inside an interactive element, goes against HTML5 standard and caused the event bubbling problem -->

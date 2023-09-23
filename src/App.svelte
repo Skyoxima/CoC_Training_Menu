@@ -7,6 +7,8 @@
   import { showMenu, playButtonAudio } from "./svelte-stores";
   import { onDestroy, onMount } from "svelte";
   import type { Unsubscriber } from "svelte/motion";
+  import ClickableDarkBarracks from "./components/auxiliaryComponents/Interactables/ClickableDarkBarracks.svelte";
+  import ClickableSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableSpellFactory.svelte";
   let audioBind: HTMLAudioElement;
   let playButtonAudioUnsubscriber: Unsubscriber;
   
@@ -33,6 +35,8 @@
     <InfoPopUp />
     <AmbientMusic />
     <ClickableBarracks />
+    <ClickableDarkBarracks />
+    <ClickableSpellFactory />
     <BgVideo />
     <audio bind:this={audioBind} src="/src/assets/sound/button_click.ogg" preload="auto"></audio>
   </div>
