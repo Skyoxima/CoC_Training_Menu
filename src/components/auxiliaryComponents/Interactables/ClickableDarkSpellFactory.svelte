@@ -43,7 +43,7 @@
     border: none;
     position: absolute;
     top: 51.2%; right: 21%;
-    width: 4.5rem; aspect-ratio: 1 / 1;
+    width: 4.75rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;

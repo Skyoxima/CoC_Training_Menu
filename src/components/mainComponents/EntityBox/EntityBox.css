@@ -1,7 +1,8 @@
 /*! These styles goes to both Grid Buttons and Queue Boxes */
 .entity-box-wrapper {
   position: relative;
-  width: 85px; height: 85px;
+  /* width: 85px; height: 85px; */
+  width: 85%; aspect-ratio: 1 / 1;
 }
 
 #entity-grid-container.siege-grid .entity-box-wrapper {
@@ -22,13 +23,12 @@
   overflow: hidden;
 }
 
-/* ! Adjust for siege grid (only btn) */
 .entity-btn img, .entity-box img {
   width: 100%;
   height: 100%;
 }
 
-/* >> Troops */
+/*>> Troops */
 
 .elixir-troop {
   background: linear-gradient(
@@ -91,6 +91,8 @@
   )
   border-box;
 }
+
+/*>> Siege Machines */
 
 .siege-machine {
   background: linear-gradient(

@@ -1,4 +1,4 @@
-<div class="entity-box-wrapper" style="width: 75px; height: 75px;">
+<div class="entity-box-wrapper queue-entity-box-wrapper">
   <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType}`} data-count={`${count}x`}>
     <img src={iconSource} alt={entityID}>
     <div class="training-progress">
@@ -19,6 +19,10 @@
 </script>
 
 <style>
+  .entity-box-wrapper.queue-entity-box-wrapper {
+    width: auto;
+    height: 85%; aspect-ratio: 1 / 1;
+  }
   .queue-entity-box {
     width: 100%; height: 100%;
   }
