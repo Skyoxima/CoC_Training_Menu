@@ -43,8 +43,8 @@
     background: none;
     border: none;
     position: absolute;
-    top: 36.5%; right: 20.5%;
-    width: 4.5rem; aspect-ratio: 1 / 1;
+    top: 36.5%; right: 20.25%;
+    width: 4.75rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;
@@ -54,5 +54,3 @@
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
 </style>
-
-<!-- TODO: Make it responsive -->

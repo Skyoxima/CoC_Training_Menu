@@ -28,13 +28,16 @@
 <button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-workshop" class="{glowingClass}" on:click={handleInteractableClick}>
   <audio bind:this={audioBind} src="/src/assets/sound/Barracks_Pickup.ogg" preload="auto"></audio>
 </button>
+<img src="/src/assets/images/interactables/workshop/patch.png" alt="patch" id="patch">
+<img src="/src/assets/images/interactables/workshop/plain_patch.png" alt="plain_patch" id="plain-patch">
+
 
 <style>
   @keyframes subtle-glow {
     from {
-      filter: drop-shadow(2px 2px 4px yellow) drop-shadow(-2px -2px 4px yellow);
+      filter: drop-shadow(2px 2px 4px cyan) drop-shadow(-2px -2px 4px cyan);
     } to {
-      filter: drop-shadow(5px 5px 7px yellow) drop-shadow(-5px -5px 7px yellow);
+      filter: drop-shadow(5px 5px 7px cyan) drop-shadow(-5px -5px 7px cyan);
     }
   }
 
@@ -48,10 +51,23 @@
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 1;
   }
   #clickable-workshop.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
+  
+  #patch {
+    position: absolute;
+    top: 27.35%; left: -0.5%;
+    width: 40%;
+    filter: brightness(0.90);
+  }
+  
+  #plain-patch {
+    position: absolute;
+    top: 44.5%; left: 9.75%;
+    width: 8rem;
+    filter: brightness(0.90);
+  }
 </style>
-
-<!-- TODO: Make it responsive -->

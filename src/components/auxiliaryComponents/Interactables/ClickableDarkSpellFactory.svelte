@@ -32,9 +32,9 @@
 <style>
   @keyframes subtle-glow {
     from {
-      filter: drop-shadow(2px 2px 4px yellow) drop-shadow(-2px -2px 4px yellow);
+      filter: drop-shadow(2px 2px 4px magenta) drop-shadow(-2px -2px 4px magenta);
     } to {
-      filter: drop-shadow(5px 5px 7px yellow) drop-shadow(-5px -5px 7px yellow);
+      filter: drop-shadow(5px 5px 7px magenta) drop-shadow(-5px -5px 7px magenta);
     }
   }
 
@@ -53,5 +53,3 @@
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
 </style>
-
-<!-- TODO: Make it responsive -->
