@@ -50,8 +50,14 @@
     padding: 0 0.5rem;
     display: flex; justify-content: end; align-items: center;
     gap: 1rem; flex-direction: row-reverse;
+    
     box-shadow: inset 0 2px 0 0 rgba(var(--pure-black-rgb), 0.2), 0 2px 0 0 rgba(var(--pure-white-rgb), 1);
     background-color: rgba(var(--off-grey-rgb));
     border-radius: 1rem;
+
+    overflow-x: scroll;
+  }
+  #training-queue::-webkit-scrollbar {
+    display: none;
   }
 </style>

@@ -1,4 +1,4 @@
-<div id="entity-grid-container" class={isSiegeData(Data) ? "siege-grid": ""}>
+<div id="entity-grid-container" class={isSiegeData(Data) ? "siege-grid": ""} style="grid-template-columns: repeat({noofGridColumns}, 100px);">
   {#each Object.entries(Data) as [entityID, data] (entityID)}  <!-- neat! -->
     <GridEntityBox
       entityID={entityID}
@@ -22,10 +22,12 @@
   
   let areDisabled: string[] = []
   const entityHousingSpaces: {[key: string]: number} = {}      // you can use Record<keyType, valueType> as well, it is absolutely same as this
-  const id="wall-wrecker"
+  const noofGridColumns = Math.ceil(Object.keys(Data).length / 2);
+
   for(const entity in Data) {
     entityHousingSpaces[entity] = Data[entity].housingSpace;
   }
+  
   function manageEntitiesHousing(state: queueStateType) {
     let remainingCapacity: number;
     remainingCapacity = entityFullCapacity - state.currentCapacity;
@@ -82,9 +84,10 @@
     display: grid;
     padding: 0.5rem;
     grid-auto-flow: column;
-    grid-template-columns: repeat(20, 100px);
+    /* grid-template-columns: repeat(21, 100px); */
     grid-template-rows: 1fr 1fr;
     align-items: center;
+    place-items: center;
     column-gap: 5px;
 
     border-radius: 1rem;  

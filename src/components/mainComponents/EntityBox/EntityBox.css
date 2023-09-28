@@ -1,22 +1,17 @@
+@import url(./SpellStyles.css);
 /*! These styles goes to both Grid Buttons and Queue Boxes */
 .entity-box-wrapper {
   position: relative;
-  /* width: 85px; height: 85px; */
   width: 85%; aspect-ratio: 1 / 1;
 }
 
 #entity-grid-container.siege-grid .entity-box-wrapper {
   height: 100%;
-  width: max-content;
+  aspect-ratio: 3 / 4;
 }
 
 .entity-btn, .entity-box {
   position: relative;
-  background: linear-gradient(
-    to top,
-    rgb(255, 182, 108) 0% var(--linear-gradient-color-extent),
-    transparent
-  );
   border-radius: 0.5rem;
   border: 3px solid transparent;
 
@@ -26,6 +21,11 @@
 .entity-btn img, .entity-box img {
   width: 100%;
   height: 100%;
+}
+
+#entity-grid-container.siege-grid .entity-btn img {
+  width: 75%;
+  height: auto;
 }
 
 /*>> Troops */

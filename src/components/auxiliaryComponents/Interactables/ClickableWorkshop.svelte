@@ -6,7 +6,7 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = siegeQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/workshop/workshop_th12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
+    gifBackgroundSrc = `/src/assets/images/interactables/workshop/workshop_th12${state.currentCapacity > 0 ? "_working.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -14,7 +14,7 @@
     audioBind.volume = 0.7;
   })
 
-  function handleBarracksClick() {
+  function handleInteractableClick() {
     audioBind.play();
     activeTab.set("siege-tab");
     showMenu.set(true); 
@@ -25,7 +25,7 @@
   })
 </script>
 
-<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-spell-factory" class="{glowingClass}" on:click={handleBarracksClick}>
+<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-workshop" class="{glowingClass}" on:click={handleInteractableClick}>
   <audio bind:this={audioBind} src="/src/assets/sound/Barracks_Pickup.ogg" preload="auto"></audio>
 </button>
 
@@ -38,7 +38,7 @@
     }
   }
 
-  #clickable-spell-factory {
+  #clickable-workshop {
     background: none;
     border: none;
     position: absolute;
@@ -49,7 +49,7 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
-  #clickable-spell-factory.custom-glow {
+  #clickable-workshop.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
   }
 </style>

@@ -15,7 +15,8 @@
   let playButtonAudioUnsubscriber: Unsubscriber;
   
   // the Training queue management should also be global most likely (top level, here in the App component...)
-
+  // will there be a global timeout store?
+  
   // global click audio player
   onMount(() => {
     audioBind.volume = 0.51;
@@ -24,6 +25,8 @@
         audioBind.play();
     });
   })
+
+  
 
   onDestroy(() => {
     playButtonAudioUnsubscriber();

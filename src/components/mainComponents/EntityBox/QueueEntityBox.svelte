@@ -1,5 +1,5 @@
 <div class="entity-box-wrapper queue-entity-box-wrapper">
-  <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType}`} data-count={`${count}x`}>
+  <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType}`} data-count={`${count}x`}> <!--slightly different ID is for styling purposes only -->
     <img src={iconSource} alt={entityID}>
     <div class="training-progress">
       <span class="progress-made"></span>
@@ -19,12 +19,20 @@
 </script>
 
 <style>
+  /* 2 classes to have it be more specific */ 
   .entity-box-wrapper.queue-entity-box-wrapper {
     width: auto;
     height: 85%; aspect-ratio: 1 / 1;
   }
+  
   .queue-entity-box {
     width: 100%; height: 100%;
+    display: flex; justify-content: center; align-items: center;
+    overflow: hidden;
+  }
+
+  .queue-entity-box.siege-machine img {
+    width: 85%; height: auto;
   }
 
   .queue-entity-box::before {

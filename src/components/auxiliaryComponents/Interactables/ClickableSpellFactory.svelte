@@ -6,7 +6,7 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = spellQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_glow.gif" : "_no_glow.png"}`
+    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_brewing.gif" : "_no_glow.png"}`
     glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
   })
 
@@ -14,7 +14,7 @@
     audioBind.volume = 0.7;
   })
 
-  function handleBarracksClick() {
+  function handleInteractableClick() {
     audioBind.play();
     activeTab.set("spells-tab");
     showMenu.set(true); 
@@ -25,7 +25,7 @@
   })
 </script>
 
-<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-spell-factory" class="{glowingClass}" on:click={handleBarracksClick}>
+<button style="--gifSrc: url({gifBackgroundSrc})" id="clickable-spell-factory" class="{glowingClass}" on:click={handleInteractableClick}>
   <audio bind:this={audioBind} src="/src/assets/sound/Spell_Factory_Pickup.ogg" preload="auto"></audio>
 </button>
 
