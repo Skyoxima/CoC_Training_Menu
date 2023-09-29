@@ -1,6 +1,6 @@
 <script lang="ts">
   import GreenButton from "./GreenButton.svelte";
-  import { updateClickAudio } from "../../../../functions";
+  import { updateClickAudio } from "../../../../scripts/functions";
   function beginEntityBoosting() {
     updateClickAudio()
   }

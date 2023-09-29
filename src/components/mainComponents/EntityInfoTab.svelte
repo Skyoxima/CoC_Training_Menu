@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { showEntityInfo } from "../../svelte-stores";
+  import { showEntityInfo } from "../../scripts/svelte-stores";
   import ExitButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/ExitButton.svelte";
   import StdTroopStatsGrid from "../auxiliaryComponents/StatsGrids/StdTroopStatsGrid.svelte";
 

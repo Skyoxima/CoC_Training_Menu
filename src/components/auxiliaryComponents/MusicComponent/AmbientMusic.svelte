@@ -1,6 +1,6 @@
 <script lang="ts">
   import MusicIcon from '../../../assets/SVGASComponent/MusicIcon.svelte';
-  import { infoPopUp } from '../../../svelte-stores';
+  import { infoPopUp } from '../../../scripts/svelte-stores';
   let musicPlayStatus = false;
   let audioBind: HTMLAudioElement;
   let currentMusic: string;

@@ -1,9 +1,9 @@
 <script lang="ts">
   import GreenButton from "./GreenButton.svelte";
-  import type { queueStateType } from "../../../../../typeDeclarations";
+  import type { queueStateType } from "../../../../scripts/typeDeclarations";
   import { type Writable } from "svelte/store";
-  import { updateClickAudio } from "../../../../functions";
-  import { currencies } from "../../../../svelte-stores";
+  import { updateClickAudio } from "../../../../scripts/functions";
+  import { currencies } from "../../../../scripts/svelte-stores";
 
   export let queueState: Writable<queueStateType>;
   let skipCost: number;

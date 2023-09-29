@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { updateClickAudio } from "../../functions";
-  import { activeTab } from "../../svelte-stores";
+  import { updateClickAudio } from "../../scripts/functions";
+  import { activeTab } from "../../scripts/svelte-stores";
 
   export let tabID: string;
   export let tabClass = "tab";
@@ -36,8 +36,6 @@
     border: 2px solid var(--off-white-hex);
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
 
     font-family: 'Supercell-Magic';
     color: white;

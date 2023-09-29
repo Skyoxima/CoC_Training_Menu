@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { showMenu } from "../../svelte-stores";
+  import { showMenu } from "../../scripts/svelte-stores";
   import Tab from "../auxiliaryComponents/Tab.svelte";
   import ExitButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/ExitButton.svelte";
 </script>

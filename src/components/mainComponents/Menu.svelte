@@ -1,12 +1,13 @@
 <script lang="ts">
   import Toolbar from "./Toolbar.svelte";
-  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState, siegeQueueState } from "../../svelte-stores";
-  import type { troopDataType, spellDataType, siegeDataType } from "../../../typeDeclarations";
+  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState, siegeQueueState } from "../../scripts/svelte-stores";
+  import type { troopDataType, spellDataType, siegeDataType } from "../../scripts/typeDeclarations";
   import MenuContents from "./MenuContents.svelte";
   import EntityInfoTab from "./EntityInfoTab.svelte";
   import TroopData from '../../data/troopData.json';
   import SpellData from '../../data/spellData.json';
   import SiegeData from '../../data/siegeData.json';
+  import ArmyOverview from "./ArmyOverview.svelte";
 
   const troopData: troopDataType = TroopData;
   const spellData: spellDataType = SpellData;
@@ -18,10 +19,12 @@
   <div id="inner-container">
   {#if $activeTab === 'training-tab'}
     <MenuContents queueState={troopQueueState} Data={troopData} entityFullCapacity={$fullCapacities.troop} />
-    {:else if $activeTab === 'spells-tab'}
+  {:else if $activeTab === 'spells-tab'}
     <MenuContents queueState={spellQueueState} Data={spellData} entityFullCapacity={$fullCapacities.spell} />
-    {:else if $activeTab === 'siege-tab'}
+  {:else if $activeTab === 'siege-tab'}
     <MenuContents queueState={siegeQueueState} Data={siegeData} entityFullCapacity={$fullCapacities.siege} />
+  {:else if $activeTab === 'army-tab'}
+    <ArmyOverview /> <!--! it will have to subscribe to all queue datas within -->
   {/if}
   </div>
 </div>

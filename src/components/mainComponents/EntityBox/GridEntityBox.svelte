@@ -1,6 +1,6 @@
 <div class="entity-box-wrapper">
   <button id={entityID} class={`menu-entity-box entity-btn ${entityData.type}`} disabled={isDisabled} on:click>     <!-- on:click handler is coming from the parent, neat imo, don't need to pass down the handler function  -->
-    <img src={entityData.iconSource} alt={entityID}>
+    <img src={mainIconSrc} alt={entityID}>
     <div class="bottom-overlay" data-current-entity-level={entityData.maxLevel} style="--iconSrc: url({bottomOverlayIconSrc})">
       <span>{entityData.housingSpace}</span>
     </div>
@@ -9,15 +9,25 @@
 </div>
 
 <script lang="ts">
-  import type { spellDataSubType, troopDataSubType } from '../../../../typeDeclarations';
-  import { updateClickAudio } from '../../../functions';
-  import { showEntityInfo } from '../../../svelte-stores';
+  import type { siegeDataSubType, spellDataSubType, troopDataSubType } from '../../../scripts/typeDeclarations';
+  import { updateClickAudio } from '../../../scripts/functions';
+  import { showEntityInfo } from '../../../scripts/svelte-stores';
   import './EntityBox.css';                                 // EntityBox because it will apply for an entity at both places, Grid and Queue
 
   export let entityID: string;
-  export let entityData: troopDataSubType | spellDataSubType;     // neat feature, enables intellisense on the "sub-type"
+  export let entityData: troopDataSubType | spellDataSubType | siegeDataSubType;     // neat feature, enables intellisense on the "sub-type"
   export let isDisabled = false;
+  
+  let mainIconSrc: string;
   let bottomOverlayIconSrc = "/src/assets/icons";
+
+  if(entityData.type === 'siege-machine') {
+    entityData = entityData as siegeDataSubType;
+    mainIconSrc = entityData.modelSource;
+    mainIconSrc = mainIconSrc.replace('.png', '_1.png');
+  } else {
+    mainIconSrc = entityData.iconSource;
+  }
 
   if(['elixir-troop', 'dark-elixir-troop', 'super-elixir-troop', 'super-dark-elixir-troop'].includes(entityData.type))
     bottomOverlayIconSrc += "/troop_capacity.png";
@@ -25,7 +35,7 @@
     bottomOverlayIconSrc += "/siege_capacity.png";
   else
     bottomOverlayIconSrc += "/spell_capacity.png";
-
+  
   function handleInfoBtnClick() {
     updateClickAudio();
     showEntityInfo.set(true);

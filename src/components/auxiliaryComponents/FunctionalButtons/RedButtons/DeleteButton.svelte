@@ -7,8 +7,8 @@
   import RedButton from "./RedButton.svelte";
   import DeleteBtnImg from "../../../../assets/SVGASComponent/DeleteBtnImg.svelte";
   import { type Writable } from "svelte/store";
-  import { type queueStateType } from "../../../../../typeDeclarations";
-  import { updateClickAudio } from "../../../../functions"; 
+  import { type queueStateType } from "../../../../scripts/typeDeclarations";
+  import { updateClickAudio } from "../../../../scripts/functions"; 
   
   export let queueState: Writable<queueStateType>;
   

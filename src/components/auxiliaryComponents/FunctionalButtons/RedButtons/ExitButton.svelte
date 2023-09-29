@@ -6,7 +6,7 @@
   import RedButton from "./RedButton.svelte";
   import ExitBtnSVGSC from "../../../../assets/SVGASComponent/ExitBtnSVGSC.svelte";
   import { type Writable } from "svelte/store";
-  import { updateClickAudio } from "../../../../functions";
+  import { updateClickAudio } from "../../../../scripts/functions";
 
   export let addnID: string;
   export let storeOfClosingMenu: Writable<boolean>;

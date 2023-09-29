@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { showMenu, troopQueueState, activeTab } from "../../../svelte-stores";
+  import { showMenu, troopQueueState, activeTab } from "../../../scripts/svelte-stores";
   let audioBind: HTMLAudioElement;
   let gifBackgroundSrc: string;
   let glowingClass: string;

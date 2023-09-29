@@ -22,8 +22,8 @@
   import EntityGrid from "./EntityGrid.svelte";
   import Currencies from "../auxiliaryComponents/TextComponents/Currencies.svelte";
   import { type Writable } from "svelte/store";
-  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from "../../../typeDeclarations";
-  import { isSpellData, isTroopData } from "../../functions";
+  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from "../../scripts/typeDeclarations";
+  import { isSpellData, isTroopData } from "../../scripts/functions";
 
   export let queueState: Writable<queueStateType>;
   export let Data: troopDataType | spellDataType | siegeDataType;

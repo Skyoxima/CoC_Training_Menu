@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onDestroy } from "svelte";
   import type { Writable } from 'svelte/store';
-  import type { queueStateType } from "../../../../typeDeclarations";
+  import type { queueStateType } from "../../../scripts/typeDeclarations";
   import TextSmallInfo from "./TextSmallInfo.svelte"; 
   
   export let queueState: Writable<queueStateType>;

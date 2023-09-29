@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { currencies } from "../../../svelte-stores";
+  import { currencies } from "../../../scripts/svelte-stores";
   import TextSmallInfo from "./TextSmallInfo.svelte";
 </script>
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onDestroy, onMount } from "svelte";
-  import { showMenu, siegeQueueState, activeTab } from "../../../svelte-stores";
+  import { showMenu, siegeQueueState, activeTab } from "../../../scripts/svelte-stores";
   let audioBind: HTMLAudioElement;
   let gifBackgroundSrc: string;
   let glowingClass: string;
@@ -45,8 +45,8 @@
     background: none;
     border: none;
     position: absolute;
-    top: 40.5%; left: 9.25%;
-    width: 6.25rem; aspect-ratio: 1 / 1;
+    top: 39.5%; left: 9.25%;
+    width: 6.75rem; aspect-ratio: 1 / 1;
     background-image: var(--gifSrc);
     background-position: center center;
     background-size: contain;
@@ -59,9 +59,10 @@
   
   #patch {
     position: absolute;
-    top: 27.35%; left: -0.5%;
-    width: 40%;
+    top: 36.5%; left: 3.5%;
+    width: 16rem;
     filter: brightness(0.90);
+    user-select: none;
   }
   
   #plain-patch {
@@ -69,5 +70,6 @@
     top: 44.5%; left: 9.75%;
     width: 8rem;
     filter: brightness(0.90);
+    user-select: none;
   }
 </style>

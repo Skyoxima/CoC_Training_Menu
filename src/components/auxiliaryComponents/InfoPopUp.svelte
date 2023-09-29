@@ -1,7 +1,7 @@
 <!--~ Any component should be able to change the text and size as needed, therefore used a store writable as this is a top-level component -->
 
 <script lang="ts">
-  import { infoPopUp } from "../../svelte-stores";
+  import { infoPopUp } from "../../scripts/svelte-stores";
   const validWidths: Record<string, string> = {"small": "12rem", "medium": "18rem", "large": "24rem"}
 </script>
 

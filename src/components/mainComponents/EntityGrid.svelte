@@ -12,9 +12,9 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { type Writable } from 'svelte/store';
-  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from '../../../typeDeclarations';
+  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from '../../scripts/typeDeclarations';
   import GridEntityBox from './EntityBox/GridEntityBox.svelte';
-  import { updateClickAudio, isTroopData, isSpellData, isSiegeData } from '../../functions';
+  import { updateClickAudio, isTroopData, isSpellData, isSiegeData } from '../../scripts/functions';
   
   export let Data: troopDataType | spellDataType | siegeDataType;
   export let queueState: Writable<queueStateType>;

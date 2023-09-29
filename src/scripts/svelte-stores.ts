@@ -1,5 +1,5 @@
 import { readable, writable, type Writable } from "svelte/store";
-import { type queueStateType, type ratesType } from '../typeDeclarations'
+import { type megaQueueStateType, type queueStateType, type ratesType } from './typeDeclarations'
 
 
 export const playButtonAudio = writable(0);     // it is counting how many times the click sound effect has been called, it's just a way to track a change
@@ -41,6 +41,10 @@ export const siegeQueueState: Writable<queueStateType> = writable({
 }, () => {
   console.log('SiegeQueueState was manually subscribed');
   return () => console.log('SiegeQueueState was totally unsubscribed');
+})
+
+export const entitiesMadeState: Writable<megaQueueStateType> = writable({
+  troops: {}, spells: {}, sieges: {}
 })
 
 export const fullCapacities = readable({"troop": 320, "spell": 11, "siege": 6})

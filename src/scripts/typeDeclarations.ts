@@ -4,6 +4,12 @@ export interface queueStateType {
   timeLeft: number;
 }
 
+export type megaQueueStateType = {
+  troops: {[key: string]: number};
+  spells: {[key: string]: number};
+  sieges: {[key: string]: number};
+}
+
 export type ratesType = {
   troop: number;
   spell: number;

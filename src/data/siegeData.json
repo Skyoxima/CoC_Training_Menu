@@ -2,7 +2,7 @@
   "wall-wrecker": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Wall_Wrecker.png",
-    "modelSource": "/src/assets/images/models/siege/Wall_Wrecker.png",
+    "modelSource": "/src/assets/images/siege/models/Wall_Wrecker.png",
     "housingSpace": 1,
     "maxLevel": 5,
     "makeDuration": 1200,
@@ -70,7 +70,7 @@
   "battle-blimp": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Battle_Blimp.png",
-    "modelSource": "/src/assets/images/models/siege/Battle_Blimp.png",
+    "modelSource": "/src/assets/images/siege/models/Battle_Blimp.png",
     "housingSpace": 1,
     "maxLevel": 4,
     "makeDuration": 1200,
@@ -130,7 +130,7 @@
   "stone-slammer": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Stone_Slammer.png",
-    "modelSource": "/src/assets/images/models/siege/Stone_Slammer.png",
+    "modelSource": "/src/assets/images/siege/models/Stone_Slammer.png",
     "housingSpace": 1,
     "maxLevel": 5,
     "makeDuration": 1200,
@@ -205,7 +205,7 @@
   "siege-barracks": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Siege_Barracks.png",
-    "modelSource": "/src/assets/images/models/siege/Siege_Barracks.png",
+    "modelSource": "/src/assets/images/siege/models/Siege_Barracks.png",
     "housingSpace": 1,
     "maxLevel": 4,
     "makeDuration": 1200,
@@ -257,7 +257,7 @@
   "log-launcher": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Log_Launcher.png",
-    "modelSource": "/src/assets/images/models/siege/Log_Launcher.png",
+    "modelSource": "/src/assets/images/siege/models/Log_Launcher.png",
     "housingSpace": 1,
     "maxLevel": 4,
     "makeDuration": 1200,
@@ -323,7 +323,7 @@
   "flame-flinger": {
     "type": "siege-machine",
     "iconSource": "/src/assets/images/siege/icons/Flame_Flinger.png",
-    "modelSource": "/src/assets/images/models/siege/Flame_Flinger.png",
+    "modelSource": "/src/assets/images/siege/models/Flame_Flinger.png",
     "housingSpace": 1,
     "maxLevel": 4,
     "makeDuration": 1200,
@@ -391,7 +391,7 @@
     "type": "siege-machine",
     "preferredTarget": "Defenses",
     "iconSource": "/src/assets/images/siege/icons/Battle_Drill.png",
-    "modelSource": "/src/assets/images/models/siege/Battle_Drill.png",
+    "modelSource": "/src/assets/images/siege/models/Battle_Drill.png",
     "housingSpace": 1,
     "maxLevel": 4,
     "makeDuration": 1200,

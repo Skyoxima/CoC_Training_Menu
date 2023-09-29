@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Writable } from 'svelte/store';
-  import type { queueStateType } from "../../../../typeDeclarations";
+  import type { queueStateType } from "../../../scripts/typeDeclarations";
   import TextSmallInfo from "./TextSmallInfo.svelte";
   export let iconSource: string, 
             queueState: Writable<queueStateType>,
