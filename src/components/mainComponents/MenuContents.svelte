@@ -15,7 +15,7 @@
 <script lang="ts">
   import Capacity from "../auxiliaryComponents/TextComponents/Capacity.svelte";
   import TimeLeft from "../auxiliaryComponents/TextComponents/TimeLeft.svelte";
-  import TrainingQueue from "../auxiliaryComponents/TrainingQueue.svelte";
+  import TrainingQueue from "./TrainingQueue.svelte";
   import DeleteButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/DeleteButton.svelte";
   import BoostButton from "../auxiliaryComponents/FunctionalButtons/GreenButtons/BoostButton.svelte";
   import FinishButton from "../auxiliaryComponents/FunctionalButtons/GreenButtons/FinishButton.svelte";

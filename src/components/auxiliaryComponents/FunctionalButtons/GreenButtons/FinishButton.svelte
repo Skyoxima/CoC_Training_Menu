@@ -2,8 +2,8 @@
   import GreenButton from "./GreenButton.svelte";
   import type { queueStateType } from "../../../../scripts/typeDeclarations";
   import { type Writable } from "svelte/store";
-  import { updateClickAudio } from "../../../../scripts/functions";
-  import { currencies } from "../../../../scripts/svelte-stores";
+  import { updateClickAudio, updateNonSpellAudio, updateSpellAudio } from "../../../../scripts/functions";
+  import { activeTab, currencies } from "../../../../scripts/svelte-stores";
 
   export let queueState: Writable<queueStateType>;
   let skipCost: number;
@@ -14,6 +14,10 @@
 
   function handleFinish() {
     updateClickAudio();
+    if($activeTab === 'training-tab' || $activeTab === 'siege-tab')
+      updateNonSpellAudio();
+    else 
+      updateSpellAudio();
     currencies.update(state => {
       state.gems -= skipCost;  
       return state;
@@ -22,7 +26,8 @@
     if(Object.keys($queueState.queued).length > 0) {
       queueState.update(state => {
         state.queued = {}
-        state.currentCapacity = 0;
+        // state.currentCapacity = 0;
+        //! add to madeQueue
         state.timeLeft = 0;
         return state;
       });

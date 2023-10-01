@@ -9,7 +9,9 @@
     <ClickableDarkSpellFactory />
     <ClickableWorkshop />
     <BgVideo />
-    <audio bind:this={audioBind} src="/src/assets/sound/button_click.ogg" preload="auto"></audio>
+    <audio bind:this={buttonClickBind} src="/src/assets/sound/button_click.ogg" preload="auto"></audio>
+    <audio bind:this={troopAndSiegeMadeBind} src="/src/assets/sound/Troop_Trained.ogg" preload="auto"></audio>
+    <audio bind:this={spellBrewedBind} src="/src/assets/sound/Spell_Brewed.ogg" preload="auto"></audio>
   </div>
 </main>
 
@@ -19,35 +21,50 @@
   import InfoPopUp from "./components/auxiliaryComponents/InfoPopUp.svelte";
   import BgVideo from "./components/auxiliaryComponents/BgVideo.svelte";
   import ClickableBarracks from "./components/auxiliaryComponents/Interactables/ClickableBarracks.svelte";
-  import { showMenu, playButtonAudio } from "./scripts/svelte-stores";
+  import { showMenu, playButtonAudio, playNonSpellAudio, playSpellAudio } from "./scripts/svelte-stores";
   import { onDestroy, onMount } from "svelte";
   import type { Unsubscriber } from "svelte/motion";
   import ClickableDarkBarracks from "./components/auxiliaryComponents/Interactables/ClickableDarkBarracks.svelte";
   import ClickableSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableSpellFactory.svelte";
   import ClickableDarkSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableDarkSpellFactory.svelte";
   import ClickableWorkshop from "./components/auxiliaryComponents/Interactables/ClickableWorkshop.svelte";
-  import { troopQueueState, spellQueueState, siegeQueueState, entitiesMadeState } from "./scripts/svelte-stores";
-  let audioBind: HTMLAudioElement;
-  let playButtonAudioUnsubscriber: Unsubscriber;
-  
+  import './scripts/troopTraining';
+  import { troopQueueStateUnsubscriber } from "./scripts/troopTraining";
+
+  let buttonClickBind: HTMLAudioElement;
+  let troopAndSiegeMadeBind: HTMLAudioElement;
+  let spellBrewedBind: HTMLAudioElement;
+
+  let playButtonAudioUnsubscriber: Unsubscriber;      // cause the unsubscriber is in the onMount closure
+  let playNonSpellAudioUnsubscriber: Unsubscriber;      
+  let playSpellAudioUnsubscriber: Unsubscriber;      
   
   // global click audio player
   onMount(() => {
-    audioBind.volume = 0.51;
+    buttonClickBind.volume = 0.51;
     playButtonAudioUnsubscriber = playButtonAudio.subscribe(value => {
       if(value > 0)                // to not click on this onMount
-        audioBind.play();
+        buttonClickBind.play();
     });
-  })
 
-  troopQueueState.subscribe(state => {
-    if(Object.keys(state.queued).length !== 0) {
-      
-    }
+    troopAndSiegeMadeBind.volume = 0.51;
+    playNonSpellAudioUnsubscriber = playNonSpellAudio.subscribe(value => {
+      if(value > 0)
+      troopAndSiegeMadeBind.play();
+  });
+  
+  spellBrewedBind.volume = 0.51;
+  playSpellAudioUnsubscriber = playSpellAudio.subscribe(value => {
+    if(value > 0)
+      spellBrewedBind.play();
+    });
   })
 
   onDestroy(() => {
     playButtonAudioUnsubscriber();
+    playNonSpellAudioUnsubscriber();
+    playSpellAudioUnsubscriber();
+    troopQueueStateUnsubscriber();
   })
 
 </script>

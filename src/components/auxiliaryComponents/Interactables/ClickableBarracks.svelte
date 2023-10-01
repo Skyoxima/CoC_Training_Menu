@@ -6,8 +6,8 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = troopQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/barracks/barracks_th12${state.currentCapacity > 0 ? "_glow" : "_no_glow"}.gif`
-    glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
+    gifBackgroundSrc = `/src/assets/images/interactables/barracks/barracks_th12${Object.entries(state.queued).length > 0 ? "_glow" : "_no_glow"}.gif`
+    glowingClass = `${Object.entries(state.queued).length > 0 ? "": "custom-glow"}`
   })
 
   onMount(() => {

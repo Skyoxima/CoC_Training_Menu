@@ -1,8 +1,22 @@
-import { playButtonAudio } from "./svelte-stores";
+import { playButtonAudio, playNonSpellAudio, playSpellAudio } from "./svelte-stores";
 import type { troopDataType, spellDataType, siegeDataType } from "./typeDeclarations";
 
 export const updateClickAudio = () => {
   playButtonAudio.update(state => {
+    state++;
+    return state;
+  });
+}
+
+export const updateNonSpellAudio = () => {
+  playNonSpellAudio.update(state => {
+    state++;
+    return state;
+  });
+}
+
+export const updateSpellAudio = () => {
+  playSpellAudio.update(state => {
     state++;
     return state;
   });

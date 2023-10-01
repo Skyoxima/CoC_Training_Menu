@@ -262,7 +262,7 @@
   },
   "freeze": {
     "radius": "1.75 tiles",
-    "housingSpace": 2,
+    "housingSpace": 1,
     "maxLevel": 7,
     "iconSource": "/src/assets/images/spells/Freeze_Spell.png",
     "type": "elixir-spell",
@@ -375,7 +375,7 @@
   },
   "invisibility": {
     "radius": "4 tiles",
-    "housingSpace": 2,
+    "housingSpace": 1,
     "maxLevel": 4,
     "iconSource": "/src/assets/images/spells/Invisibility_Spell.png",
     "type": "elixir-spell",

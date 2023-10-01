@@ -1,9 +1,9 @@
 <div class="entity-box-wrapper queue-entity-box-wrapper">
-  <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType}`} data-count={`${count}x`}> <!--slightly different ID is for styling purposes only -->
+  <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType} ${isFirstEntity ? '': 'non-first'}`} data-count={`${count}x`}> <!--slightly different ID is for styling purposes only -->
     <img src={iconSource} alt={entityID}>
-    <div class="training-progress">
-      <span class="progress-made"></span>
-      <p class="time-left">42s</p>
+    <div class="training-progress" style="display: {isFirstEntity ? "block" : "none"}">
+      <span class="progress-made" style="--percent-fill: {percentFill};"></span>
+      <p class="time-left">{convertToMins($currentlyTraining.entityTimeLeft)}</p>
     </div>
   </div>
   <button class="unqueue-troop top-right-btn" on:click></button>      <!-- It is red but not a RedButton -->
@@ -11,10 +11,42 @@
 
 <script lang="ts">
   import './EntityBox.css';
-  export let entityID: string;    // not used, but good to have
+  import { currentlyTraining } from '../../../scripts/svelte-stores';
+  import { onMount, onDestroy } from 'svelte';
+
+  export let entityID: string;    // image alts, specific styles (e.g spells)
   export let entityType: string;  // used for applying type-specific styles to queueEntityboxes
   export let iconSource: string;
+  export let entityMakeDuration: number;
   export let count: number;
+  export let isFirstEntity: boolean;
+
+  let percentFill: string;
+
+  onMount(() => {
+    console.log(`${entityID} was mounted`);
+  })
+
+  const currentlyTrainingUnsubscriber = currentlyTraining.subscribe(value => {
+    if(isFirstEntity) {
+      percentFill = (100 - 100 * (value.entityTimeLeft / entityMakeDuration)).toFixed(2) + '%'
+      console.log(value, percentFill, entityID)
+    }
+  })
+
+  function convertToMins(timeLeft: number) {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft - (minutes * 60)
+    if(minutes == 0) {
+      return `${seconds}s`;
+    }
+    return `${minutes}m ${seconds}s`;
+  }
+
+  onDestroy(() => {
+    console.log(`${entityID} was destroyed, firstEntity would now change`)
+    currentlyTrainingUnsubscriber();
+  })
   
 </script>
 
@@ -29,6 +61,9 @@
     width: 100%; height: 100%;
     display: flex; justify-content: center; align-items: center;
     overflow: hidden;
+  } 
+  .queue-entity-box.non-first {
+    filter: brightness(0.8);
   }
 
   .queue-entity-box.siege-machine img {
@@ -88,9 +123,10 @@
 
   .training-progress .time-left {
     position: absolute;
-    top: 20%; left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.6rem;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 0.7rem;
     text-shadow: 0 0.5px 2px rgba(var(--pure-black-rgb), 0.9);
   }
 
@@ -98,6 +134,7 @@
     position: absolute;
     top: 0; left: 0;
     width: 80%; height: 100%;
+    width: var(--percent-fill);
     background: rgb(70, 190, 0);
   }
 </style>

@@ -6,8 +6,8 @@
   let glowingClass: string;
 
   const queueStateUnsubscriber = spellQueueState.subscribe(state => {
-    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${state.currentCapacity > 0 ? "_brewing.gif" : "_no_glow.png"}`
-    glowingClass = `${state.currentCapacity > 0 ? "": "custom-glow"}`
+    gifBackgroundSrc = `/src/assets/images/interactables/spell_factory/spell_factory_th_12${Object.entries(state.queued).length > 0 ? "_brewing.gif" : "_no_glow.png"}`
+    glowingClass = `${Object.entries(state.queued).length > 0 ? "": "custom-glow"}`
   })
 
   onMount(() => {

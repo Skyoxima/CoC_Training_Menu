@@ -15,6 +15,9 @@
   function convertToMins(timeLeft: number) {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft - (minutes * 60)
+    if(minutes == 0) {
+      trainingTimeFinal = `${seconds}s`
+    }
     trainingTimeFinal = `${minutes}m ${seconds}s`
   }
 

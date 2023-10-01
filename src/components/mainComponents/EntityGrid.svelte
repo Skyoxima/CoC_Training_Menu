@@ -4,7 +4,7 @@
       entityID={entityID}
       entityData={data}
       isDisabled={areDisabled.includes(entityID)} 
-      on:click={() => handleQueueEntity(entityID)} 
+      on:click={() => handleQueueEntity(entityID)}
     />
   {/each}
 </div>
@@ -50,27 +50,20 @@
 
   function commonQueueUpdate(state: queueStateType, clickedEntityID: string) {
     state.currentCapacity += Data[clickedEntityID].housingSpace;
-    if(isTroopData(Data)) 
-      state.timeLeft += Data[clickedEntityID].makeDuration;
-    else
-      state.timeLeft += Data[clickedEntityID].makeDuration;
+    state.timeLeft += Data[clickedEntityID].makeDuration;
   }
 
-  function handleQueueEntity(clcikedEntityID: string) {
+  function handleQueueEntity(clickedEntityID: string) {
     updateClickAudio();
-    if($queueState.queued[clcikedEntityID] !== undefined) {          // if entity already exists, just increment
-      queueState.update(state => {
-        state.queued[clcikedEntityID]++;
-        commonQueueUpdate(state, clcikedEntityID);
-        return state;
-      })
-    } else {
-      queueState.update(state => {                                  // if entity doesn't exist, make a new entry
-      state.queued[clcikedEntityID] = 1;
-      commonQueueUpdate(state, clcikedEntityID);
+    queueState.update(state => {
+      if(state.queued[clickedEntityID] !== undefined) {
+        state.queued[clickedEntityID]++;
+      } else {
+        state.queued[clickedEntityID] = 1
+      }
+      commonQueueUpdate(state, clickedEntityID);
       return state;
-      })
-    }
+    })
   }
 
   onDestroy(() => {
