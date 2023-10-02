@@ -29,7 +29,11 @@
   import ClickableDarkSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableDarkSpellFactory.svelte";
   import ClickableWorkshop from "./components/auxiliaryComponents/Interactables/ClickableWorkshop.svelte";
   import './scripts/troopTraining';
+  import './scripts/spellBrewing';
+  import './scripts/siegeBuilding';
   import { troopQueueStateUnsubscriber } from "./scripts/troopTraining";
+  import { spellQueueStateUnsubscriber } from "./scripts/spellBrewing";
+  import { siegeQueueStateUnsubscriber } from "./scripts/siegeBuilding";
 
   let buttonClickBind: HTMLAudioElement;
   let troopAndSiegeMadeBind: HTMLAudioElement;
@@ -65,6 +69,8 @@
     playNonSpellAudioUnsubscriber();
     playSpellAudioUnsubscriber();
     troopQueueStateUnsubscriber();
+    spellQueueStateUnsubscriber();
+    siegeQueueStateUnsubscriber();
   })
 
 </script>

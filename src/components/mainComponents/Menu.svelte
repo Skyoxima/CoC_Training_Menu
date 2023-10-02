@@ -1,6 +1,6 @@
 <script lang="ts">
   import Toolbar from "./Toolbar.svelte";
-  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState, siegeQueueState } from "../../scripts/svelte-stores";
+  import { activeTab, fullCapacities, showEntityInfo, spellQueueState, troopQueueState, siegeQueueState, currentlyMakingTroop, currentlyMakingSpell, currentlyMakingSiege } from "../../scripts/svelte-stores";
   import type { troopDataType, spellDataType, siegeDataType } from "../../scripts/typeDeclarations";
   import MenuContents from "./MenuContents.svelte";
   import EntityInfoTab from "./EntityInfoTab.svelte";
@@ -12,17 +12,19 @@
   const troopData: troopDataType = TroopData;
   const spellData: spellDataType = SpellData;
   const siegeData: siegeDataType = SiegeData;
+
+  
 </script>
 
 <div id="menu">
   <Toolbar />
   <div id="inner-container">
   {#if $activeTab === 'training-tab'}
-    <MenuContents queueState={troopQueueState} Data={troopData} entityFullCapacity={$fullCapacities.troop} />
+    <MenuContents queueState={troopQueueState} Data={troopData} entityFullCapacity={$fullCapacities.troop} queueManager={currentlyMakingTroop}/>
   {:else if $activeTab === 'spells-tab'}
-    <MenuContents queueState={spellQueueState} Data={spellData} entityFullCapacity={$fullCapacities.spell} />
+    <MenuContents queueState={spellQueueState} Data={spellData} entityFullCapacity={$fullCapacities.spell} queueManager={currentlyMakingSpell}/>
   {:else if $activeTab === 'siege-tab'}
-    <MenuContents queueState={siegeQueueState} Data={siegeData} entityFullCapacity={$fullCapacities.siege} />
+    <MenuContents queueState={siegeQueueState} Data={siegeData} entityFullCapacity={$fullCapacities.siege} queueManager={currentlyMakingSiege}/>
   {:else if $activeTab === 'army-tab'}
     <ArmyOverview /> <!--! it will have to subscribe to all queue datas within -->
   {/if}

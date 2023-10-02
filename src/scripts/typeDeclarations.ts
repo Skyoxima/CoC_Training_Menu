@@ -4,7 +4,20 @@ export interface queueStateType {
   timeLeft: number;
 }
 
-export type megaQueueStateType = {
+export type queueManagerType = {
+  entity: string;
+  entityTimeLeft: number;
+  entityMakeDuration: number;
+  percentDone: string;
+}
+
+export type intervalIDType = {
+  troop: number;
+  spell: number;
+  siege: number;
+}
+
+export type madeEntitiesStateType = {
   troops: {[key: string]: number};
   spells: {[key: string]: number};
   sieges: {[key: string]: number};

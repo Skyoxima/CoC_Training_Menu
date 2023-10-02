@@ -2,7 +2,7 @@
   <Capacity queueState={queueState} full_capacity={entityFullCapacity} iconSource={topIconSource} />
   <TimeLeft queueState={queueState} />
 </div>
-<TrainingQueue queueStore={queueState} Data={Data}/>
+<TrainingQueue queueStore={queueState} Data={Data} queueManager={queueManager}/>
 <div id="mid-btns-div">
   <DeleteButton queueState={queueState} />
   <BoostButton />
@@ -22,10 +22,11 @@
   import EntityGrid from "./EntityGrid.svelte";
   import Currencies from "../auxiliaryComponents/TextComponents/Currencies.svelte";
   import { type Writable } from "svelte/store";
-  import type { queueStateType, siegeDataType, spellDataType, troopDataType } from "../../scripts/typeDeclarations";
+  import type { queueManagerType, queueStateType, siegeDataType, spellDataType, troopDataType } from "../../scripts/typeDeclarations";
   import { isSpellData, isTroopData } from "../../scripts/functions";
 
   export let queueState: Writable<queueStateType>;
+  export let queueManager: Writable<queueManagerType>;
   export let Data: troopDataType | spellDataType | siegeDataType;
   export let entityFullCapacity:  number;
 

@@ -2,19 +2,18 @@
   <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType} ${isFirstEntity ? '': 'non-first'}`} data-count={`${count}x`}> <!--slightly different ID is for styling purposes only -->
     <img src={iconSource} alt={entityID}>
     <div class="training-progress" style="display: {isFirstEntity ? "block" : "none"}">
-      <span class="progress-made" style="--percent-fill: {$currentlyTraining.percentDone};"></span>
-      <p class="time-left">{convertToMins($currentlyTraining.entityTimeLeft)}</p>
+      <span class="progress-made" style="--percent-fill: {$queueManager.percentDone};"></span>
+      <p class="time-left">{convertToMins($queueManager.entityTimeLeft)}</p>
     </div>
   </div>
   <button class="unqueue-troop top-right-btn" on:click={() => handleUnqueue(queueStore, entityID)}></button>      <!-- It is red but not a RedButton -->
 </div>
-
+<!-- ! Change to queueManager -->
 <script lang="ts">
   import './EntityBox.css';
-  import { currentlyTraining } from '../../../scripts/svelte-stores';
   import { updateClickAudio } from '../../../scripts/functions';
   import type { Writable } from 'svelte/store';
-  import { type queueStateType } from '../../../scripts/typeDeclarations';
+  import { type queueManagerType, type queueStateType } from '../../../scripts/typeDeclarations';
 
   export let entityID: string;    // image alts, specific styles (e.g spells)
   export let entityType: string;  // used for applying type-specific styles to queueEntityboxes
@@ -24,6 +23,7 @@
   export let queueStore: Writable<queueStateType>;
   export let makeDuration: number;
   export let housingSpace: number;
+  export let queueManager: Writable<queueManagerType>;
 
   function commonUnqueueUpdate(state: queueStateType, entityID: string, timeToSubtract = 0) {
     state.currentCapacity -= housingSpace;
@@ -50,7 +50,7 @@
         commonUnqueueUpdate(state, entityID);
       } else {
         delete state.queued[entityID];
-        commonUnqueueUpdate(state, entityID, $currentlyTraining.entityTimeLeft);
+        commonUnqueueUpdate(state, entityID, $queueManager.entityTimeLeft);
       }
       return state;
     })

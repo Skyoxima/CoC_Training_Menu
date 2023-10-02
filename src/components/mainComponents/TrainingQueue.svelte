@@ -9,6 +9,7 @@
       makeDuration={Data[entityID].makeDuration}
       housingSpace={Data[entityID].housingSpace}
       queueStore={queueStore}
+      queueManager={queueManager}
     />
   {/each}
 </div>
@@ -16,12 +17,12 @@
 <!-- There is the same queue active at a given time, only data passed to it changes depending on the tab selected (check Menu.svelte) -->
 <script lang="ts">
   import { type Writable } from "svelte/store";
-  import { type queueStateType, type siegeDataType, type spellDataType, type troopDataType } from "../../scripts/typeDeclarations";
+  import { type queueManagerType, type queueStateType, type siegeDataType, type spellDataType, type troopDataType } from "../../scripts/typeDeclarations";
   import QueueEntityBox from "./EntityBox/QueueEntityBox.svelte";
 
   export let queueStore: Writable<queueStateType>;
   export let Data: troopDataType | spellDataType | siegeDataType;       // Typescript will automatically only grant intellisense for common properties between the 3... for specific properties we'll need to narrow the type down 
-  
+  export let queueManager:Writable<queueManagerType>;
 </script>
 
 <style>
