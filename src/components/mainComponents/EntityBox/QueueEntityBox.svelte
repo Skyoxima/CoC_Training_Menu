@@ -2,37 +2,59 @@
   <div id="{entityID}-q" class={`entity-box queue-entity-box ${entityType} ${isFirstEntity ? '': 'non-first'}`} data-count={`${count}x`}> <!--slightly different ID is for styling purposes only -->
     <img src={iconSource} alt={entityID}>
     <div class="training-progress" style="display: {isFirstEntity ? "block" : "none"}">
-      <span class="progress-made" style="--percent-fill: {percentFill};"></span>
+      <span class="progress-made" style="--percent-fill: {$currentlyTraining.percentDone};"></span>
       <p class="time-left">{convertToMins($currentlyTraining.entityTimeLeft)}</p>
     </div>
   </div>
-  <button class="unqueue-troop top-right-btn" on:click></button>      <!-- It is red but not a RedButton -->
+  <button class="unqueue-troop top-right-btn" on:click={() => handleUnqueue(queueStore, entityID)}></button>      <!-- It is red but not a RedButton -->
 </div>
 
 <script lang="ts">
   import './EntityBox.css';
   import { currentlyTraining } from '../../../scripts/svelte-stores';
-  import { onMount, onDestroy } from 'svelte';
+  import { updateClickAudio } from '../../../scripts/functions';
+  import type { Writable } from 'svelte/store';
+  import { type queueStateType } from '../../../scripts/typeDeclarations';
 
   export let entityID: string;    // image alts, specific styles (e.g spells)
   export let entityType: string;  // used for applying type-specific styles to queueEntityboxes
   export let iconSource: string;
-  export let entityMakeDuration: number;
   export let count: number;
   export let isFirstEntity: boolean;
+  export let queueStore: Writable<queueStateType>;
+  export let makeDuration: number;
+  export let housingSpace: number;
 
-  let percentFill: string;
-
-  onMount(() => {
-    console.log(`${entityID} was mounted`);
-  })
-
-  const currentlyTrainingUnsubscriber = currentlyTraining.subscribe(value => {
-    if(isFirstEntity) {
-      percentFill = (100 - 100 * (value.entityTimeLeft / entityMakeDuration)).toFixed(2) + '%'
-      console.log(value, percentFill, entityID)
+  function commonUnqueueUpdate(state: queueStateType, entityID: string, timeToSubtract = 0) {
+    state.currentCapacity -= housingSpace;
+    const currentEntities = Object.entries(state.queued);
+    if(currentEntities.length === 0)
+      state.timeLeft = 0;
+    else {
+      if(isFirstEntity) {
+        state.timeLeft -= timeToSubtract;
+      } else {
+        state.timeLeft -= makeDuration;
+      }
     }
-  })
+  }
+  //! here is a special case for when it is the last entity that has been unqueued  it should reset the queueState.timeLeft, not simply minus
+  //! an even more important special case is when training is going on, if the current top one is dequeued then the time it has already spent training should be deducted, not whole time (when it is the only one left in its stack)
+
+  // no additional checks required here as this will only run when there is atleast one entity in the queueState and its '-' btn is clicked
+  function handleUnqueue(queueStore: Writable<queueStateType>, entityID: string) {
+    updateClickAudio();
+    queueStore.update(state => {
+      if(state.queued[entityID] > 1) {
+        state.queued[entityID]--;
+        commonUnqueueUpdate(state, entityID);
+      } else {
+        delete state.queued[entityID];
+        commonUnqueueUpdate(state, entityID, $currentlyTraining.entityTimeLeft);
+      }
+      return state;
+    })
+  }
 
   function convertToMins(timeLeft: number) {
     const minutes = Math.floor(timeLeft / 60);
@@ -42,12 +64,6 @@
     }
     return `${minutes}m ${seconds}s`;
   }
-
-  onDestroy(() => {
-    console.log(`${entityID} was destroyed, firstEntity would now change`)
-    currentlyTrainingUnsubscriber();
-  })
-  
 </script>
 
 <style>

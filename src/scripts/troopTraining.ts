@@ -27,6 +27,7 @@ function intervalSetter(troopInTraining: string) {
           state.timeLeft--;
           currentlyTraining.update(value => {
             value.entityTimeLeft--;
+            value.percentDone = (100 - 100 * (value.entityTimeLeft / value.entityMakeDuration)).toFixed(2) + '%'
             return value;
           }
           );
@@ -38,12 +39,18 @@ function intervalSetter(troopInTraining: string) {
             state.queued[troopInTraining] -= 1;
             currentlyTraining.update(state => {
               state.entityTimeLeft = troopData[troopInTraining].makeDuration;
+              state.percentDone = '0%'
               return state;
             })
           } else {
             delete state.queued[troopInTraining];
             clearInterval(get(intervalID));
-            currentlyTraining.set({entity: 'n/a', entityTimeLeft: 0});
+            currentlyTraining.set({
+              entity: 'n/a', 
+              entityTimeLeft: 0, 
+              entityMakeDuration: 0, 
+              percentDone: '0%'
+            });
           }
           addToMadeQueue(troopInTraining);
           updateNonSpellAudio();
@@ -54,14 +61,15 @@ function intervalSetter(troopInTraining: string) {
   )
 }
 
-// should cancel all the previous intervals... only one interval should run at a time for a queueStateType
 const troopQueueStateUnsubscriber = troopQueueState.subscribe(state => {
   if(Object.keys(state.queued).length > 0) {
     const topEntry = Object.entries(state.queued)[0];
     if(topEntry[0] !== get(currentlyTraining).entity) {       // an entity is dequeued, second one becomes the new first one
       currentlyTraining.set({
         entity: topEntry[0], 
-        entityTimeLeft: troopData[topEntry[0]].makeDuration
+        entityTimeLeft: troopData[topEntry[0]].makeDuration,
+        entityMakeDuration: troopData[topEntry[0]].makeDuration,
+        percentDone: '0%'
       });
       clearInterval(get(intervalID));
       intervalSetter(topEntry[0]);
@@ -72,6 +80,3 @@ const troopQueueStateUnsubscriber = troopQueueState.subscribe(state => {
 })
 
 export { troopQueueStateUnsubscriber }
-
-// every second I want to update... and wait for troop training duration amount of time before removing it but still every second have to update the tick for progress bar...
-// I have not implemented re-ordering... so the first entity will not be changed as much except being totally removed... in this case on re-addition it gets to the back of the queue and the new entity's training time is considered

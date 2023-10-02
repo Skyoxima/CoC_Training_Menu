@@ -11,13 +11,15 @@ export const playSpellAudio = writable(0);
 //~ primarily used to send the current training progress to the queueEntityBox's elements
 export const currentlyTraining = writable({
   entity: 'n/a', 
-  entityTimeLeft: 0
+  entityTimeLeft: 0,
+  entityMakeDuration: 0,
+  percentDone: '0%'
 })
 
 export const intervalID: Writable<number> = writable(-1);
 
 export const activeTab = writable("training-tab");
-export let rates: Writable<ratesType> = writable({"troop": 2, "spell": 1, "siege": 1});
+export let rates: Writable<ratesType> = writable({"troop": 1, "spell": 1, "siege": 1});
 
 export const infoPopUp = writable({
   infoPopUpClass: "inactive",

@@ -5,9 +5,10 @@
       entityType={Data[entityID].type}
       iconSource={Data[entityID].iconSource} 
       count={count}
-      entityMakeDuration={Data[entityID].makeDuration}
       isFirstEntity={i === 0}
-      on:click={() => handleUnqueue(queueStore, entityID)}
+      makeDuration={Data[entityID].makeDuration}
+      housingSpace={Data[entityID].housingSpace}
+      queueStore={queueStore}
     />
   {/each}
 </div>
@@ -17,39 +18,10 @@
   import { type Writable } from "svelte/store";
   import { type queueStateType, type siegeDataType, type spellDataType, type troopDataType } from "../../scripts/typeDeclarations";
   import QueueEntityBox from "./EntityBox/QueueEntityBox.svelte";
-  import { updateClickAudio, isTroopData, isSpellData } from "../../scripts/functions";
-  import { currentlyTraining } from "../../scripts/svelte-stores";
 
   export let queueStore: Writable<queueStateType>;
   export let Data: troopDataType | spellDataType | siegeDataType;       // Typescript will automatically only grant intellisense for common properties between the 3... for specific properties we'll need to narrow the type down 
   
-  // common for all queue data hence defined here
-
-  function commonUnqueueUpdate(state: queueStateType, entityID: string, timeToSubtract: undefined | number = undefined) {
-    state.currentCapacity -= Data[entityID].housingSpace;
-    const currentEntities = Object.entries(state.queued);
-    if(currentEntities.length === 0)
-      state.timeLeft = 0;
-    else
-      state.timeLeft -= (timeToSubtract || Data[entityID].makeDuration);       
-  }
-  //! here is a special case for when it is the last entity that has been unqueued  it should reset the queueState.timeLeft, not simply minus
-  //! an even more important special case is when training is going on
-
-  // no additional checks required here as this will only run when there is atleast one entity in the queueState and its '-' btn is clicked
-  function handleUnqueue(queueStore: Writable<queueStateType>, entityID: string) {
-    updateClickAudio();
-    queueStore.update(state => {
-      if(state.queued[entityID] > 1) {
-        state.queued[entityID]--;
-        commonUnqueueUpdate(state, entityID);
-      } else {
-        delete state.queued[entityID];
-        commonUnqueueUpdate(state, entityID, $currentlyTraining.entityTimeLeft);
-      }
-      return state;
-    })
-  }
 </script>
 
 <style>
