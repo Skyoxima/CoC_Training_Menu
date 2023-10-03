@@ -1,61 +1,14 @@
-import { intervalID, troopQueueState, entitiesMadeState, rates, currentlyMakingTroop } from "./svelte-stores";
+import { intervalID, troopQueueState, rates, currentlyMakingTroop } from "./svelte-stores";
 import TroopData from '../data/troopData.json';
 import type { troopDataType } from "./typeDeclarations";
 import { get } from "svelte/store";
 import { updateNonSpellAudio } from "./functions";
+import { intervalSetter } from "./heartFunctions";
 
 const troopData: troopDataType = TroopData;
 
-function addToMadeQueue(madeEntity: string) {
-  entitiesMadeState.update(state => {
-    if(state.troops[madeEntity] !== undefined) {
-      state.troops[madeEntity]++;
-    } else {
-      state.troops[madeEntity] = 1;
-    }
-    return state;
-  })
-}
-
-function intervalSetter(troopInTraining: string) {
-  const troopIntervalID = setInterval(() => {
-    troopQueueState.update(state => {
-      if(state.timeLeft > 0) {
-        state.timeLeft--;
-        currentlyMakingTroop.update(value => {
-          value.entityTimeLeft--;
-          value.percentDone = (100 - 100 * (value.entityTimeLeft / value.entityMakeDuration)).toFixed(2) + '%'
-          return value;
-        }
-        );
-      }
-
-      if(get(currentlyMakingTroop).entityTimeLeft === 0) {
-        // if there are more of the same entity, reduce count and reset the currentlyTraining back to this entity's makeDuration
-        if(state.queued[troopInTraining] > 1) {
-          state.queued[troopInTraining] -= 1;
-          currentlyMakingTroop.update(state => {
-            state.entityTimeLeft = troopData[troopInTraining].makeDuration;
-            state.percentDone = '0%'
-            return state;
-          })
-        } else {
-          delete state.queued[troopInTraining];
-          clearInterval(get(intervalID).troop);
-          currentlyMakingTroop.set({
-            entity: 'n/a', 
-            entityTimeLeft: 0, 
-            entityMakeDuration: 0, 
-            percentDone: '0%'
-          });
-        }
-        addToMadeQueue(troopInTraining);
-        updateNonSpellAudio();
-      }
-      return state;
-    })
-  }, 1000 / get(rates).troop)
-
+function intervalSetterCover(troopInTraining: string) {
+  const troopIntervalID = intervalSetter(troopQueueState, currentlyMakingTroop, troopInTraining, troopData[troopInTraining].makeDuration, get(rates).troop, updateNonSpellAudio)
   intervalID.update(value => {
     value.troop = troopIntervalID;
     return value;
@@ -64,20 +17,26 @@ function intervalSetter(troopInTraining: string) {
 
 const troopQueueStateUnsubscriber = troopQueueState.subscribe(state => {
   if(Object.keys(state.queued).length > 0) {
-    const topEntry = Object.entries(state.queued)[0];
-    if(topEntry[0] !== get(currentlyMakingTroop).entity) {       // an entity is dequeued, second one becomes the new first one
+    const topEntryName = Object.entries(state.queued)[0][0];
+    if(topEntryName !== get(currentlyMakingTroop).entity) {       // an entity is dequeued (auto), second one becomes the new first one
+      //>> initialize the queueManager with the new entity
       currentlyMakingTroop.set({
-        entity: topEntry[0], 
-        entityTimeLeft: troopData[topEntry[0]].makeDuration,
-        entityMakeDuration: troopData[topEntry[0]].makeDuration,
+        entity: topEntryName, 
+        entityTimeLeft: troopData[topEntryName].makeDuration,
+        entityMakeDuration: troopData[topEntryName].makeDuration,
         percentDone: '0%'
       });
+      //>> clear any on-going interval
       clearInterval(get(intervalID).troop);
-      intervalSetter(topEntry[0]);
+      //>> begin the making process by setting a new interval
+      intervalSetterCover(topEntryName);
     }
   } else {
+    //>> clear any residual interval that might be running (which after the last troop there is always one (of its own))
     clearInterval(get(intervalID).troop);
   }
 })
 
 export { troopQueueStateUnsubscriber }
+
+//>> By my understanding so far, get is substitute of $ and in script portion of Svelte $ acts as a snapshot of store value at that instance (only in template it seems to act as a subscribe i.e reflects live change)

@@ -2,11 +2,11 @@
   <Capacity queueState={queueState} full_capacity={entityFullCapacity} iconSource={topIconSource} />
   <TimeLeft queueState={queueState} />
 </div>
-<TrainingQueue queueStore={queueState} Data={Data} queueManager={queueManager}/>
+<TrainingQueue queueStore={queueState} Data={Data} queueManager={queueManager} />
 <div id="mid-btns-div">
-  <DeleteButton queueState={queueState} />
-  <BoostButton />
-  <FinishButton queueState={queueState} />
+  <DeleteButton queueState={queueState} queueManager={queueManager} />
+  <BoostButton boostAvailable={boostAvailable} />
+  <FinishButton queueState={queueState} queueManager={queueManager} />
 </div>
 <EntityGrid Data={Data} queueState={queueState} entityFullCapacity={entityFullCapacity} />
 <Currencies />
@@ -29,7 +29,7 @@
   export let queueManager: Writable<queueManagerType>;
   export let Data: troopDataType | spellDataType | siegeDataType;
   export let entityFullCapacity:  number;
-
+  export let boostAvailable: boolean;
   let topIconSource = `/src/assets/icons/${isTroopData(Data) ? "troop" : isSpellData(Data) ? "spell" : "siege"}_capacity.png`;
 </script>
 

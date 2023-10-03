@@ -8,7 +8,7 @@
   </div>
   <button class="unqueue-troop top-right-btn" on:click={() => handleUnqueue(queueStore, entityID)}></button>      <!-- It is red but not a RedButton -->
 </div>
-<!-- ! Change to queueManager -->
+
 <script lang="ts">
   import './EntityBox.css';
   import { updateClickAudio } from '../../../scripts/functions';
@@ -31,7 +31,7 @@
     if(currentEntities.length === 0)
       state.timeLeft = 0;
     else {
-      if(isFirstEntity) {
+      if(isFirstEntity && state.queued[entityID] === undefined) {     // has been dequeued entirely
         state.timeLeft -= timeToSubtract;
       } else {
         state.timeLeft -= makeDuration;
@@ -51,6 +51,12 @@
       } else {
         delete state.queued[entityID];
         commonUnqueueUpdate(state, entityID, $queueManager.entityTimeLeft);
+        queueManager.set({
+            entity: 'n/a', 
+            entityTimeLeft: 0, 
+            entityMakeDuration: 0, 
+            percentDone: '0%'
+          });
       }
       return state;
     })

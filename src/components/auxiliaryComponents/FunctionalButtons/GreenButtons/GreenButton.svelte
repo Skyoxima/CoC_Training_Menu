@@ -2,7 +2,7 @@
   export let isDisabled = false;
 </script>
 
-<button class="green-btn" on:click disabled={isDisabled}>
+<button class="green-btn" disabled={isDisabled} on:click>
   <slot></slot>
 </button>
 

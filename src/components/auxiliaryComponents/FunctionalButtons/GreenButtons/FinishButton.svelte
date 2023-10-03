@@ -1,15 +1,17 @@
 <script lang="ts">
   import GreenButton from "./GreenButton.svelte";
-  import type { queueStateType } from "../../../../scripts/typeDeclarations";
+  import type { queueManagerType, queueStateType } from "../../../../scripts/typeDeclarations";
   import { type Writable } from "svelte/store";
   import { updateClickAudio, updateNonSpellAudio, updateSpellAudio } from "../../../../scripts/functions";
   import { activeTab, currencies } from "../../../../scripts/svelte-stores";
+  import { addToMadeQueue } from "../../../../scripts/heartFunctions";
 
   export let queueState: Writable<queueStateType>;
+  export let queueManager: Writable<queueManagerType>
   let skipCost: number;
 
   queueState.subscribe((state) => {
-    skipCost = Math.floor(state.timeLeft / 60) * 3;
+    skipCost = state.timeLeft <= 0 ? 0 : (Math.floor(state.timeLeft / 60) * 3) + 1;
   })
 
   function handleFinish() {
@@ -23,13 +25,23 @@
       return state;
     })
 
+    // before emptying add it to the made queue
     if(Object.keys($queueState.queued).length > 0) {
+      Object.entries($queueState.queued).forEach(element => {
+        addToMadeQueue(element[0], element[1]);
+      })
       queueState.update(state => {
         state.queued = {}
-        // state.currentCapacity = 0;
-        //! add to madeQueue
         state.timeLeft = 0;
         return state;
+      });
+
+      // reset step, very important
+      queueManager.set({
+        entity: 'n/a', 
+        entityTimeLeft: 0,
+        entityMakeDuration: 0,
+        percentDone: '0%'
       });
     }
   }
