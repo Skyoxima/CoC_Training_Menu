@@ -29,8 +29,9 @@
     transform: translateX(-50%) translateY(0%);
   }
   #info-pop-up > p {
-    font-family: consolas;
+    font-family: "Supercell-Magic", consolas;
     white-space: nowrap;
+    -webkit-text-stroke-width: 0;
   }
 
 </style>
