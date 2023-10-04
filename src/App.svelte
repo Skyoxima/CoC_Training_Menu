@@ -3,11 +3,7 @@
     {#if $showMenu} <Menu /> {/if}
     <InfoPopUp />
     <AmbientMusic />
-    <ClickableBarracks />
-    <ClickableDarkBarracks />
-    <ClickableSpellFactory />
-    <ClickableDarkSpellFactory />
-    <ClickableWorkshop />
+    <Interactables />
     <BgVideo />
     <TopLevelAudio />
   </div>
@@ -19,12 +15,7 @@
   import InfoPopUp from "./components/auxiliaryComponents/InfoPopUp.svelte";
   import BgVideo from "./components/auxiliaryComponents/BgVideo.svelte";
   import TopLevelAudio from "./components/auxiliaryComponents/TopLevelAudio.svelte";
-  import ClickableBarracks from "./components/auxiliaryComponents/Interactables/ClickableBarracks.svelte";
-  import ClickableDarkBarracks from "./components/auxiliaryComponents/Interactables/ClickableDarkBarracks.svelte";
-  import ClickableSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableSpellFactory.svelte";
-  import ClickableDarkSpellFactory from "./components/auxiliaryComponents/Interactables/ClickableDarkSpellFactory.svelte";
-  import ClickableWorkshop from "./components/auxiliaryComponents/Interactables/ClickableWorkshop.svelte";
-  import { showMenu, entitiesMadeState, rates, activeTab, intervalID, troopQueueState, spellQueueState, siegeQueueState, currentlyMakingTroop, currentlyMakingSpell, currentlyMakingSiege } from "./scripts/svelte-stores";
+  import { showMenu, rates, activeTab, intervalID, troopQueueState, spellQueueState, siegeQueueState, currentlyMakingTroop, currentlyMakingSpell, currentlyMakingSiege } from "./scripts/svelte-stores";
   import { onDestroy } from "svelte";
   import './scripts/troopTraining';
   import './scripts/spellBrewing';
@@ -34,6 +25,7 @@
   import { siegeQueueStateUnsubscriber } from "./scripts/siegeBuilding";
   import { intervalSetter } from "./scripts/heartFunctions";
   import { updateNonSpellAudio, updateSpellAudio } from "./scripts/functions";
+  import Interactables from "./components/auxiliaryComponents/Interactables/Interactables.svelte";
 
   //! To apply the new rate we have to cancel the old one and start the new one immediately
   // avoid on setting up an interval on loading, this change should only apply when there is something in the making... on rest if boost is activated then it will anyways form a new interval and take the boosted rate
