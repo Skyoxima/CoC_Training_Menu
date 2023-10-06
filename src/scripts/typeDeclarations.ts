@@ -23,11 +23,23 @@ export type madeEntitiesStateType = {
   sieges: {[key: string]: number};
 }
 
+export type entityInfoToShowType = {
+  entityID: string;
+  entityData: troopDataSubType | spellDataSubType | siegeDataSubType | {};
+  entityType: string
+}
+
 export type ratesType = {
   troop: number;
   spell: number;
   siege: number;
 };
+
+export type infoTabDataType = {
+  generalType: "troop" | "spell" | "siege";
+  portraitStyle: "elixir" | "dark-elixir" | "super-elixir" | "super-dark-elixir" | "gold";
+  [key: string]: any
+}
 
 // first section are the compulsory entries for every troop
 export type troopDataType = {
@@ -38,6 +50,7 @@ export type troopDataType = {
     maxLevel: number;
     housingSpace: number;
     makeDuration: number;
+    movementSpeed: number;
     Level: string[];
     Hitpoints: string[];
     "Research Cost"?: string[];
@@ -110,6 +123,7 @@ export type spellDataType = {
     makeDuration: number;
     maxLevel: number;
     iconSource: string;
+    modelSource: string;
     housingSpace: number;
     type: string;
     Level: string[];

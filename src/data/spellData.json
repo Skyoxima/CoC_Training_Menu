@@ -5,6 +5,7 @@
     "housingSpace": 1,
     "maxLevel": 10,
     "iconSource": "/src/assets/images/spells/Lightning_Spell.png",
+    "modelSource": "/src/assets/images/spells/Lightning_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -76,6 +77,7 @@
     "housingSpace": 2,
     "maxLevel": 9,
     "iconSource": "/src/assets/images/spells/Heal_Spell.png",
+    "modelSource": "/src/assets/images/spells/Heal_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -165,6 +167,7 @@
     "housingSpace": 2,
     "maxLevel": 6,
     "iconSource": "/src/assets/images/spells/Rage_Spell.png",
+    "modelSource": "/src/assets/images/spells/Rage_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -222,6 +225,7 @@
     "housingSpace": 2,
     "maxLevel": 5,
     "iconSource": "/src/assets/images/spells/Jump_Spell.png",
+    "modelSource": "/src/assets/images/spells/Jump_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -265,6 +269,7 @@
     "housingSpace": 1,
     "maxLevel": 7,
     "iconSource": "/src/assets/images/spells/Freeze_Spell.png",
+    "modelSource": "/src/assets/images/spells/Freeze_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -320,6 +325,7 @@
     "housingSpace": 3,
     "maxLevel": 8,
     "iconSource": "/src/assets/images/spells/Clone_Spell.png",
+    "modelSource": "/src/assets/images/spells/Clone_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 540,
     "Level": [
@@ -378,6 +384,7 @@
     "housingSpace": 1,
     "maxLevel": 4,
     "iconSource": "/src/assets/images/spells/Invisibility_Spell.png",
+    "modelSource": "/src/assets/images/spells/Invisibility_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -417,6 +424,7 @@
     "housingSpace": 2,
     "maxLevel": 4,
     "iconSource": "/src/assets/images/spells/Recall_Spell.png",
+    "modelSource": "/src/assets/images/spells/Recall_Spell.png",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -457,6 +465,7 @@
     "maxLevel": 9,
     "targets": "Ground & Air",
     "iconSource": "/src/assets/images/spells/Poison_Spell.png",
+    "modelSource": "/src/assets/images/spells/Poison_Spell.png",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -543,6 +552,7 @@
     "targets": "Buildings & Walls",
     "favTarget": "Walls",
     "iconSource": "/src/assets/images/spells/Earthquake_Spell.png",
+    "modelSource": "/src/assets/images/spells/Earthquake_Spell.png",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -594,6 +604,7 @@
     "maxLevel": 5,
     "targets": "Ground & Air",
     "iconSource": "/src/assets/images/spells/Haste_Spell.png",
+    "modelSource": "/src/assets/images/spells/Haste_Spell.png",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -645,6 +656,7 @@
     "maxLevel": 8,
     "targets": "Ground",
     "iconSource": "/src/assets/images/spells/Skeleton_Spell.png",
+    "modelSource": "/src/assets/images/spells/Skeleton_Spell.png",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -704,6 +716,7 @@
     "maxLevel": 6,
     "targets": "Defenses",
     "iconSource": "/src/assets/images/spells/Bat_Spell.png",
+    "modelSource": "/src/assets/images/spells/Bat_Spell.png",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [

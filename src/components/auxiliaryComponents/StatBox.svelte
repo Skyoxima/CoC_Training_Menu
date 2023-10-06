@@ -3,6 +3,7 @@
   export let statIconSrc: string;
   export let statTitle: string;
   export let statValue: string;
+  export let statColor = 'green';
 
   let addnStyle = ""
   if(statTitle.length > 13) {
@@ -10,7 +11,7 @@
   }
 </script>
 
-<div class="stat" style="--fill-width: {fillPercentage}%">
+<div class="stat {statColor}" style="--fill-width: {fillPercentage}%">
   <div class="top-filter"></div>
   <div class="stat-header">
     <img height="24px" src={statIconSrc} alt="Stat" class="stat-icon">
@@ -32,8 +33,11 @@
     position: absolute;
     top: 2%; left: 0;
     width: var(--fill-width); height: 98%;
-    background: rgba(var(--stat-dark-green-rgb));
     border-radius: 1rem;
+  } .stat.green {
+    background: rgba(var(--stat-dark-green-rgb));
+  } .stat.blue {
+    background: darkturquoise;
   }
 
   .stat .top-filter {

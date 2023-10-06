@@ -11,7 +11,7 @@
 <script lang="ts">
   import type { siegeDataSubType, spellDataSubType, troopDataSubType } from '../../../scripts/typeDeclarations';
   import { updateClickAudio } from '../../../scripts/functions';
-  import { showEntityInfo } from '../../../scripts/svelte-stores';
+  import { entityInfoToShow, showEntityInfo } from '../../../scripts/svelte-stores';
   import './EntityBox.css';                                 // EntityBox because it will apply for an entity at both places, Grid and Queue
 
   export let entityID: string;
@@ -22,7 +22,6 @@
   let bottomOverlayIconSrc = "/src/assets/icons";
 
   if(entityData.type === 'siege-machine') {
-    entityData = entityData as siegeDataSubType;
     mainIconSrc = entityData.modelSource;
     mainIconSrc = mainIconSrc.replace('.png', '_1.png');
   } else {
@@ -38,6 +37,9 @@
   
   function handleInfoBtnClick() {
     updateClickAudio();
+    entityInfoToShow.set({
+      "entityID": entityID, "entityData": entityData, entityType: entityData.type
+    })
     showEntityInfo.set(true);
   }
 

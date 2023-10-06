@@ -21,4 +21,4 @@
 <StatBox statTitle="DPS" statIconSrc="/src/assets/icons/stat_icons/damage.png" statValue={dps}/>
 <StatBox statTitle="HP" statIconSrc="/src/assets/icons/stat_icons/hp.png" statValue={hp} />
 <StatBox statTitle="Training Time" statIconSrc="/src/assets/icons/stopwatch.png" statValue={convertToMins(parseInt(trainTime))} fillPercentage={100} />
-<StatBox statTitle="Movement Speed" statIconSrc="/src/assets/icons/stat_icons/speed.png" statValue={movementSpeed} fillPercentage={0}/>
+<StatBox statColor='blue' statTitle="Movement Speed" statIconSrc="/src/assets/icons/stat_icons/speed.png" statValue={movementSpeed} fillPercentage={0}/>

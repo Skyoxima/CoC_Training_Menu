@@ -6,6 +6,7 @@
     "maxLevel": 11,
     "housingSpace": 1,
     "makeDuration": 5,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -105,6 +106,7 @@
     "maxLevel": 11,
     "housingSpace": 5,
     "makeDuration": 25,
+    "movementSpeed": 20,
     "Level": [
       "8",
       "9",
@@ -137,6 +139,7 @@
     "maxLevel": 11,
     "housingSpace": 1,
     "makeDuration": 6,
+    "movementSpeed": 24,
     "Level": [
       "1",
       "2",
@@ -236,6 +239,7 @@
     "maxLevel": 11,
     "housingSpace": 12,
     "makeDuration": 72,
+    "movementSpeed": 24,
     "Level": [
       "8",
       "9",
@@ -268,6 +272,7 @@
     "maxLevel": 11,
     "housingSpace": 5,
     "makeDuration": 30,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -367,6 +372,7 @@
     "maxLevel": 11,
     "housingSpace": 10,
     "makeDuration": 60,
+    "movementSpeed": 12,
     "Level": [
       "9",
       "10",
@@ -400,6 +406,7 @@
     "maxLevel": 9,
     "housingSpace": 1,
     "makeDuration": 7,
+    "movementSpeed": 32,
     "Level": [
       "1",
       "2",
@@ -496,6 +503,7 @@
     "maxLevel": 9,
     "housingSpace": 3,
     "makeDuration": 21,
+    "movementSpeed": 32,
     "Level": [
       "7",
       "8",
@@ -529,6 +537,7 @@
     "maxLevel": 11,
     "housingSpace": 2,
     "makeDuration": 15,
+    "movementSpeed": 24,
     "Level": [
       "1",
       "2",
@@ -654,6 +663,7 @@
     "maxLevel": 11,
     "housingSpace": 8,
     "makeDuration": 60,
+    "movementSpeed": 28,
     "Level": [
       "7",
       "8",
@@ -704,6 +714,7 @@
     "maxLevel": 10,
     "housingSpace": 5,
     "makeDuration": 30,
+    "movementSpeed": 10,
     "Level": [
       "1",
       "2",
@@ -808,6 +819,7 @@
     "maxLevel": 10,
     "housingSpace": 8,
     "makeDuration": 48,
+    "movementSpeed": 12,
     "Level": [
       "8",
       "9",
@@ -841,6 +853,7 @@
     "maxLevel": 11,
     "housingSpace": 4,
     "makeDuration": 30,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -940,6 +953,7 @@
     "maxLevel": 11,
     "housingSpace": 8,
     "makeDuration": 75,
+    "movementSpeed": 20,
     "Level": [
       "9",
       "10",
@@ -973,6 +987,7 @@
     "maxLevel": 8,
     "housingSpace": 14,
     "makeDuration": 120,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -1061,6 +1076,7 @@
     "maxLevel": 9,
     "housingSpace": 20,
     "makeDuration": 180,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -1153,6 +1169,7 @@
     "maxLevel": 9,
     "housingSpace": 40,
     "makeDuration": 360,
+    "movementSpeed": 14,
     "Level": [
       "7",
       "8",
@@ -1185,6 +1202,7 @@
     "maxLevel": 10,
     "housingSpace": 25,
     "makeDuration": 180,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -1277,6 +1295,7 @@
     "maxLevel": 9,
     "housingSpace": 10,
     "makeDuration": 90,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -1373,6 +1392,7 @@
     "maxLevel": 9,
     "housingSpace": 15,
     "makeDuration": 135,
+    "movementSpeed": 20,
     "Level": [
       "6",
       "7",
@@ -1411,6 +1431,7 @@
     "maxLevel": 9,
     "housingSpace": 6,
     "makeDuration": 30,
+    "movementSpeed": 32,
     "Level": [
       "1",
       "2",
@@ -1496,6 +1517,7 @@
     "maxLevel": 9,
     "housingSpace": 24,
     "makeDuration": 120,
+    "movementSpeed": 32,
     "Level": [
       "7",
       "8",
@@ -1529,6 +1551,7 @@
     "maxLevel": 6,
     "housingSpace": 30,
     "makeDuration": 360,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -1601,6 +1624,7 @@
     "maxLevel": 4,
     "housingSpace": 18,
     "makeDuration": 180,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -1665,6 +1689,7 @@
     "maxLevel": 3,
     "housingSpace": 25,
     "makeDuration": 250,
+    "movementSpeed": 20,
     "Level": [
       "1",
       "2",
@@ -1713,6 +1738,7 @@
     "maxLevel": 3,
     "housingSpace": 32,
     "makeDuration": 360,
+    "movementSpeed": 16,
     "Level": [
       "1",
       "2",
@@ -1766,6 +1792,7 @@
     "maxLevel": 11,
     "housingSpace": 2,
     "makeDuration": 18,
+    "movementSpeed": 18,
     "Level": [
       "1",
       "2",
@@ -1865,6 +1892,7 @@
     "maxLevel": 11,
     "housingSpace": 12,
     "makeDuration": 108,
+    "movementSpeed": 16,
     "Level": [
       "8",
       "9",
@@ -1897,6 +1925,7 @@
     "maxLevel": 11,
     "housingSpace": 5,
     "makeDuration": 45,
+    "movementSpeed": 24,
     "Level": [
       "1",
       "2",
@@ -2003,6 +2032,7 @@
     "maxLevel": 11,
     "housingSpace": 12,
     "makeDuration": 108,
+    "movementSpeed": 24,
     "Level": [
       "10",
       "11",
@@ -2031,6 +2061,7 @@
     "maxLevel": 10,
     "housingSpace": 8,
     "makeDuration": 90,
+    "movementSpeed": 24,
     "Level": [
       "1",
       "2",
@@ -2123,6 +2154,7 @@
     "maxLevel": 10,
     "housingSpace": 20,
     "makeDuration": 235,
+    "movementSpeed": 20,
     "Level": [
       "7",
       "8",
@@ -2155,6 +2187,7 @@
     "maxLevel": 12,
     "housingSpace": 30,
     "makeDuration": 300,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -2289,6 +2322,7 @@
     "maxLevel": 6,
     "housingSpace": 12,
     "makeDuration": 120,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -2361,6 +2395,7 @@
     "maxLevel": 6,
     "housingSpace": 40,
     "makeDuration": 400,
+    "movementSpeed": 12,
     "Level": [
       "5",
       "6"
@@ -2385,6 +2420,7 @@
     "maxLevel": 6,
     "housingSpace": 30,
     "makeDuration": 300,
+    "movementSpeed": 20,
     "Level": [
       "1",
       "2",
@@ -2465,6 +2501,7 @@
     "maxLevel": 6,
     "housingSpace": 40,
     "makeDuration": 400,
+    "movementSpeed": 20,
     "Level": [
       "5",
       "6"
@@ -2497,6 +2534,7 @@
     "maxLevel": 7,
     "housingSpace": 6,
     "makeDuration": 60,
+    "movementSpeed": 14,
     "Level": [
       "1",
       "2",
@@ -2568,6 +2606,7 @@
     "maxLevel": 7,
     "housingSpace": 30,
     "makeDuration": 300,
+    "movementSpeed": 14,
     "Level": [
       "4",
       "5",
@@ -2600,6 +2639,7 @@
     "maxLevel": 7,
     "housingSpace": 15,
     "makeDuration": 150,
+    "movementSpeed": 12,
     "Level": [
       "1",
       "2",
@@ -2689,6 +2729,7 @@
     "maxLevel": 3,
     "housingSpace": 6,
     "makeDuration": 60,
+    "movementSpeed": 24,
     "Level": [
       "1",
       "2",
@@ -2747,6 +2788,7 @@
     "maxLevel": 4,
     "housingSpace": 20,
     "makeDuration": 240,
+    "movementSpeed": 20,
     "Level": [
       "1",
       "2",
