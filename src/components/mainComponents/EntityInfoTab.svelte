@@ -1,17 +1,22 @@
 <script lang="ts">
   import { showEntityInfo } from "../../scripts/svelte-stores";
   import ExitButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/ExitButton.svelte";
+  import StandardGrid from "../auxiliaryComponents/StatsGrids/StandardGrid.svelte";
   import StdTroopStatsGrid from "../auxiliaryComponents/StatsGrids/StdTroopStatsGrid.svelte";
   import { entityInfoToShow } from "../../scripts/svelte-stores";
-  import { giveProperInfoData } from "../../scripts/infoDataProcessor";
-
+  import { typeLvlSrcStyle } from "../../scripts/infoDataProcessor";
+  
   const entityInfoToShowLocal = $entityInfoToShow;
-  const returnedInfo = giveProperInfoData(entityInfoToShowLocal)
+  const returnedInfo = typeLvlSrcStyle(entityInfoToShowLocal)
 
   function processEntityName(entityID: string, entityType: string) {
     if(['elixir-troop', 'dark-elixir-troop', 'super-elixir-troop', 'super-dark-elixir-troop'].includes(entityType))
-      if(entityID.slice(0, 2) === 's-')
+      if(entityID.slice(0, 2) === 's-' && entityID.slice(2) !== "goblin")
         return 'Super ' + entityID.slice(2, 3).toUpperCase() + entityID.slice(3)
+      else if(entityID.slice(0, 2) === 's-' && entityID.slice(2) === "goblin")
+        return 'Sneaky ' + entityID.slice(2, 3).toUpperCase() + entityID.slice(3)
+      else if(entityID.slice(0, 2) === 'r-')
+        return 'Rocket ' + entityID[2].toUpperCase() + entityID.slice(3)
       else if(entityID.slice(0, 2) === 'e-')
         return 'Electro ' + entityID[2].toUpperCase() + entityID.slice(3)
       else if(entityID.slice(0, 2) === 'i-')
@@ -30,7 +35,7 @@
 
 <div id="information">
   <div id="top-container">
-    <h2 id="entity-title" style="text-align: center;">{processEntityName(entityInfoToShowLocal.entityID, entityInfoToShowLocal.entityType)}</h2>
+    <h2 id="entity-title" style="text-align: center;">{processEntityName(entityInfoToShowLocal.entityID, entityInfoToShowLocal.entityType) + ` (Level ${returnedInfo.level})`}</h2>
     <ExitButton addnID="info-exit-btn" storeOfClosingMenu={showEntityInfo} />
   </div>  
   <div id="inner-info-container">
@@ -39,9 +44,7 @@
     </div>
     <div id="entity-stats-container">
       <div id="stats-grid">
-        {#if returnedInfo.generalType == 'troop' && !['healer', 'wallbreaker', 's-wallbreaker'].includes(entityInfoToShowLocal.entityID)}
-          <StdTroopStatsGrid dph={`${returnedInfo.dph}`} dps={`${returnedInfo.dps}`} hp={`${returnedInfo.hp}`} trainTime={`${returnedInfo.trainingTime}`} movementSpeed={`${returnedInfo.movementSpeed}`} />
-        {/if}
+        <StandardGrid />
       </div>
     </div>
   </div>
@@ -94,6 +97,7 @@
     width: 40%; height: 100%;
     
     border-radius: 1rem;
+    background-size: 40% 1000px;
     background: rgba(var(--off-grey-rgb), 0.5);
     box-shadow: inset 2px 2px 0 0 rgba(var(--pure-black-rgb), 0.3), inset -2px -2px 0 0 rgba(var(--pure-white-rgb), 0.5);
   } #inner-info-container #entity-portrait-container.elixir {

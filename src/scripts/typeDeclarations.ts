@@ -37,7 +37,9 @@ export type ratesType = {
 
 export type infoTabDataType = {
   generalType: "troop" | "spell" | "siege";
+  level: number;
   portraitStyle: "elixir" | "dark-elixir" | "super-elixir" | "super-dark-elixir" | "gold";
+  portraitSrc: string;
   [key: string]: any
 }
 
@@ -48,70 +50,16 @@ export type troopDataType = {
     modelSource: string;
     type: string;
     maxLevel: number;
+    currLevel: number;
     housingSpace: number;
     makeDuration: number;
     movementSpeed: number;
+    preferredTarget: string;
     Level: string[];
     Hitpoints: string[];
-    "Research Cost"?: string[];
-    "Research Time"?: string[];
-    "Laboratory Level Required"?: string[]; // super troops wouldn't have lab info
-  } & (
-    | {
-        "Damage per Second": string[];
-        "Damage per Attack": string[];
-
-        "DPS on Resource Buildings"?: string[]; // goblins
-        "Damage Upon Death"?: string[]; // balloon, golem, lavahound
-        "Ability Damage per Second"?: string[]; // baby-dragon
-        "Yetimites spawned"?: string[];
-        "Aura Damage per Second"?: string[]; // electro-titan
-        "Aura Damage per Attack"?: string[];
-        "Golemites spawned Upon Death"?: string[]; // golem
-        "Maximum Skeletons Summoned"?: string[]; // witch
-        "Lava Pups Spawned (After Death)"?: string[];
-        "Freeze Time when Destroyed"?: string[];
-        "Ice Pups Spawned"?: string[];
-        "Freeze Time After Death On Offense"?: string[];
-        "Freeze Time After Death On Defense"?: string[];
-        "DPS on Heroes"?: string[];
-        "Speed Decrease"?: string[];
-        "Attack Rate Decrease"?: string[]; // x3 headhunter
-        "Aura HP Increase"?: string[];
-      }
-    | {
-        // Wall-breaker
-        Damage: string[];
-        "Damage when destroyed": string[];
-        "Damage to Walls": string[];
-        "Damage when destroyed to Walls": string[];
-      }
-    | {
-        // Super Wizard
-        "Damage per Second": string[];
-        "Damage per Attack(Primary Target)": string[];
-        "Secondary Chain Damage(per Target)": string[];
-      }
-    | {
-        // Healer
-        "Healing per Second": string[];
-        "Healing per Pulse": string[];
-        "HPS on Heroes": string[];
-      }
-    | {
-        // Inferno Dragon and Super Miner
-        "Damage per Second Stage 1": string[];
-        "Damage per Second Stage 2": string[];
-        "Damage per Second Stage 3": string[];
-      }
-    | {
-        // Electro Dragon
-        "Damage per Second(Primary Target)": string[];
-        "Damage per Hit(Primary Target)": string[];
-        "Damage when destroyed": string[];
-      }
-  );
-};
+    [key: string]: string[] | number | string;    // rest of the varying stats
+  };
+}
 
 export type troopDataSubType = troopDataType[keyof troopDataType];
 
@@ -122,6 +70,7 @@ export type spellDataType = {
     targets?: string;
     makeDuration: number;
     maxLevel: number;
+    currLevel: number;
     iconSource: string;
     modelSource: string;
     housingSpace: number;
@@ -214,6 +163,7 @@ export type siegeDataType = {
     modelSource: string;
     housingSpace: number;
     maxLevel: number;
+    currLevel: number;
     makeDuration: number;
     movementSpeed: number;
     Level: string[];
@@ -261,3 +211,104 @@ export type siegeDataType = {
 };
 
 export type siegeDataSubType = siegeDataType[keyof siegeDataType];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Junk
+// export type troopDataType = {
+//   [key: string]: {
+//     iconSource: string;
+//     modelSource: string;
+//     type: string;
+//     maxLevel: number;
+//     currLevel: number;
+//     housingSpace: number;
+//     makeDuration: number;
+//     movementSpeed: number;
+//     Level: string[];
+//     Hitpoints: string[];
+//     "Research Cost"?: string[];
+//     "Research Time"?: string[];
+//     "Laboratory Level Required"?: string[]; // super troops wouldn't have lab info
+//   } & (
+//     | {
+//         "Damage per Second": string[];
+//         "Damage per Attack": string[];
+
+//         "DPS on Resource Buildings"?: string[]; // goblins
+//         "Damage Upon Death"?: string[]; // balloon, golem, lavahound
+//         "Ability Damage per Second"?: string[]; // baby-dragon
+//         "Yetimites spawned"?: string[];
+//         "Aura Damage per Second"?: string[]; // electro-titan
+//         "Aura Damage per Attack"?: string[];
+//         "Golemites spawned Upon Death"?: string[]; // golem
+//         "Maximum Skeletons Summoned"?: string[]; // witch
+//         "Lava Pups Spawned (After Death)"?: string[];
+//         "Freeze Time when Destroyed"?: string[];
+//         "Ice Pups Spawned"?: string[];
+//         "Freeze Time After Death On Offense"?: string[];
+//         "Freeze Time After Death On Defense"?: string[];
+//         "DPS on Heroes"?: string[];
+//         "Speed Decrease"?: string[];
+//         "Attack Rate Decrease"?: string[]; // x3 headhunter
+//         "Aura HP Increase"?: string[];
+//       }
+//     | {
+//         // Wall-breaker
+//         Damage: string[];
+//         "Damage when destroyed": string[];
+//         "Damage to Walls": string[];
+//         "Damage when destroyed to Walls": string[];
+//       }
+//     | {
+//         // Super Wizard
+//         "Damage per Second": string[];
+//         "Damage per Attack(Primary Target)": string[];
+//         "Secondary Chain Damage(per Target)": string[];
+//       }
+//     | {
+//         // Healer
+//         "Healing per Second": string[];
+//         "Healing per Pulse": string[];
+//         "HPS on Heroes": string[];
+//       }
+//     | {
+//         // Inferno Dragon and Super Miner
+//         "Damage per Second Stage 1": string[];
+//         "Damage per Second Stage 2": string[];
+//         "Damage per Second Stage 3": string[];
+//       }
+//     | {
+//         // Electro Dragon
+//         "Damage per Second(Primary Target)": string[];
+//         "Damage per Hit(Primary Target)": string[];
+//         "Damage when destroyed": string[];
+//       }
+//   );
+// };
