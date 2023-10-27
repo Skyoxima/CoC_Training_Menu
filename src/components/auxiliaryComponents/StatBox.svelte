@@ -29,8 +29,9 @@
     position: relative;
     border-radius: 1rem;
     padding: 5px;
+    padding-bottom: 10px;
     background: rgba(var(--pure-grey-rgb));
-    box-shadow: inset 0 2px 0 0 rgba(var(--pure-black-rgb), 0.2), 0 2px 0 0 rgba(var(--pure-white-rgb), 1);
+    box-shadow: inset 0 2px 0 0 rgba(var(--pure-black-rgb), 0.4), 0 2px 0 0 rgba(var(--pure-white-rgb), 1);
   }
   .stat::before {
     content: '';
@@ -43,7 +44,8 @@
   } .stat.blue::before {
     background: darkslategray;
   } .stat.white::before {
-    background: rgba(220, 220, 200);
+    /* background: rgba(220, 220, 200); */
+    background: rgb(255, 147, 147);
   }
 
   .stat .top-filter {

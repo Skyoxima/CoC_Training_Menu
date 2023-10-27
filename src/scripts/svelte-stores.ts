@@ -7,6 +7,7 @@ export const showEntityInfo = writable(false);
 export const playNonSpellAudio = writable(0);
 export const playSpellAudio = writable(0);
 export const playBoostAudio = writable(0);
+export const playCryAudio = writable({count: 0, src: ''})
 
 export const infoPopUp = writable({
   infoPopUpClass: "inactive",

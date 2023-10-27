@@ -1,13 +1,32 @@
 <script lang="ts">
-  import { showEntityInfo } from "../../scripts/svelte-stores";
+  import { playCryAudio, showEntityInfo } from "../../scripts/svelte-stores";
   import ExitButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/ExitButton.svelte";
   import StandardGrid from "../auxiliaryComponents/StatsGrids/StandardGrid.svelte";
-  import StdTroopStatsGrid from "../auxiliaryComponents/StatsGrids/StdTroopStatsGrid.svelte";
   import { entityInfoToShow } from "../../scripts/svelte-stores";
   import { typeLvlSrcStyle } from "../../scripts/infoDataProcessor";
+  import { onDestroy, onMount } from "svelte";
+  import type { Unsubscriber } from "svelte/store";
   
   const entityInfoToShowLocal = $entityInfoToShow;
   const returnedInfo = typeLvlSrcStyle(entityInfoToShowLocal)
+  let cryUnsub: Unsubscriber;
+  let cryAudioBind: HTMLAudioElement;
+  
+  onMount(() => {
+    cryAudioBind.volume = 0.4;
+    cryUnsub = playCryAudio.subscribe((state) => {
+      console.log(state)
+      if(state.count > 0) {
+        cryAudioBind.src = state.src;
+        cryAudioBind.play();
+      }
+    })
+  })
+
+  onDestroy(() => {
+    console.log('infotab destroyed')
+    cryUnsub();
+  })
 
   function processEntityName(entityID: string, entityType: string) {
     if(['elixir-troop', 'dark-elixir-troop', 'super-elixir-troop', 'super-dark-elixir-troop'].includes(entityType))
@@ -48,6 +67,7 @@
       </div>
     </div>
   </div>
+  <audio bind:this={cryAudioBind}></audio>
 </div>
 
 <style>
@@ -126,8 +146,12 @@
     width: 60%; height: 100%;
     padding: 0.5rem;
 
+    overflow-y: scroll;
+
     border-radius: 1rem;
     box-shadow: inset 2px 2px 0 0 rgba(var(--pure-black-rgb), 0.1), inset -2px -2px 0 0 rgba(var(--pure-white-rgb), 0.75);
+  } #inner-info-container #entity-stats-container::-webkit-scrollbar {
+    display: none;
   }
 
   #stats-grid {

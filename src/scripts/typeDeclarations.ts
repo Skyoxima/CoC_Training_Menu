@@ -48,6 +48,7 @@ export type troopDataType = {
   [key: string]: {
     iconSource: string;
     modelSource: string;
+    crySource: string;
     type: string;
     maxLevel: number;
     currLevel: number;
@@ -55,6 +56,8 @@ export type troopDataType = {
     makeDuration: number;
     movementSpeed: number;
     preferredTarget: string;
+    attackType: string;
+    targets: string;
     Level: string[];
     Hitpoints: string[];
     [key: string]: string[] | number | string;    // rest of the varying stats
@@ -73,6 +76,7 @@ export type spellDataType = {
     currLevel: number;
     iconSource: string;
     modelSource: string;
+    crySource: string;
     housingSpace: number;
     type: string;
     Level: string[];
@@ -161,6 +165,7 @@ export type siegeDataType = {
     type: string;
     iconSource: string;
     modelSource: string;
+    crySource: string;
     housingSpace: number;
     maxLevel: number;
     currLevel: number;

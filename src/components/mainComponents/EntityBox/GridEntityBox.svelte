@@ -10,7 +10,7 @@
 
 <script lang="ts">
   import type { siegeDataSubType, spellDataSubType, troopDataSubType } from '../../../scripts/typeDeclarations';
-  import { updateClickAudio } from '../../../scripts/functions';
+  import { updateClickAudio, updateCryAudio } from '../../../scripts/functions';
   import { entityInfoToShow, showEntityInfo } from '../../../scripts/svelte-stores';
   import './EntityBox.css';                                 // EntityBox because it will apply for an entity at both places, Grid and Queue
 
@@ -37,6 +37,7 @@
   
   function handleInfoBtnClick() {
     updateClickAudio();
+    updateCryAudio(entityData.crySource);
     entityInfoToShow.set({
       "entityID": entityID, "entityData": entityData, entityType: entityData.type
     })

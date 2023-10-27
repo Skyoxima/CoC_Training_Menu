@@ -1,4 +1,4 @@
-import { playBoostAudio, playButtonAudio, playNonSpellAudio, playSpellAudio } from "./svelte-stores";
+import { playBoostAudio, playButtonAudio, playCryAudio, playNonSpellAudio, playSpellAudio } from "./svelte-stores";
 import type { troopDataType, spellDataType, siegeDataType } from "./typeDeclarations";
 
 export const updateClickAudio = () => {
@@ -27,6 +27,14 @@ export const updateBoostAudio = () => {
     state++;
     return state;
   });
+}
+
+export const updateCryAudio = (crySource: string) => {
+  playCryAudio.update(state => {
+    state.count++;
+    state.src = crySource;
+    return state;
+  })
 }
 
 //>> Type Guards, the functions which narrow down the type at block level.
