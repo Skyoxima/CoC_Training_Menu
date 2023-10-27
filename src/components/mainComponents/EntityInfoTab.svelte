@@ -15,7 +15,6 @@
   onMount(() => {
     cryAudioBind.volume = 0.4;
     cryUnsub = playCryAudio.subscribe((state) => {
-      console.log(state)
       if(state.count > 0) {
         cryAudioBind.src = state.src;
         cryAudioBind.play();
@@ -24,7 +23,6 @@
   })
 
   onDestroy(() => {
-    console.log('infotab destroyed')
     cryUnsub();
   })
 
@@ -40,6 +38,12 @@
         return 'Electro ' + entityID[2].toUpperCase() + entityID.slice(3)
       else if(entityID.slice(0, 2) === 'i-')
         return 'Inferno ' + entityID[2].toUpperCase() + entityID.slice(3)
+      else if(entityID.slice(0, 3) === 'app')
+        return 'Apprentice Warden'
+      else if(entityID.slice(0, 4) === 'lava')
+        return "Lava " + entityID[4].toUpperCase() + entityID.slice(5)
+      else if(entityID.slice(0, 3) === 'ice')
+        return "Ice " + entityID[3].toUpperCase() + entityID.slice(4)
 
     if(['dark-elixir-spell', 'elixir-spell'].includes(entityType))
       return entityID[0].toUpperCase() + entityID.slice(1) + ' Spell';
