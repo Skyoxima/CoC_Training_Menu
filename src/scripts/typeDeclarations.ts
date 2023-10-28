@@ -38,7 +38,7 @@ export type ratesType = {
 export type infoTabDataType = {
   generalType: "troop" | "spell" | "siege";
   level: number;
-  portraitStyle: "elixir" | "dark-elixir" | "super-elixir" | "super-dark-elixir" | "gold";
+  portraitStyle: string;
   portraitSrc: string;
   [key: string]: any
 }

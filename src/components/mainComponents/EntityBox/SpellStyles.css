@@ -1,14 +1,14 @@
 #lightning, #lightning-q, #clone, #clone-q, #freeze, #freeze-q {
   background: linear-gradient(
     to top,
-    rgba(4, 31, 55),
-    rgba(162, 180, 197)
+    rgba(var(--spell-lightning-dark-rgb)),
+    rgba(var(--spell-lightning-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(4, 31, 55),
-    rgba(162, 180, 197)
+    rgba(var(--spell-lightning-dark-rgb)),
+    rgba(var(--spell-lightning-light-rgb))
   )
   border-box;
 }
@@ -16,14 +16,14 @@
 #heal, #heal-q {
   background: linear-gradient(
     to top,
-    rgb(158, 119, 1),
-    rgba(255, 210, 75)
+    rgba(var(--spell-heal-dark-rgb)),
+    rgba(var(--spell-heal-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(158, 119, 1),
-    rgba(255, 210, 75)
+    rgba(var(--spell-heal-dark-rgb)),
+    rgba(var(--spell-heal-light-rgb))
   )
   border-box;
 }
@@ -31,14 +31,14 @@
 #rage, #rage-q, #bat, #bat-q {
   background: linear-gradient(
     to top,
-    rgb(69, 1, 96),
-    rgba(189, 102, 223)
+    rgb(var(--spell-rage-dark-rgb)),
+    rgba(var(--spell-rage-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(69, 1, 96),
-    rgba(189, 102, 223)
+    rgba(var(--spell-rage-light-rgb)),
+    rgba(var(--spell-rage-dark-rgb))
   )
   border-box;
 }
@@ -46,14 +46,14 @@
 #jump, #jump-q {
   background: linear-gradient(
     to top,
-    rgb(46, 132, 0),
-    rgba(102, 239, 29)
+    rgb(var(--spell-jump-dark-rgb)),
+    rgba(var(--spell-jump-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(46, 132, 0),
-    rgba(102, 239, 29)
+    rgba(var(--spell-jump-dark-rgb)),
+    rgba(var(--spell-jump-light-rgb))
   )
   border-box;
 }
@@ -61,14 +61,14 @@
 #invisibility, #invisibility-q {
   background: linear-gradient(
     to top,
-    rgb(0, 103, 64),
-    rgba(26, 216, 144)
+    rgb(var(--spell-invisibility-dark-rgb)),
+    rgba(var(--spell-invisibility-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(0, 103, 64),
-    rgba(26, 216, 144)
+    rgba(var(--spell-invisibility-dark-rgb)),
+    rgba(var(--spell-invisibility-light-rgb))
   )
   border-box;
 }
@@ -76,14 +76,14 @@
 #recall, #recall-q {
   background: linear-gradient(
     to top,
-    rgb(214, 0, 76),
-    rgba(248, 120, 165)
+    rgb(var(--spell-recall-dark-rgb)),
+    rgba(var(--spell-recall-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(214, 0, 76),
-    rgba(248, 120, 165)
+    rgba(var(--spell-recall-dark-rgb)),
+    rgba(var(--spell-recall-light-rgb))
   )
   border-box;
 }
@@ -91,14 +91,14 @@
 #poison, #poison-q {
   background: linear-gradient(
     to top,
-    rgb(255, 92, 0),
-    rgba(255, 184, 144)
+    rgb(var(--spell-poison-dark-rgb)),
+    rgba(var(--spell-poison-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(255, 92, 0),
-    rgba(255, 184, 144)
+    rgba(var(--spell-poison-dark-rgb)),
+    rgba(var(--spell-poison-light-rgb))
   )
   border-box;
 }
@@ -106,14 +106,14 @@
 #earthquake, #earthquake-q {
   background: linear-gradient(
     to top,
-    rgb(38, 11, 1),
-    rgba(159, 108, 89)
+    rgb(var(--spell-eq-dark-rgb)),
+    rgba(var(--spell-eq-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(38, 11, 1),
-    rgba(159, 108, 89)
+    rgba(var(--spell-eq-dark-rgb)),
+    rgba(var(--spell-eq-light-rgb))
   )
   border-box;
 }
@@ -121,14 +121,14 @@
 #haste, #haste-q {
   background: linear-gradient(
     to top,
-    rgb(204, 11, 102),
-    rgba(235, 130, 180)
+    rgb(var(--spell-haste-dark-rgb)),
+    rgba(var(--spell-haste-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(204, 11, 102),
-    rgba(235, 130, 180)
+    rgba(var(--spell-haste-dark-rgb)),
+    rgba(var(--spell-haste-light-rgb))
   )
   border-box;
 }
@@ -136,14 +136,14 @@
 #skeleton, #skeleton-q {
   background: linear-gradient(
     to top,
-    rgb(136, 0, 27),
-    rgba(250, 0, 49)
+    rgb(var(--spell-skeleton-dark-rgb)),
+    rgba(var(--spell-skeleton-light-rgb))
   )
   padding-box,
   linear-gradient(
     to top,
-    rgba(136, 0, 27),
-    rgba(250, 0, 49)
+    rgba(var(--spell-skeleton-dark-rgb)),
+    rgba(var(--spell-skeleton-light-rgb))
   )
   border-box;
 }

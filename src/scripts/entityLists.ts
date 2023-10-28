@@ -68,3 +68,15 @@ export const allSieges = [
   'flame-flinger', 
   'battle-drill'
 ];
+
+export const statIcons = { 'hp': "/src/assets/icons/stat_icons/hp.png",
+                      'heal1': "src/assets/icons/stat_icons/heal_troop.png",
+                      'heal2': "src/assets/icons/stat_icons/heal_hero.png",
+                      'damage': "/src/assets/icons/stat_icons/damage.png",
+                      'speed': "/src/assets/icons/stat_icons/speed.png",
+                      'time': "/src/assets/icons/stopwatch.png",
+                      'housing': "/src/assets/icons/stat_icons/troop_silhouette.png",
+                      'target': "/src/assets/icons/stat_icons/target.png",
+                      'poison': "/src/assets/icons/stat_icons/poison.png",
+                      'count': "/src/assets/icons/stat_icons/count.png"
+                    }

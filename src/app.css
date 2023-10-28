@@ -44,6 +44,36 @@
 
   --stat-dark-green-rgb: 63, 177, 4;
   --stat-light-green-rgb: 145, 215, 57;
+
+  --spell-lightning-dark-rgb: 4, 31, 55;
+  --spell-lightning-light-rgb: 162, 180, 197;
+
+  --spell-heal-dark-rgb: 158, 119, 1;
+  --spell-heal-light-rgb: 255, 210, 75;
+  
+  --spell-rage-dark-rgb: 69, 1, 96;
+  --spell-rage-light-rgb: 189, 102, 223;
+
+  --spell-jump-dark-rgb: 46, 132, 0;
+  --spell-jump-light-rgb: 102, 239, 29;
+
+  --spell-invisibility-dark-rgb: 0, 103, 64;
+  --spell-invisibility-light-rgb: 26, 216, 144;
+
+  --spell-recall-dark-rgb: 214, 0, 76;
+  --spell-recall-light-rgb: 248, 120, 165;
+
+  --spell-poison-dark-rgb: 255, 92, 0;
+  --spell-poison-light-rgb: 255, 184, 144;
+
+  --spell-eq-dark-rgb: 38, 11, 1;
+  --spell-eq-light-rgb: 159, 108, 89;
+
+  --spell-haste-dark-rgb: 204, 11, 102;
+  --spell-haste-light-rgb: 235, 130, 180;
+
+  --spell-skeleton-dark-rgb: 136, 0, 27;
+  --spell-skeleton-light-rgb: 250, 0, 49;
 }
 
 * {

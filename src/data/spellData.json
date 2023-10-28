@@ -7,6 +7,7 @@
     "currLevel": 10,
     "iconSource": "/src/assets/images/spells/Lightning_Spell.png",
     "modelSource": "/src/assets/images/spells/Lightning_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/lightning_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -80,6 +81,7 @@
     "currLevel": 9,
     "iconSource": "/src/assets/images/spells/Heal_Spell.png",
     "modelSource": "/src/assets/images/spells/Heal_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/heal_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -171,6 +173,7 @@
     "currLevel": 6,
     "iconSource": "/src/assets/images/spells/Rage_Spell.png",
     "modelSource": "/src/assets/images/spells/Rage_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/rage_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -230,6 +233,7 @@
     "currLevel": 5,
     "iconSource": "/src/assets/images/spells/Jump_Spell.png",
     "modelSource": "/src/assets/images/spells/Jump_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/jump_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -275,6 +279,7 @@
     "currLevel": 7,
     "iconSource": "/src/assets/images/spells/Freeze_Spell.png",
     "modelSource": "/src/assets/images/spells/Freeze_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/freeze_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -332,6 +337,7 @@
     "currLevel": 8,
     "iconSource": "/src/assets/images/spells/Clone_Spell.png",
     "modelSource": "/src/assets/images/spells/Clone_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/clone_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 540,
     "Level": [
@@ -392,6 +398,7 @@
     "currLevel": 4,
     "iconSource": "/src/assets/images/spells/Invisibility_Spell.png",
     "modelSource": "/src/assets/images/spells/Invisibility_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/invisibility_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -433,6 +440,7 @@
     "currLevel": 4,
     "iconSource": "/src/assets/images/spells/Recall_Spell.png",
     "modelSource": "/src/assets/images/spells/Recall_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/recall_deploy.ogg",
     "type": "elixir-spell",
     "makeDuration": 360,
     "Level": [
@@ -475,6 +483,7 @@
     "targets": "Ground & Air",
     "iconSource": "/src/assets/images/spells/Poison_Spell.png",
     "modelSource": "/src/assets/images/spells/Poison_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/poison_deploy.ogg",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -563,6 +572,7 @@
     "favTarget": "Walls",
     "iconSource": "/src/assets/images/spells/Earthquake_Spell.png",
     "modelSource": "/src/assets/images/spells/Earthquake_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/earthquake_deploy.ogg",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -616,6 +626,7 @@
     "targets": "Ground & Air",
     "iconSource": "/src/assets/images/spells/Haste_Spell.png",
     "modelSource": "/src/assets/images/spells/Haste_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/haste_deploy.ogg",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -669,6 +680,7 @@
     "targets": "Ground",
     "iconSource": "/src/assets/images/spells/Skeleton_Spell.png",
     "modelSource": "/src/assets/images/spells/Skeleton_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/skeleton_deploy.ogg",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
@@ -730,6 +742,7 @@
     "targets": "Defenses",
     "iconSource": "/src/assets/images/spells/Bat_Spell.png",
     "modelSource": "/src/assets/images/spells/Bat_Spell.png",
+    "crySource": "/src/assets/sound/cries/spells/bat_deploy.ogg",
     "type": "dark-elixir-spell",
     "makeDuration": 180,
     "Level": [
