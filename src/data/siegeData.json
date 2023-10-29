@@ -216,6 +216,7 @@
     "housingSpace": 1,
     "maxLevel": 4,
     "currLevel": 4,
+    "preferredTarget": "None",
     "makeDuration": 1200,
     "movementSpeed": 0,
     "Lifetime": 30,

@@ -1,7 +1,7 @@
 {#each Object.entries(statboxData) as [key, value]}
-  {#if ['Movement Speed', 'Training Time', 'Housing Space', 'Spell Lifespan', 'Clone Lifespan'].includes(key)}
+  {#if ['Training Time', 'Housing Space', 'Spell Lifespan', 'Clone Lifespan'].includes(key)}
     <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={100} statColor="blue" />
-    {:else if ['Preferred Target', 'Attack Type', 'Targets', 'Radius'].includes(key) }
+    {:else if ['Movement Speed', 'Preferred Target', 'Attack Type', 'Attack Speed', 'Targets', 'Radius'].includes(key) }
     <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={100} statColor="white" />
   {:else}
     <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={fillPercentage} />
@@ -35,4 +35,5 @@
   
 </script>
 
+<!-->> Green StatBox color is for progressive stats (string[]), blue for fixed training related and red for fixed combat(on the field) related -->
 <!-- ! Add subtroop counts for golem, yeti, lavahound, witch etc. -->

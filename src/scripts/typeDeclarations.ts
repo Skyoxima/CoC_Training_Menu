@@ -172,13 +172,13 @@ export type siegeDataType = {
     movementSpeed: number;
     Level: string[];
     Hitpoints: string[];
+    preferredTarget: string;
     "Research Cost": string[];
     "Research Time": string[];
     "Laboratory Level Required": string[];
   } & (
     | ({
         // common to everyone except siege-barracks
-        preferredTarget: string;
         attackType: string;
         attackSpeed: number;
         "Damage per Second": string[];

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { playCryAudio, showEntityInfo } from "../../scripts/svelte-stores";
   import ExitButton from "../auxiliaryComponents/FunctionalButtons/RedButtons/ExitButton.svelte";
-  import StandardGrid from "../auxiliaryComponents/StatsGrids/StandardGrid.svelte";
+  import StandardInfoGrid from "../auxiliaryComponents/StatsGrids/StandardInfoGrid.svelte";
   import { entityInfoToShow } from "../../scripts/svelte-stores";
   import { typeLvlSrcStyle } from "../../scripts/infoDataProcessor";
   import { onDestroy, onMount } from "svelte";
@@ -71,7 +71,7 @@
     </div>
     <div id="entity-stats-container">
       <div id="stats-grid">
-        <StandardGrid />
+        <StandardInfoGrid />
       </div>
     </div>
   </div>

@@ -48,10 +48,9 @@ export function processData(entityData: troopDataSubType | siegeDataSubType | sp
         dataToShow[`${key}`] = [(value as string[])[entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['heal2']];
       }
     })
-    // method to access string[] values above is used so that super troops' stats are retrieved correctly as well
+    // method to access string[] values above is used so that super troops' stats are retrieved correctly as well for all levels
 
     dataToShow['HP'] = [entityData["Hitpoints"][entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['hp']];
-    dataToShow['Movement Speed'] = [entityData["movementSpeed"], statIcons['speed']];
   }
   
   else if(type === 'spell') {
@@ -89,15 +88,29 @@ export function processData(entityData: troopDataSubType | siegeDataSubType | sp
     })
   }
 
+  else {
+    entityData = entityData as siegeDataSubType;
+    dataToShow['HP'] = [entityData.Hitpoints[entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['hp']]
+    Object.entries(entityData).forEach(([key, value]) => {
+      if(['Damage', 'DPS', 'Point-Blank', 'Total', 'Flame'].includes(key.split(' ')[0]))
+        dataToShow[`${key}`] = [(value as string[])[entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['damage']]
+      else if(key.split(" ")[1] === 'Spawned')
+        dataToShow[`${key}`] = [(value as string[])[entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['count']]
+      else if(key === 'Lifetimes')
+        dataToShow[`Siege Life`] = [(value as string[])[entityData.Level.indexOf(`${entityData.currLevel}`)], statIcons['heal3']]
+    })
+  }
+
   // common to all entities
   dataToShow["Training Time"] = [convertToMins(entityData.makeDuration), statIcons['time']]
   dataToShow["Housing Space"] = [entityData.housingSpace, statIcons['housing']];
   
-  //~ separated for proper grid alignment
+  //~ separated for proper grid alignment as the keys are being looped over above
   if(type === 'troop') {
     entityData = entityData as troopDataSubType;
+    dataToShow['Movement Speed'] = [entityData["movementSpeed"], statIcons['speed']];
     dataToShow["Preferred Target"] = [entityData["preferredTarget"], statIcons['target']]
-    dataToShow["Attack Type"] = [entityData.attackType, statIcons['target']]
+    dataToShow["Attack Type"] = [entityData.attackType, statIcons['attack']]
     dataToShow["Targets"] = [entityData.targets, statIcons['target']]
   } else if(type === 'spell') {
     entityData = entityData as spellDataSubType;
@@ -109,6 +122,14 @@ export function processData(entityData: troopDataSubType | siegeDataSubType | sp
     if(!('Radius ' in dataToShow))    // earthquake fix-around
       dataToShow['Radius'] = [entityData['radius'], statIcons['radius']]
     dataToShow['Targets'] = [entityData['targets'], statIcons['target']]
+  } else {
+    entityData = entityData as siegeDataSubType;
+    dataToShow['Movement Speed'] = [entityData.movementSpeed, statIcons['speed']]
+    dataToShow["Preferred Target"] = [entityData["preferredTarget"], statIcons['target']]
+    if('attackType' in entityData) // only because siegebarracks doesn't have this I have to mention this here
+      dataToShow[`Attack Type`] = [entityData['attackType'], statIcons['attack']]
+    if('attackSpeed' in entityData) // only because siegebarracks doesn't have this I have to mention this here
+      dataToShow[`Attack Speed`] = [entityData['attackSpeed'], statIcons['attack2']]
   }
   return dataToShow;
 }
