@@ -70,13 +70,19 @@ export const allSieges = [
 ];
 
 export const statIcons = { 'hp': "/src/assets/icons/stat_icons/hp.png",
-                      'heal1': "src/assets/icons/stat_icons/heal_troop.png",
-                      'heal2': "src/assets/icons/stat_icons/heal_hero.png",
+                      'heal1': "/src/assets/icons/stat_icons/heal_troop.png",
+                      'heal2': "/src/assets/icons/stat_icons/heal_hero.png",
+                      'heal3': "/src/assets/icons/stat_icons/hp_transition.png",
                       'damage': "/src/assets/icons/stat_icons/damage.png",
                       'speed': "/src/assets/icons/stat_icons/speed.png",
                       'time': "/src/assets/icons/stopwatch.png",
                       'housing': "/src/assets/icons/stat_icons/troop_silhouette.png",
                       'target': "/src/assets/icons/stat_icons/target.png",
                       'poison': "/src/assets/icons/stat_icons/poison.png",
-                      'count': "/src/assets/icons/stat_icons/count.png"
+                      'count': "/src/assets/icons/stat_icons/count.png",
+                      'skull': "/src/assets/icons/stat_icons/skull.png",
+                      'bats': "/src/assets/icons/stat_icons/bat.png",
+                      'radius': "/src/assets/icons/stat_icons/blast_radius.png",
+                      'attack': "/src/assets/icons/stat_icons/attack.png",
+                      'attack2': "/src/assets/icons/stat_icons/attack2.png"
                     }

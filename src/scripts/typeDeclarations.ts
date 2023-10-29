@@ -68,9 +68,9 @@ export type troopDataSubType = troopDataType[keyof troopDataType];
 
 export type spellDataType = {
   [key: string]: {
-    radius?: string; // optional as lighning and eq have diff radius
+    radius?: string; // optional, eq has progressive radius
     spellDuration?: number; // some spells don't have it
-    targets?: string;
+    targets: string;
     makeDuration: number;
     maxLevel: number;
     currLevel: number;
@@ -109,7 +109,6 @@ export type spellDataType = {
       ))
     | {
         // jump
-        boostTime: number;
         "Spell Duration": string[];
       }
     | {

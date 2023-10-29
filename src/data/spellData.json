@@ -2,6 +2,7 @@
   "lightning": {
     "radius": "2 tiles",
     "stunTime": "0.1s*",
+    "targets": "Air & Ground",
     "housingSpace": 1,
     "maxLevel": 10,
     "currLevel": 10,
@@ -76,6 +77,7 @@
     "spellDuration": 12,
     "noofpulses": 40,
     "timeBtwnPulses": "0.3s",
+    "targets": "Air & Ground",
     "housingSpace": 2,
     "maxLevel": 9,
     "currLevel": 9,
@@ -168,6 +170,7 @@
     "noofpulses": 60,
     "timeBtwnPulses": "0.3s",
     "boostTime": 1,
+    "targets": "Air & Ground",
     "housingSpace": 2,
     "maxLevel": 6,
     "currLevel": 6,
@@ -227,7 +230,7 @@
   },
   "jump": {
     "radius": "3.5 tiles",
-    "boostTime": 1,
+    "targets": "Ground",
     "housingSpace": 2,
     "maxLevel": 5,
     "currLevel": 5,
@@ -244,11 +247,11 @@
       "5"
     ],
     "Spell Duration": [
-      "20 seconds",
-      "40 seconds",
-      "60 seconds",
-      "80 seconds",
-      "100 seconds"
+      "20s",
+      "40s",
+      "60s",
+      "80s",
+      "100s"
     ],
     "Research Cost": [
       "N/A",
@@ -274,6 +277,7 @@
   },
   "freeze": {
     "radius": "1.75 tiles",
+    "targets": "Air & Ground",
     "housingSpace": 1,
     "maxLevel": 7,
     "currLevel": 7,
@@ -292,13 +296,13 @@
       "7"
     ],
     "Freeze Time": [
-      "2.5 seconds",
-      "3.0 seconds",
-      "3.5 seconds",
-      "4.0 seconds",
-      "4.5 seconds",
-      "5.0 seconds",
-      "5.5 seconds"
+      "2.5s",
+      "3.0s",
+      "3.5s",
+      "4.0s",
+      "4.5s",
+      "5.0s",
+      "5.5s"
     ],
     "Research Cost": [
       "N/A",
@@ -332,6 +336,7 @@
     "radius": "3.5 tiles",
     "spellDuration": 18,
     "clonedLifespan": 30,
+    "targets": "Air & Ground",
     "housingSpace": 3,
     "maxLevel": 8,
     "currLevel": 8,
@@ -393,6 +398,7 @@
   },
   "invisibility": {
     "radius": "4 tiles",
+    "targets": "Air, Ground, Buildings",
     "housingSpace": 1,
     "maxLevel": 4,
     "currLevel": 4,
@@ -407,7 +413,7 @@
       "3",
       "4"
     ],
-    "Duration": [
+    "Spell Duration": [
       "3.75s",
       "4s",
       "4.25s",
@@ -509,15 +515,15 @@
       "320"
     ],
     "Speed Decrease": [
-      "26%",
-      "30%",
-      "34%",
-      "38%",
-      "40%",
-      "42%",
-      "44%",
-      "46%",
-      "48%"
+      "26",
+      "30",
+      "34",
+      "38",
+      "40",
+      "42",
+      "44",
+      "46",
+      "48"
     ],
     "Attack Rate Decrease": [
       "35%",
@@ -644,11 +650,11 @@
       "52"
     ],
     "Spell Duration": [
-      "10 seconds",
-      "15 seconds",
-      "20 seconds",
-      "25 seconds",
-      "30 seconds"
+      "10s",
+      "15s",
+      "20s",
+      "25s",
+      "30s"
     ],
     "Research Cost": [
       "N/A",

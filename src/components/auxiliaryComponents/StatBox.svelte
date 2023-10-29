@@ -45,7 +45,7 @@
     background: darkslategray;
   } .stat.white::before {
     /* background: rgba(220, 220, 200); */
-    background: rgb(255, 147, 147);
+    background: rgb(190, 90, 90);
   }
 
   .stat .top-filter {

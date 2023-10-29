@@ -1,10 +1,10 @@
 {#each Object.entries(statboxData) as [key, value]}
-  {#if ['Movement Speed', 'Training Time', 'Housing Space'].includes(key)}
+  {#if ['Movement Speed', 'Training Time', 'Housing Space', 'Spell Lifespan', 'Clone Lifespan'].includes(key)}
     <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={100} statColor="blue" />
-    {:else if ['Preferred Target', 'Attack Type', 'Targets'].includes(key) }
+    {:else if ['Preferred Target', 'Attack Type', 'Targets', 'Radius'].includes(key) }
     <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={100} statColor="white" />
   {:else}
-    <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={fillPercentage}/>
+    <StatBox statTitle={key} statValue={`${value[0]}`} statIconSrc={`${value[1]}`} fillPercentage={fillPercentage} />
   {/if}
 {/each}
 
@@ -12,7 +12,7 @@
   import type { entityInfoToShowType, siegeDataSubType, spellDataSubType, troopDataSubType } from "../../../scripts/typeDeclarations";
   import StatBox from "../StatBox.svelte";
   import { entityInfoToShow } from "../../../scripts/svelte-stores";
-  import { allTroops, allSieges, allSpells } from "../../../scripts/entityLists";
+  import { allTroops, allSpells } from "../../../scripts/entityLists";
   import { processData } from "../../../scripts/infoDataProcessor";
 
   const localEITS: entityInfoToShowType = $entityInfoToShow;

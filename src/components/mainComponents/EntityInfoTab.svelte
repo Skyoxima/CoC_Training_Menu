@@ -157,8 +157,6 @@
     background: linear-gradient(to top, rgba(var(--spell-poison-dark-rgb)), rgba(var(--spell-poison-light-rgb)), transparent);
   } #inner-info-container #entity-portrait-container.eq {
     background: linear-gradient(to top, rgba(var(--spell-eq-dark-rgb)), rgba(var(--spell-eq-light-rgb)), transparent);
-  } #inner-info-container #entity-portrait-container.eq {
-    background: linear-gradient(to top, rgba(var(--spell-eq-dark-rgb)), rgba(var(--spell-eq-light-rgb)), transparent);
   } #inner-info-container #entity-portrait-container.haste {
     background: linear-gradient(to top, rgba(var(--spell-haste-dark-rgb)), rgba(var(--spell-haste-light-rgb)), transparent);
   } #inner-info-container #entity-portrait-container.skeleton {
