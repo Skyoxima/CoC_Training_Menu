@@ -3,7 +3,8 @@
 ----
 
 <details>
-<summary>Introduction</summary>
+<summary style='font-size: 2rem; font-weight: bold'>Introduction</summary>
+<br>
 Hello everyone, here's my crown jewel (till date) project as an aspiring Front-end Developer: A fully functional implementation of the famous game Clash of Clan's in-game training menu.
 
 I've played the game ever since its release (I was in grade 4, used to play it on my dad's phone, fond memories🥰) and have always loved the artstyle, the overall bright and sunshine-y aesthetic of it.
