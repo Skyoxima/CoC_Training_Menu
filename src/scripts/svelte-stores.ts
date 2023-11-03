@@ -72,10 +72,12 @@ export const currentlyMakingSiege: Writable<queueManagerType> = writable({
 })
 
 export const entitiesMadeState: Writable<madeEntitiesStateType> = writable({
-  troops: {}, spells: {}, sieges: {}
+  troops: {},
+  spells: {}, 
+  sieges: {},
 })
 
-export const fullCapacities = readable({"troop": 320, "spell": 11, "siege": 6})
+export const fullCapacities = readable({"troop": 320, "spell": 11, "siege": 3})
 export const currencies = writable({
   "gems": 3000
 });

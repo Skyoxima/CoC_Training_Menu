@@ -24,7 +24,7 @@
   {:else if $activeTab === 'siege-tab'}
     <MenuContents queueState={siegeQueueState} Data={siegeData} entityFullCapacity={$fullCapacities.siege} queueManager={currentlyMakingSiege} boostAvailable={$rates.siege === $initialRates.siege} />
   {:else if $activeTab === 'army-tab'}
-    <ArmyOverview /> <!--! it will have to subscribe to all queue datas within -->
+    <ArmyOverview troopData={troopData} siegeData={siegeData} spellData={spellData}/> 
   {/if}
   </div>
 </div>

@@ -2,13 +2,15 @@ import { entitiesMadeState, activeTab } from "./svelte-stores";
 import { get } from "svelte/store";
 import { type Writable } from "svelte/store";
 import type { queueStateType, queueManagerType } from "./typeDeclarations";
+import { allTroops, allSpells, allSieges } from "./entityLists";      // this is the correct way, current tab one is wrong
+
 
 //common for all 'making' scripts
 export function addToMadeQueue(madeEntity: string, bulkNumbers = 0) {
-  if(get(activeTab) === 'training-tab') {
+  if(allTroops.includes(madeEntity)) {
     entitiesMadeState.update(state => {
       if(bulkNumbers > 1) {
-        state.troops[madeEntity] = bulkNumbers
+        state.troops[madeEntity] = bulkNumbers;
       } else {
         if(state.troops[madeEntity] !== undefined) {
           state.troops[madeEntity]++;
@@ -18,7 +20,7 @@ export function addToMadeQueue(madeEntity: string, bulkNumbers = 0) {
       }
       return state;
     });
-  } else if(get(activeTab) === 'spells-tab') {
+  } else if(allSpells.includes(madeEntity)) {
     entitiesMadeState.update(state => {
       if(bulkNumbers > 1) {
         state.spells[madeEntity] = bulkNumbers

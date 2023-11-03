@@ -86,3 +86,11 @@ export const statIcons = { 'hp': "/src/assets/icons/stat_icons/hp.png",
                       'attack': "/src/assets/icons/stat_icons/attack.png",
                       'attack2': "/src/assets/icons/stat_icons/attack2.png"
                     }
+
+export const armyTabIcons = {
+  'troops': '/src/assets/icons/troop_capacity.png',
+  'spells': '/src/assets/icons/spell_capacity.png',
+  'sieges': '/src/assets/icons/siege_capacity.png',
+  'heroes': '/src/assets/icons/hero.png',
+  'cc': '/src/assets/icons/clan_castle.png',
+}

@@ -3,6 +3,7 @@
   export let entityImgSrc: string;
   export let entityCount: number;
   export let entityLvl = 1;
+  export let entityMaxLvl = 999;
   const bgSrcs: Record<string, string> = {'spell': '/src/assets/icons/army_tab_spell.png', 'troop': '/src/assets/icons/army_tab_troop.png', 'siege': '/src/assets/icons/army_tab_troop.png', 'super-troop': '/src/assets/icons/army_tab_super_troop.png'}
 </script>
   
@@ -10,7 +11,7 @@
   <div class="a-card">
     <img class="card-bg" src="/src/assets/icons/army_tab_hero.png" alt="">
     <img class="entity-face hero" src={entityImgSrc} alt="" />
-    <p class="entity-lvl">{entityLvl}</p>
+    <p class="entity-lvl max">{entityLvl}</p>
   </div>
 {:else}
   <div class="a-card {entityType}">
@@ -18,7 +19,7 @@
     <img class="card-bg" src={bgSrcs[entityType]} alt="">
     <img class="entity-face {entityType}" src={entityImgSrc} alt="" />
     {#if entityType === 'super-troop'} <div class="gold-frame"></div> {/if}
-    <p class="entity-lvl">{entityLvl}</p>
+    <p class="entity-lvl {entityMaxLvl === entityLvl ? 'max' : ''}">{entityLvl}</p>
   </div>
 {/if}
 
@@ -48,11 +49,14 @@
     bottom: 2.5%; left: 50%;
     translate: -50% 0;
     width: 95%;
-  } .entity-face.hero{
+  } .entity-face.hero { 
     height: 100%;
-  } .entity-face.troop, .entity-face.siege, .entity-face.spell {
+  } .entity-face.troop, .entity-face.spell {
     height: 75%;
     border-radius: 0 0 1rem 1rem;
+  } .entity-face.siege {
+    height: 75%;
+    object-fit: contain;
   }
 
   .a-card .entity-count {
@@ -71,5 +75,8 @@
     text-align: center;
     border: 2px solid grey;
     border-radius: 0.25rem;
+  } .a-card .entity-lvl.max {
+    background: rgba(var(--spell-heal-light-rgb), 0.8);
+    border: 2px solid var(--gold-light-alternate);
   }
 </style>
