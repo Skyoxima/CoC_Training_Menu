@@ -25,6 +25,6 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 
 ### Initial Screen (Landing)
 
-[Landing](public/screenshots/Landing.mp4)
+[Landing](https://drive.google.com/file/d/1DZD_jMcysY0UkTf6adBd3sNnI3pcccNE/view?usp=drive_link)
 
 ----
