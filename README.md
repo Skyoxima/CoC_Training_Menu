@@ -25,6 +25,6 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 
 https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/668a8d9b-12d0-4272-8a91-4b6880e592cc
 
-All the glowing 'interactables' are what open the menu, similar to the game!
+All the glowing 'interactables' are the way to open the menu, similar to the game!
 
 ----
