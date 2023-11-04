@@ -3,7 +3,7 @@
 ----
 
 <details>
-<summary style='font-size: 2rem; font-weight: bold'>Introduction</summary>
+<summary> Introduction</summary>
 <br>
 Hello everyone, here's my crown jewel (till date) project as an aspiring Front-end Developer: A fully functional implementation of the famous game Clash of Clan's in-game training menu.
 
@@ -22,5 +22,9 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 ----
 
 ## Screenshots :camera:
+
+### Initial Screen (Landing)
+
+[Landing](public/screenshots/Landing.mp4)
 
 ----
