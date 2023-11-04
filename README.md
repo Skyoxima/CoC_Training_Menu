@@ -1,7 +1,5 @@
 # [Clash of Clans](https://supercell.com/en/games/clashofclans/) Training Menu recreated as a web app using SvelteJS
 
-----
-
 <details>
 <summary> Introduction</summary>
 <br>
@@ -24,7 +22,5 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 ## Screenshots :camera:
 
 ### Initial Screen (Landing)
-
-[Landing](https://drive.google.com/file/d/1DZD_jMcysY0UkTf6adBd3sNnI3pcccNE/view?usp=drive_link)
 
 ----
