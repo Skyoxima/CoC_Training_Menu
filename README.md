@@ -23,4 +23,8 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 
 ### Initial Screen (Landing)
 
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/668a8d9b-12d0-4272-8a91-4b6880e592cc
+
+
+
 ----
