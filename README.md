@@ -13,7 +13,7 @@ I also didn't want to one-to-one replicate it as firstly to hone my originality/
 To my jaw-dropping surprise, what I've created here is now somewhat similar to what the current 'info' tab for entities (troop, spell, sieges) looks like (as I had started this project in late August '23).
 
 I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.fandom.com) for the detailed statistics of the entities. Of course, a big thanks to [Clash of Clans](https://supercell.com/en/games/clashofclans/) for making such an enjoyable game.
-**This project is entirely non-profit, as it is only a means to showcase my skills as a front-end developer. No copyright infringement is intended.**
+**This project is entirely non-profit, as it is only a means to showcase my skills as a front-end developer. I have no ill-intent on/by using the resources, no copyright infringement is intended.**
 
 </details>
 
@@ -21,10 +21,39 @@ I want to give a big thank you to [Clash of Clans Fandom](https://clashofclans.f
 
 ## Screenshots :camera:
 
-### Initial Screen (Landing)
+#### Initial Screen (Landing)
 
-https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/668a8d9b-12d0-4272-8a91-4b6880e592cc
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/e36dc512-4976-47d9-9345-5bc29b10aa51
 
-All the glowing 'interactables' are the way to open the menu, similar to the game!
+All the glowing 'interactables' are the way to open the menu, similar to the game! Pair-wise color coding based on the 'type' of 'entity' (troops, spells, siege).
+
+### The Menu
+
+#### Troops Section
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/246a0c1c-1a53-4b0c-b7a0-d60f62db7a0e
+
+#### Spells Section
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/0bec69ab-226a-4399-a851-447edba35487
+
+#### Siege Section
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/df3480a2-8666-4d77-a0a6-3a7e2da60db1
+
+#### Army Section + Tab Switching
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/131236da-351f-402a-8c8b-7fb54b635dcd
+
+
+**So here's the face of the project, the actual menu. As can be seen, I've tried to replicate its look from the in-game counterpart but have added some more color-coding for the type of entity for better distinction and visuals :D.** Now onto the functionalities!
+
+### Menu Functionalities
+
+#### Training an Entity
+
+
+
+**All the three entities are trained similarly, with corresponding UI effects and sounds. Additionally, boosting and finishing training are also implemented with gems!**
 
 ----
