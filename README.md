@@ -46,14 +46,36 @@ https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/df3480a2-8666-4d7
 https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/131236da-351f-402a-8c8b-7fb54b635dcd
 
 
-**So here's the face of the project, the actual menu. As can be seen, I've tried to replicate its look from the in-game counterpart but have added some more color-coding for the type of entity for better distinction and visuals :D.** Now onto the functionalities!
+**So here's the face of the project, the actual menu. As can be seen, I've tried to replicate its look from the in-game counterpart but have added some more color-coding for the type of entity for better distinction and visuals :D.** 
+
+Now onto the functionalities!
 
 ### Menu Functionalities
 
 #### Training an Entity
 
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/84716994-74d4-4cc1-ba10-061b380ee3f6
 
+**This is how I've implemented the training mechanism, pretty happy with it haha! Additionally, as seen, boosting and finishing training are also implemented with (fake) gems!**
 
-**All the three entities are trained similarly, with corresponding UI effects and sounds. Additionally, boosting and finishing training are also implemented with gems!**
+#### Entity Information Dialog-box
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/860f787b-0a29-4f59-894f-8e1df731b467
+
+**All the information is stored neatly in JSON files, retrieved as demanded by the app on 'i' icon click. Curating this data was a fun and good experience!**
+
+> I know at TH12 everything's not unlocked let alone at max level, call it creative liberty as I could only record my at-the-time base in high quality for the background.
+
+#### Some attention-to-detail
+
+Barracks, Spell Factories and the Workshop are all reactive i.e play "active" animation (which I have re-created from scratch in a video editor using the frame-by-frame images as I couldn't find a good enough quality gif). Once nothing's cooking, they revert back to "inactive" state.
+
+https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/c6350b27-1d4c-4f8d-87f1-b9bf6c1d2989
 
 ----
+
+# TODOs
+- Improve responsiveness (especially for mobile devices, have a landscape orientation enforcement like the game).
+- Add Quick Train functionality.
+- Add subtle attention-to-detail. (Training boost tab icons, heroes info tabs, etc.)
+- Entity gallery (especially for troops, thinking alternative model art and level-wise sprites progression sequence) (will take a LOT of images)
