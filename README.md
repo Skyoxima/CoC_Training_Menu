@@ -76,6 +76,7 @@ https://github.com/Skyoxima/CoC_Training_Menu/assets/104982200/c6350b27-1d4c-4f8
 
 # TODOs
 - Improve responsiveness (especially for mobile devices, have a landscape orientation enforcement like the game).
+- Optimize asset loading!
 - Add Quick Train functionality.
 - Add subtle attention-to-detail. (Training boost tab icons, heroes info tabs, etc.)
 - Entity gallery (especially for troops, thinking alternative model art and level-wise sprites progression sequence) (will take a LOT of images)
