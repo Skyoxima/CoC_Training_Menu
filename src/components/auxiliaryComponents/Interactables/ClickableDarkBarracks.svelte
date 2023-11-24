@@ -49,6 +49,7 @@
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
   #clickable-dark-barracks.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;

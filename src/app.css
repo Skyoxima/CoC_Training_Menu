@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Supercell-Magic';
+  src: url(/src/assets/font/supercell-magic.woff) format('woff');
+}
+
 :root {
   font-family: 'Supercell-Magic', 'Poppins', 'Segoe UI', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: bold;

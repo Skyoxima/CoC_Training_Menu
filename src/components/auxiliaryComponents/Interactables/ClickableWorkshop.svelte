@@ -52,6 +52,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 1;
+    cursor: pointer;
   }
   #clickable-workshop.custom-glow {
     animation: subtle-glow 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
